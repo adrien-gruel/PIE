@@ -8,8 +8,8 @@
  *
  * @package Theme_PIE
  */
-
 ?>
+
 <!doctype html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -22,19 +22,19 @@
 </head>
 
 <body <?php body_class(); ?>>
-<?php wp_body_open(); ?>
-<div id="page" class="site">
 	
-	<header>
-		<div class="logo"><?php the_custom_logo(); ?></div>
-		<nav>
-			<?php 
-			$items = wp_get_nav_menu_items(
-				get_nav_menu_locations("header-public-menu")["header-public-menu"]
-			);
-			foreach($items as $menuItem) : 
-			?>
-			<a href="<?= $menuItem->url ?>" title="<?= $menuItem->title ?>"><?= $menuItem->title ?></a>
-			<?php endforeach; ?>
-		</nav>
-	</header>
+	<?php wp_body_open(); ?>
+
+	<div id="page" class="site"><!-- #page -->
+		<header>
+			<div class="logo">
+				<?php the_custom_logo(); ?>
+			</div>
+			<nav id="site-navigation" class="main-navigation"> <!-- #site-navigation -->
+				<?php wp_nav_menu(
+					array(
+						'theme_location' => 'header-public-menu',
+					)
+				); ?>
+			</nav>
+		</header>
