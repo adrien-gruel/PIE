@@ -9,7 +9,7 @@
  * @package Theme_PIE
  */
 ?>
-		<footer>
+		<footer class="custom-footer">
 			<div class="logo">
 				<?php the_custom_logo(); ?>
 			</div>
