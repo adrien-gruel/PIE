@@ -26,7 +26,7 @@
 	<?php wp_body_open(); ?>
 
 	<div id="page" class="site"><!-- #page -->
-		<header>
+		<header class="header-desktop">
 			<div class="logo">
 				<?php the_custom_logo(); ?>
 			</div>
