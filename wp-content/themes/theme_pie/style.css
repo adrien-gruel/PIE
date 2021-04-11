@@ -983,17 +983,16 @@ textarea {
 }
 
 .custom-footer {
-  padding: 80px 0px;
+  padding: 60px 10%;
   background: #f6f6f6;
   display: flex;
   align-items: center;
 }
 .custom-footer .logo {
-  margin-left: 10%;
   line-height: 0;
 }
-.custom-footer nav {
-  margin-right: 10%;
+.custom-footer .logo img {
+  width: 200px;
 }
 .custom-footer nav ul {
   padding-left: 10%;
@@ -1013,6 +1012,31 @@ textarea {
 }
 .custom-footer nav ul li a:hover {
   color: #ff8024;
+}
+
+@media screen and (max-width: 1024px) {
+  .custom-footer nav ul li a {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 850px) {
+  .custom-footer {
+    display: flex;
+    flex-direction: column;
+  }
+  .custom-footer nav ul {
+    margin-top: 30px;
+    padding-left: initial;
+    flex-direction: column;
+    text-align: center;
+  }
+  .custom-footer nav ul li {
+    width: 100%;
+    padding: 20px;
+  }
+  .custom-footer nav ul li a {
+    font-size: 20px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
