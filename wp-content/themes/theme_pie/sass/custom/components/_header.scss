@@ -1,16 +1,8 @@
-%linkMenu {
-    color: $black;
-    text-transform: uppercase;
-    font-family: $oswald;
-}
-
 .header {
+    @extend %flexAcenter;
     padding: 0px 10%;
     height: 10vh;
     box-shadow: 0px 5px 5px 0px rgb(180, 180, 180);
-    
-    display: flex;
-    align-items: center;
     .logo {
         line-height: 0;
         img {
@@ -22,8 +14,7 @@
 
 .nav-desktop {
     ul {
-        display: flex;
-        justify-content: flex-end;
+        @extend %flexJend;
     }
     
     li { 
@@ -41,12 +32,7 @@
             background: $lightOrange;            
             margin-left: -18px;
             box-shadow: none;
-            
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-
+            @extend %flexColumnJcenterACenter;
             li {
                 a {
                    width: initial;
@@ -59,8 +45,47 @@
     }    
 }
 
-.nav-mobile {
+.nav-mobile {   
     display: none;
+    justify-content: flex-end;
+    #menu-mobile {
+        background: $lightGray;
+        height: 100vh;
+        width: 0%;
+        position: fixed;
+        z-index: 10;
+        top: 0;
+        left: 0;
+        overflow-x: hidden;
+        transition: 0.8s;
+        opacity: 1;
+        ul {
+            @extend %flexColumn; 
+            width: 100%;
+            top: 15%;
+            position: absolute;
+            text-align: center;
+            li {
+                padding: 20px 0px 10px;
+                a {
+                    @extend %linkMenu;
+                    font-size: $size24;
+                }
+                ul {
+                    position: relative;
+                    li {
+                        padding: 10px 0px 5px;
+                        a {
+                           width: initial;
+                           img {
+                               max-width: none;
+                           }
+                       }
+                    }  
+                }
+            }
+        }
+    }
 }
 
 .icon-menu {
@@ -80,49 +105,8 @@
         display: none;
     }
     
-    .nav-mobile {   
+    .nav-mobile {
         display: flex;
-        justify-content: flex-end;
-        #menu-mobile {
-            background: $lightGray;
-            height: 100vh;
-            width: 0%;
-            position: fixed;
-            z-index: 10;
-            top: 0;
-            left: 0;
-            overflow-x: hidden;
-            transition: 0.8s;
-            opacity: 1;
-            ul {    
-                width: 100%;
-                top: 15%;
-                position: absolute;
-                text-align: center;
-                
-                display: flex;
-                flex-direction: column;
-                li {
-                    padding: 20px 0px 10px;
-                    a {
-                        @extend %linkMenu;
-                        font-size: $size24;
-                    }
-                    ul {
-                        position: relative;
-                        li {
-                            padding: 10px 0px 5px;
-                            a {
-                               width: initial;
-                               img {
-                                   max-width: none;
-                               }
-                           }
-                        }  
-                    }
-                }
-            }
-        }
     }
 
     .icon-cross {

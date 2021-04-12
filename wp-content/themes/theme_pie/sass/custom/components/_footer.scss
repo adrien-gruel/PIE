@@ -1,8 +1,7 @@
 .custom-footer {
     padding: 60px 10%;
     background: $lightGray;
-    display: flex;
-    align-items: center;
+    @extend %flexAcenter;
     .logo {
         line-height: 0;
         img {
@@ -11,18 +10,15 @@
     }
     nav {
         ul {
+            @extend %flexWrap;
             padding-left: 10%;
-            display: flex;
-            flex-wrap: wrap;
             text-align: center;
             li {
                 padding: 10px;
                 width: 33.33%;
                 a {
                     font-size: 20px;
-                    color: $black;
-                    text-transform: uppercase;
-                    font-family: $oswald;
+                    @extend %linkMenu;
                     &:hover {
                         color: $primary;
                     }

@@ -1,0 +1,26 @@
+%flexColumnJcenterACenter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+%flexColumn {
+    display: flex;
+    flex-direction: column;
+}
+
+%flexJend {
+    display: flex;
+    justify-content: flex-end;
+}
+
+%flexAcenter {
+    display: flex;
+    align-items: center;
+}
+
+%flexWrap {
+    display: flex;
+    flex-wrap: wrap;
+}
