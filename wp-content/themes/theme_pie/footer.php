@@ -8,25 +8,22 @@
  *
  * @package Theme_PIE
  */
-
 ?>
+		<footer class="custom-footer">
+			<div class="logo">
+				<?php the_custom_logo(); ?>
+			</div>
+			<nav id="site-navigation" class="main-navigation">
+				<?php wp_nav_menu(
+					array(
+						'theme_location' => 'footer-public-menu',
+					)
+				); ?>
+			</nav><!-- #site-navigation -->
+		</footer>
+	</div><!-- #page -->
 
-	<footer>
-		<div class="logo"><?php the_custom_logo(); ?></div>
-		<nav>
-		<?php 
-			$items = wp_get_nav_menu_items(
-				get_nav_menu_locations("footer-public-menu")["footer-public-menu"]
-			);
-			foreach($items as $menuItem) : 
-			?>
-			<a href="<?= $menuItem->url ?>" title="<?= $menuItem->title ?>"><?= $menuItem->title ?></a>
-			<?php endforeach; ?>
-		</nav>
-	</footer>
-</div><!-- #page -->
-
-<?php wp_footer(); ?>
+	<?php wp_footer(); ?>
 
 </body>
 </html>
