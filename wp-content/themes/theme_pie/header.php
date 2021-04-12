@@ -26,15 +26,36 @@
 	<?php wp_body_open(); ?>
 
 	<div id="page" class="site"><!-- #page -->
-		<header class="header-desktop">
+		<header class="header">
+			
 			<div class="logo">
 				<?php the_custom_logo(); ?>
 			</div>
-			<nav id="site-navigation" class="main-navigation"> <!-- #site-navigation -->
+			
+			<nav id="site-navigation" class="main-navigation nav-desktop"> <!-- #site-navigation desktop-->
 				<?php wp_nav_menu(
 					array(
 						'theme_location' => 'header-public-menu',
 					)
 				); ?>
 			</nav>
+			
+			<nav id="site-navigation" class="main-navigation nav-mobile"> <!-- #site-navigation mobile-->
+				<div class="icon-menu" id="icon-menu" onclick="openNav()">
+					<img src="<?= get_template_directory_uri();?>/assets/img/icon-menu.png" alt="menu burger">
+				</div>
+				
+				<div id="menu-mobile">
+					<div class="icon-cross" id="icon-cross" onclick="closeNav()">
+						<img src="<?= get_template_directory_uri();?>/assets/img/icon-cross.png" alt="menu burger">
+					</div>
+					<?php wp_nav_menu(
+						array(
+							'theme_location' => 'header-public-menu',
+						)
+					); ?>
+				</div>
+			</nav>
+
 		</header>
+

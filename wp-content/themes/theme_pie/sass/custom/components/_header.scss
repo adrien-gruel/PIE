@@ -1,52 +1,135 @@
-.header-desktop {
+%linkMenu {
+    color: $black;
+    text-transform: uppercase;
+    font-family: $oswald;
+}
+
+.header {
+    padding: 0px 10%;
     height: 10vh;
+    box-shadow: 0px 5px 5px 0px rgb(180, 180, 180);
+    
     display: flex;
     align-items: center;
-    box-shadow: 0px 5px 5px 0px rgb(180, 180, 180) ;
     .logo {
-        margin-left: 10%;
         line-height: 0;
         img {
             width: 80px;
-            height: 40px;
+            height: 45px;
         }
     }
-    nav {
-        margin-right: 10%;
-        ul {
-            display: flex;
-            justify-content: flex-end;
-        }
-        li { 
-            padding: 10px 18px;
-            &:last-child {
-                background: $lightOrange;
-            }            
-            a {
-                color: $black;
-                text-transform: uppercase;
-                font-family: $oswald;
-                &:hover {
-                    color: $primary;
-                }
+}
+
+.nav-desktop {
+    ul {
+        display: flex;
+        justify-content: flex-end;
+    }
+    
+    li { 
+        padding: 10px 18px;
+        &:last-child {
+            background: $lightOrange;
+        }            
+        a {
+            @extend %linkMenu;
+            &:hover {
+                color: $primary;
             }
-            ul {
-                background: $lightOrange;
+        }
+        ul {
+            background: $lightOrange;            
+            margin-left: -18px;
+            box-shadow: none;
+            
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            li {
+                a {
+                   width: initial;
+                   img {
+                       max-width: none;
+                   }
+               }
+            }  
+        }
+    }    
+}
+
+.nav-mobile {
+    display: none;
+}
+
+.icon-menu {
+    cursor: pointer;
+}
+
+.icon-cross {
+    display: none;
+    cursor: pointer;
+}
+
+// ----------- RESPONSIVE HEADER -----------  //
+
+@media screen and (max-width:1024px) {
+    
+    .nav-desktop {
+        display: none;
+    }
+    
+    .nav-mobile {   
+        display: flex;
+        justify-content: flex-end;
+        #menu-mobile {
+            background: $lightGray;
+            height: 100vh;
+            width: 0%;
+            position: fixed;
+            z-index: 10;
+            top: 0;
+            left: 0;
+            overflow-x: hidden;
+            transition: 0.8s;
+            opacity: 1;
+            ul {    
+                width: 100%;
+                top: 15%;
+                position: absolute;
+                text-align: center;
+                
                 display: flex;
                 flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                margin-left: -18px;
-                box-shadow: none;
                 li {
-                   a {
-                       width: initial;
-                       img {
-                           max-width: none;
-                       }
-                   }
-                }  
+                    padding: 20px 0px 10px;
+                    a {
+                        @extend %linkMenu;
+                        font-size: $size24;
+                    }
+                    ul {
+                        position: relative;
+                        li {
+                            padding: 10px 0px 5px;
+                            a {
+                               width: initial;
+                               img {
+                                   max-width: none;
+                               }
+                           }
+                        }  
+                    }
+                }
             }
         }
+    }
+
+    .icon-cross {
+        display: block;
+        position: absolute;
+        z-index: 15;
+        top: 15px;
+        right: 10%;
     }
 }
