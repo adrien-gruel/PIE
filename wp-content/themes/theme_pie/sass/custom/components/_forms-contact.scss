@@ -1,0 +1,56 @@
+.form-contact {
+    margin: 60px 10% 30px;
+    width: 80%;
+}
+
+.form-contact form p {
+    @extend %flexWrapJbetween;
+    span {
+        margin-bottom: 20px;
+        width: calc(50% - 30px);
+        input {
+            width: 100%;
+        }
+    }
+    
+    .lastName, .mail {
+        margin-right: 30px;
+    }
+
+    .firstName, .phone {
+        margin-left: 30px;
+    }
+
+    .object {
+        width: 100%;
+        input {
+            width: 100%;
+        }
+    }
+    
+    .message {
+        width: 100%;
+        textarea {
+            margin: 20px 0px;
+            resize: vertical;
+            border: solid $black 2px;
+            padding: 10px ;
+        }
+    }
+}
+
+// ----------- RESPONSIVE FORM CONTACT -----------  //
+
+@media screen and (max-width:1024px)
+{
+    .form-contact form p {
+        flex-direction: column;
+        span {
+            width: 100%;
+        }
+        .lastName, .mail,.firstName, .phone {
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+}
