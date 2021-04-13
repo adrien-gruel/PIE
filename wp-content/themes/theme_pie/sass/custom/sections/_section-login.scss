@@ -1,0 +1,16 @@
+.section-login {
+    @extend %flexWrap;
+    height: 100vh;
+    article {
+        width: 50%;
+    }
+    aside {
+        width: 50%;
+        height: 100%;
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+}

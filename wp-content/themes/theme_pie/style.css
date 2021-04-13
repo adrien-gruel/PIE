@@ -931,7 +931,7 @@ textarea {
 /* Font Size */
 /* Font Weight */
 /* Variables */
-.custom-footer nav ul {
+.section-login, .custom-footer nav ul {
   display: flex;
   flex-wrap: wrap;
 }
@@ -1230,6 +1230,23 @@ form .input {
   font-size: 16px;
   font-weight: 400;
   border-bottom: solid #262626 2px;
+}
+
+/* Sections */
+.section-login {
+  height: 100vh;
+}
+.section-login article {
+  width: 50%;
+}
+.section-login aside {
+  width: 50%;
+  height: 100%;
+}
+.section-login aside img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 /*# sourceMappingURL=style.css.map */

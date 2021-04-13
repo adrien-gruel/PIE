@@ -1,4 +1,4 @@
-form .input {
+%customInput {
     background: transparent;
     box-shadow: none;
     border: none;
@@ -7,4 +7,8 @@ form .input {
     font-size: $size16;
     font-weight: $weight400;
     border-bottom: solid $black 2px;
+}
+
+form .input {
+    @extend %customInput;
 }
