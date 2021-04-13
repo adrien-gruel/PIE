@@ -912,7 +912,7 @@ textarea {
   margin-bottom: 1.5em;
 }
 
-/* Alignments
+/* Custom
 --------------------------------------------- */
 /* Reset */
 * {
@@ -921,7 +921,7 @@ textarea {
   box-sizing: border-box;
 }
 
-.page {
+.page, .entry-content {
   margin: 0px 0px 0px;
 }
 
@@ -931,6 +931,11 @@ textarea {
 /* Font Size */
 /* Font Weight */
 /* Variables */
+.custom-footer nav ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .nav-desktop li ul {
   display: flex;
   flex-direction: column;
@@ -953,18 +958,16 @@ textarea {
   align-items: center;
 }
 
-.custom-footer nav ul {
+.form-contact form p {
   display: flex;
   flex-wrap: wrap;
-}
-
-.custom-footer nav ul li a, .nav-mobile #menu-mobile ul li a, .nav-desktop li a {
-  color: #262626;
-  text-transform: uppercase;
-  font-family: "Oswald", sans-serif;
+  justify-content: space-between;
 }
 
 /* Components */
+/*--------------------------------------------------------------
+# Header design & responsive
+--------------------------------------------------------------*/
 .header {
   padding: 0px 10%;
   height: 10vh;
@@ -1066,6 +1069,9 @@ textarea {
     right: 10%;
   }
 }
+/*--------------------------------------------------------------
+# Footer design & responsive
+--------------------------------------------------------------*/
 .custom-footer {
   padding: 60px 10%;
   background: #f6f6f6;
@@ -1114,6 +1120,116 @@ textarea {
   .custom-footer nav ul li a {
     font-size: 20px;
   }
+}
+/*--------------------------------------------------------------
+# Call to actions
+--------------------------------------------------------------*/
+.form-contact form p .cta {
+  color: white;
+  background: #ff8024;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  border: solid #ff8024 2px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 10px 12px;
+  width: 200px;
+  cursor: pointer;
+  display: block;
+  margin: auto;
+}
+.form-contact form p .cta:hover {
+  color: #ff8024;
+  border: solid #ff8024 2px;
+  background: white;
+}
+
+/*--------------------------------------------------------------
+# Fonts
+--------------------------------------------------------------*/
+.nav-desktop li a, .nav-mobile #menu-mobile ul li a, .custom-footer nav ul li a {
+  color: #262626;
+  text-transform: uppercase;
+  font-family: "Oswald", sans-serif;
+}
+
+h1 {
+  font-family: "Oswald", sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  color: #ff8024;
+  text-transform: uppercase;
+  margin: 80px 0 0 10%;
+}
+
+.second-headline {
+  font-family: "Oswald", sans-serif;
+  font-size: 32px;
+  color: #262626;
+  margin: 0 0 0 10%;
+}
+
+/*--------------------------------------------------------------
+# Contact forms / plugin [contact form 7]
+--------------------------------------------------------------*/
+.form-contact {
+  margin: 60px 10% 30px;
+  width: 80%;
+}
+
+.form-contact form p span {
+  margin-bottom: 20px;
+  width: calc(50% - 30px);
+}
+.form-contact form p span input {
+  width: 100%;
+}
+.form-contact form p .lastName, .form-contact form p .mail {
+  margin-right: 30px;
+}
+.form-contact form p .firstName, .form-contact form p .phone {
+  margin-left: 30px;
+}
+.form-contact form p .object {
+  width: 100%;
+}
+.form-contact form p .object input {
+  width: 100%;
+}
+.form-contact form p .message {
+  width: 100%;
+}
+.form-contact form p .message textarea {
+  margin: 20px 0px;
+  resize: vertical;
+  border: solid #262626 2px;
+  padding: 10px;
+}
+
+@media screen and (max-width: 1024px) {
+  .form-contact form p {
+    flex-direction: column;
+  }
+  .form-contact form p span {
+    width: 100%;
+  }
+  .form-contact form p .lastName, .form-contact form p .mail, .form-contact form p .firstName, .form-contact form p .phone {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+/*--------------------------------------------------------------
+# Inputs
+--------------------------------------------------------------*/
+form .input {
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  outline: none;
+  padding: 10px 0px;
+  font-size: 16px;
+  font-weight: 400;
+  border-bottom: solid #262626 2px;
 }
 
 /*# sourceMappingURL=style.css.map */

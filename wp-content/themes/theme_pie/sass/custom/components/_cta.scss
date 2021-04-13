@@ -1,0 +1,23 @@
+%cta {
+    color: $white;
+    background: $primary;
+    font-size: $size16;
+    font-family: $roboto;
+    border: solid $primary 2px; 
+    font-weight: $weight700;
+    text-transform: uppercase;
+    padding: 10px 12px;
+    width: 200px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    &:hover {
+        color: $primary;
+        border: solid $primary 2px;
+        background: $white;   
+    }
+}
+
+.form-contact form p .cta {
+    @extend %cta;
+}
