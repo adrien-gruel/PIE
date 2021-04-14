@@ -12,3 +12,6 @@
 form .input {
     @extend %customInput;
 }
+.formlogre input {
+    @extend %customInput
+}
