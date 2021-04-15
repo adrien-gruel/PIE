@@ -1,4 +1,4 @@
-<?php 
+<?php
 /**
  * Enqueue scripts and styles.
  */
@@ -13,3 +13,36 @@ register_nav_menus(
         "footer-public-menu" => "Public menu footer : ",
     )
 );
+
+$additionnalVariables = ["accessibility", "city", "country", "venue", "online", "event_webpage", "access", "test", "attenders", "exhibitors", "registration_form", "enquiries_email", "topics", "programme", "digital_platform"];
+
+foreach($additionnalVariables as $additionnalVariable){
+    ${"get_event_" . $additionnalVariable} = function(){
+        return("oui");
+    };
+    
+}
+
+function get_event_test( $post = null ) 
+{
+  
+    $post = get_post( $post );
+  
+    if ( $post->post_type !== 'event_listing' ) 
+        return '';
+        
+    $event_test  = $post->_test;
+  
+    return apply_filters( 'display_event_test', $event_test, $post );
+ 
+}
+  
+function display_event_test( $before = '', $after = '', $echo = true, $post = null ) 
+{
+$event_test = get_event_test( $post );
+$event_test = $before . $event_test . $after;
+if ( $echo )
+echo $event_test;
+else
+    return $event_test;
+}
