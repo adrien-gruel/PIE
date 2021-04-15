@@ -12,6 +12,6 @@
 form .input {
     @extend %customInput;
 }
-.formlogre input {
-    @extend %customInput
+.um input[type=submit].um-button, .um input[type=submit].um-button:focus, .um a.um-button.um-disabled:hover, .um a.um-button.um-disabled:focus, .um a.um-button.um-disabled:active {
+    background: $primary !important;
 }

@@ -1,12 +1,17 @@
-.section-login {
+.section-login-register {
     @extend %flexWrap;
-    height: 120vh;
     article {
         width: 50%;
+        padding: 0% 10%;
+       .second-headline{
+        margin: 0 0 20px 0;
+        }
+        h1{
+            margin: 80px 0 0 0;
+        }
     }
     aside {
         width: 50%;
-        height: 100%;
         img {
             height: 100%;
             width: 100%;
