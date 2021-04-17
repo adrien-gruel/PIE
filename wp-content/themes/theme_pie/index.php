@@ -1,57 +1,35 @@
 <?php
-/**
- * The main template file
- *
- * This is the most generic template file in a WordPress theme
- * and one of the two required files for a theme (the other being style.css).
- * It is used to display a page when nothing more specific matches a query.
- * E.g., it puts together the home page when no home.php file exists.
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
- *
- * @package Theme_PIE
- */
-
-get_header();
+	get_header();
 ?>
+		<?php if ( have_posts() ) : ?>
 
-	<main id="primary" class="site-main">
+			<section>
+				<h1>Blog</h1>
+				<section class="section-blog">
+			<?php 
+				while ( have_posts() ) : the_post(); ?>
+					<article class="card-article">
+						<div class="card-article-img">
+							<?php the_post_thumbnail() ?>
+						</div>
+						<div class="card-article-header">
+							<h3><?php the_title(); ?></h3>
+								<?php $article_data = substr(get_the_content(), 0, 100); 
+									echo $article_data ; 
+								?>...
+						
+							<div>
+								<span><?php the_time('d/m/Y'); ?></span>
+								<a class="card-article-link" href="<?= the_permalink() ?>" title="Article : <?php the_title(); ?>">Read the article</a>
+							</div>
+						</div>
+						
+					</article>
+			<?php endwhile; ?>
 
-		<?php
-		if ( have_posts() ) :
+		<?php endif; ?>
+				</section>
+			</section>
+	
 
-			if ( is_home() && ! is_front_page() ) :
-				?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
-				<?php
-			endif;
-
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
-
-				/*
-				 * Include the Post-Type-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_type() );
-
-			endwhile;
-
-			the_posts_navigation();
-
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif;
-		?>
-
-	</main><!-- #main -->
-
-<?php
-get_sidebar();
-get_footer();
+<?php get_footer();

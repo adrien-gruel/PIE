@@ -1,0 +1,48 @@
+.card-article {
+    width: calc((100% - 120px) / 3);
+    margin-top: 30px;
+    &:nth-child(3n +2) {
+        margin: 30px 60px 0px;
+    }
+    &-img {
+        height: 200px;
+        img {
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &-header {
+        background: $black;
+        h3 {
+            color: white;
+            padding: 10px 0px 10px 20px;
+        }
+
+        p {
+            color: white;
+            padding: 10px 20px 10px 20px;
+        }
+
+        div {
+            padding: 10px 20px 10px 20px;
+           @extend %flexWrapJbetween;
+            span {
+                color: white;
+            }
+        } 
+        
+    }
+    &-link {
+        color: $primary;
+        text-decoration: none;
+        &:hover {
+            color: $white;
+        }
+        &:visited {
+            color: $primary;
+            &:hover {
+                color: $white;
+            }
+        }
+    }
+}

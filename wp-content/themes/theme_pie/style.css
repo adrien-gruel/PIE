@@ -931,7 +931,7 @@ textarea {
 /* Font Size */
 /* Font Weight */
 /* Variables */
-.section-login-register, .custom-footer nav ul {
+.section-blog, .section-login-register, .custom-footer nav ul {
   display: flex;
   flex-wrap: wrap;
 }
@@ -958,7 +958,7 @@ textarea {
   align-items: center;
 }
 
-.form-contact form p {
+.card-article-header div, .form-contact form p {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -1237,6 +1237,54 @@ form .input {
   background: #ff8024 !important;
 }
 
+/*--------------------------------------------------------------
+# Card Article
+--------------------------------------------------------------*/
+.card-article {
+  width: calc((100% - 120px) / 3);
+  margin-top: 30px;
+}
+.card-article:nth-child(3n+2) {
+  margin: 30px 60px 0px;
+}
+.card-article-img {
+  height: 200px;
+}
+.card-article-img img {
+  height: 100%;
+  object-fit: cover;
+}
+.card-article-header {
+  background: #262626;
+}
+.card-article-header h3 {
+  color: white;
+  padding: 10px 0px 10px 20px;
+}
+.card-article-header p {
+  color: white;
+  padding: 10px 20px 10px 20px;
+}
+.card-article-header div {
+  padding: 10px 20px 10px 20px;
+}
+.card-article-header div span {
+  color: white;
+}
+.card-article-link {
+  color: #ff8024;
+  text-decoration: none;
+}
+.card-article-link:hover {
+  color: white;
+}
+.card-article-link:visited {
+  color: #ff8024;
+}
+.card-article-link:visited:hover {
+  color: white;
+}
+
 /* Sections */
 .section-login-register article {
   width: 50%;
@@ -1277,6 +1325,9 @@ form .input {
     text-align: center;
     margin: 10px 0 10px 0;
   }
+}
+.section-blog {
+  padding: 60px 10%;
 }
 
 /*# sourceMappingURL=style.css.map */
