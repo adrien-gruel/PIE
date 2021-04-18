@@ -31,3 +31,9 @@
     flex-wrap: wrap;
     justify-content: space-between;
 }
+
+%flexWrapJcenter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
