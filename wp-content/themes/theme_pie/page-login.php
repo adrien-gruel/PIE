@@ -7,7 +7,7 @@
         <?php echo apply_shortcodes('[ultimatemember form_id="128"]'); ?>  
     </article>
     <aside>
-        <img src="http://localhost/Paper_Industry_Events/wp-content/uploads/2021/04/sign-in.png" alt="women_in_office">
+        <?php the_post_thumbnail() ?>
     </aside>
 </section>
 
