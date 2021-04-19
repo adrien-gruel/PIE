@@ -931,7 +931,7 @@ textarea {
 /* Font Size */
 /* Font Weight */
 /* Variables */
-.section-blog, .section-login-register, .custom-footer nav ul {
+.section-featureCards, .section-blog, .section-login-register, .custom-footer nav ul {
   display: flex;
   flex-wrap: wrap;
 }
@@ -1125,7 +1125,7 @@ textarea {
 /*--------------------------------------------------------------
 # Call to actions
 --------------------------------------------------------------*/
-.form-contact form p .cta {
+.card-feature a, .form-contact form p .cta {
   color: white;
   background: #ff8024;
   font-size: 16px;
@@ -1138,8 +1138,9 @@ textarea {
   cursor: pointer;
   display: block;
   margin: auto;
+  text-decoration: none;
 }
-.form-contact form p .cta:hover {
+.card-feature a:hover, .form-contact form p .cta:hover {
   color: #ff8024;
   border: solid #ff8024 2px;
   background: white;
@@ -1154,12 +1155,15 @@ textarea {
   font-family: "Oswald", sans-serif;
 }
 
-h1 {
+.principal-title, h1 {
   font-family: "Oswald", sans-serif;
   font-size: 40px;
   font-weight: 700;
   color: #ff8024;
   text-transform: uppercase;
+}
+
+h1 {
   margin: 80px 0 0 10%;
 }
 
@@ -1170,6 +1174,26 @@ h1 {
   margin: 0 0 0 10%;
 }
 
+.principal-title {
+  text-align: center;
+  margin: 80px 0 0 0;
+}
+
+.second-title-homepage {
+  text-align: center;
+  font-family: "Oswald", sans-serif;
+  font-size: 32px;
+  color: #262626;
+  text-transform: uppercase;
+  text-decoration: underline;
+  padding-bottom: 40px;
+}
+
+@media screen and (max-width: 600px) {
+  .second-title-homepage {
+    padding: 60px 0px 30px;
+  }
+}
 /*--------------------------------------------------------------
 # Contact forms / plugin [contact form 7]
 --------------------------------------------------------------*/
@@ -1325,17 +1349,69 @@ form .input {
     width: 100%;
   }
   .card-article:first-child, .card-article:nth-child(0n+2) {
-    margin: 10% 0 0;
+    margin: 0 0 30px;
     width: 100%;
   }
   .card-article:nth-child(3n+4), .card-article:nth-child(odd), .card-article:nth-child(even) {
-    margin: 10% 0 0;
+    margin: 0 0 30px;
   }
   .card-article-header div span {
     font-size: 14px;
   }
 }
+/*--------------------------------------------------------------
+# Card Feature
+--------------------------------------------------------------*/
+.card-feature {
+  background: white;
+  border-radius: 40px;
+  padding: 40px 20px;
+  text-align: center;
+  width: calc((100% - 60px) / 3 );
+}
+.card-feature:nth-child(2) {
+  margin: 0px 30px;
+}
+.card-feature h3 {
+  font-size: 32px;
+  font-family: "Oswald", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.card-feature img {
+  width: 80px;
+  height: 80px;
+}
+.card-feature p {
+  font-family: "Roboto", sans-serif;
+  margin: 20px 0px;
+}
+.card-feature a {
+  width: 160px;
+}
+
+@media screen and (max-width: 1024px) {
+  .card-feature {
+    width: calc((100% - 120px) / 2);
+    margin: 30px 30px;
+  }
+  .card-feature:nth-child(2) {
+    margin: 30px 30px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .card-feature {
+    width: 100%;
+    margin: 60px 0px;
+  }
+  .card-feature:nth-child(2) {
+    margin: 60px 0px;
+  }
+}
 /* Sections */
+/*--------------------------------------------------------------
+# Sections login & register form
+--------------------------------------------------------------*/
 .section-login-register article {
   width: 50%;
   padding: 0% 10%;
@@ -1376,8 +1452,31 @@ form .input {
     margin: 10px 0 10px 0;
   }
 }
+/*--------------------------------------------------------------
+# Sections cards blog
+--------------------------------------------------------------*/
 .section-blog {
   padding: 0px 10% 80px;
+}
+
+/*--------------------------------------------------------------
+# Sections cards feature
+--------------------------------------------------------------*/
+.section-featureCards {
+  padding: 80px 10% 80px;
+  background: linear-gradient(181.77deg, #FFDA15 8.41%, #FFB524 79.48%);
+}
+
+@media screen and (max-width: 1024px) {
+  .section-featureCards {
+    justify-content: center;
+  }
+}
+/*--------------------------------------------------------------
+# Sections cards feature
+--------------------------------------------------------------*/
+.section-homeContact {
+  margin: 0px 10% 120px !important;
 }
 
 /*# sourceMappingURL=style.css.map */

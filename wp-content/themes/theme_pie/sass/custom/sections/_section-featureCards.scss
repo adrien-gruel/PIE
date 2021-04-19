@@ -1,0 +1,12 @@
+.section-featureCards {
+    padding: 80px 10% 80px;
+    @extend %flexWrap;
+    background: $gradient;
+}
+
+@media screen and (max-width: 1024px) 
+{
+    .section-featureCards {
+        justify-content: center;
+    }
+}

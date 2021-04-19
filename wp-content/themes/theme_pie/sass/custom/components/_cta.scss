@@ -11,6 +11,7 @@
     cursor: pointer;
     display: block;
     margin: auto;
+    text-decoration: none;
     &:hover {
         color: $primary;
         border: solid $primary 2px;
