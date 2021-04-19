@@ -52,7 +52,8 @@ get_header();
         <h2>What ?</h2>
         <div class="search_what">
             <p>
-                <input placeholder="Fees" type="number" id="search_fees" name="search_fees" />
+                <input placeholder="From $" type="number" id="search_fees_start" name="search_fees_start" />
+                <input placeholder="To $" type="number" id="search_fees_end" name="search_fees_end" />
             </p>
             <p>
                 <input placeholder="language" type="text" id="search_language" name="search_language" />
@@ -78,7 +79,8 @@ get_header();
         $custom_accessibility= $_GET['search_accessibility'] != 'select' ? array('key' => '_accessibility', 'value' => $_GET['search_accessibility']) : array();
         $custom_start_date= !empty($_GET['search_start_date']) ? array('key' => '_start_date', 'value' => $_GET['search_start_date'], 'compare' => '>=', 'type' => 'DATE') : array();
         $custom_end_date= !empty($_GET['search_end_date']) ? array('key' => '_end_date', 'value' => $_GET['search_end_date'], 'compare' => '<=', 'type' => 'DATE') : array();
-        $custom_fees= !empty($_GET['search_fees']) ? array('key' => '_fees', 'value' => $_GET['search_fees'], 'compare' => '<=', 'type' => 'numeric') : array();
+        $custom_fees_start= !empty($_GET['search_fees_start']) ? array('key' => '_fees', 'value' => $_GET['search_fees_start'], 'compare' => '>=', 'type' => 'numeric') : array();
+        $custom_fees_end= !empty($_GET['search_fees_end']) ? array('key' => '_fees', 'value' => $_GET['search_fees_end'], 'compare' => '<=', 'type' => 'numeric') : array();
         $custom_language= !empty($_GET['search_language']) ? array('key' => '_language', 'value' => $_GET['search_language']) : array();
 
 
@@ -90,7 +92,8 @@ get_header();
                         $custom_accessibility,
                         $custom_start_date,
                         $custom_end_date,
-                        $custom_fees,
+                        $custom_fees_start,
+                        $custom_fees_end,
                         $custom_language,
                     ),
 
@@ -103,12 +106,12 @@ get_header();
             <?php if ( $the_query->have_posts() ) : ?>
             <?php while ( $the_query->have_posts() ) : $the_query->the_post(); 
             $type= get_event_type();
-            if($type[0]->term_id == $_GET['search_event_types'] || $_GET['search_event_types'] === "select"):
+            if($type[0]->term_id == $_GET['search_event_types'] || $_GET['search_event_types'] === "select" || $_GET['search_event_types'] === NULL):
                 ?>
-                <article data-aos="zoom-in-up">
+                <article>
                     <h3><?php the_title() ?></h3>
-                    <p><?php echo $post->_city ?></p>
-                    <?php display_event_type() ?>
+                    <p><?php echo $post->_fees?></p>
+                    <a href="<?php the_permalink() ?>"> Voir</a>
                     
                 </article>
             <?php 
@@ -117,7 +120,7 @@ get_header();
                 wp_reset_postdata(); 
             ?>
             <?php else:  ?>
-                <p><?php _e( 'En cours de construction' ); ?></p>
+                <p>No events found</p>
             <?php endif; ?>
 
 
