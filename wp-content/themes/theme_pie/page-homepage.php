@@ -6,7 +6,13 @@
 
 <h1 class="principal-title"><?php the_title() ?></h1>
 
-<section class="section-event"></section>
+<section class="section-event">
+
+<?php echo apply_shortcodes('[events]'); ?>
+
+
+</section>
+
 
 
 <section>

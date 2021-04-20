@@ -77,8 +77,8 @@ get_header();
         $custom_city = !empty($_GET['search_city']) ? array('key' => '_city', 'value' => $_GET['search_city']) : array();
         $custom_country= !empty($_GET['search_country']) ? array('key' => '_country', 'value' => $_GET['search_country']) : array();
         $custom_accessibility= $_GET['search_accessibility'] != 'select' ? array('key' => '_accessibility', 'value' => $_GET['search_accessibility']) : array();
-        $custom_start_date= !empty($_GET['search_start_date']) ? array('key' => '_start_date', 'value' => $_GET['search_start_date'], 'compare' => '>=', 'type' => 'DATE') : array();
-        $custom_end_date= !empty($_GET['search_end_date']) ? array('key' => '_end_date', 'value' => $_GET['search_end_date'], 'compare' => '<=', 'type' => 'DATE') : array();
+        $custom_start_date= !empty($_GET['search_start_date']) ? array('key' => '_event_start_date', 'value' => $_GET['search_start_date'], 'compare' => '>=', 'type' => 'DATE') : array();
+        $custom_end_date= !empty($_GET['search_end_date']) ? array('key' => '_event_end_date', 'value' => $_GET['search_end_date'], 'compare' => '<=', 'type' => 'DATE') : array();
         $custom_fees_start= !empty($_GET['search_fees_start']) ? array('key' => '_fees', 'value' => $_GET['search_fees_start'], 'compare' => '>=', 'type' => 'numeric') : array();
         $custom_fees_end= !empty($_GET['search_fees_end']) ? array('key' => '_fees', 'value' => $_GET['search_fees_end'], 'compare' => '<=', 'type' => 'numeric') : array();
         $custom_language= !empty($_GET['search_language']) ? array('key' => '_language', 'value' => $_GET['search_language']) : array();
@@ -106,7 +106,7 @@ get_header();
             <?php if ( $the_query->have_posts() ) : ?>
             <?php while ( $the_query->have_posts() ) : $the_query->the_post(); 
             $type= get_event_type();
-            if($type[0]->term_id == $_GET['search_event_types'] || $_GET['search_event_types'] === "select" || $_GET['search_event_types'] === NULL):
+            // if($type[0]->term_id == $_GET['search_event_types'] || $_GET['search_event_types'] === "select" || $_GET['search_event_types'] === NULL):
                 ?>
                 <article>
                     <h3><?php the_title() ?></h3>
@@ -115,7 +115,7 @@ get_header();
                     
                 </article>
             <?php 
-                endif;
+                // endif;
                 endwhile; 
                 wp_reset_postdata(); 
             ?>
