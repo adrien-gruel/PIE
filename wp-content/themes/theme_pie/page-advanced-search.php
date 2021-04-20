@@ -77,12 +77,13 @@ get_header();
         $custom_city = !empty($_GET['search_city']) ? array('key' => '_city', 'value' => $_GET['search_city']) : array();
         $custom_country= !empty($_GET['search_country']) ? array('key' => '_country', 'value' => $_GET['search_country']) : array();
         $custom_accessibility= $_GET['search_accessibility'] != 'select' ? array('key' => '_accessibility', 'value' => $_GET['search_accessibility']) : array();
-        $custom_start_date= !empty($_GET['search_start_date']) ? array('key' => '_start_date', 'value' => $_GET['search_start_date'], 'compare' => '>=', 'type' => 'DATE') : array();
-        $custom_end_date= !empty($_GET['search_end_date']) ? array('key' => '_end_date', 'value' => $_GET['search_end_date'], 'compare' => '<=', 'type' => 'DATE') : array();
+        $custom_start_date= !empty($_GET['search_start_date']) ? array('key' => '_event_start_date', 'value' => $_GET['search_start_date'], 'compare' => '>=', 'type' => 'DATE') : array();
+        $custom_end_date= !empty($_GET['search_end_date']) ? array('key' => '_event_end_date', 'value' => $_GET['search_end_date'], 'compare' => '<=', 'type' => 'DATE') : array();
         $custom_fees_start= !empty($_GET['search_fees_start']) ? array('key' => '_fees', 'value' => $_GET['search_fees_start'], 'compare' => '>=', 'type' => 'numeric') : array();
         $custom_fees_end= !empty($_GET['search_fees_end']) ? array('key' => '_fees', 'value' => $_GET['search_fees_end'], 'compare' => '<=', 'type' => 'numeric') : array();
         $custom_language= !empty($_GET['search_language']) ? array('key' => '_language', 'value' => $_GET['search_language']) : array();
 
+            if($_GET['search_event_types'] != NULL){
 
                 $args = array( 
                     'post_type' => 'event_listing', 
@@ -100,7 +101,13 @@ get_header();
                  );
                 
                 $the_query = new WP_Query( $args ); 
+                } else {
+                    $args = array(
+                        'post_type' => 'event_listing'
+                    );
+                    $the_query = new WP_Query( $args ); 
 
+                }
             ?>
             
             <?php if ( $the_query->have_posts() ) : ?>
@@ -110,7 +117,9 @@ get_header();
                 ?>
                 <article>
                     <h3><?php the_title() ?></h3>
-                    <p><?php echo $post->_fees?></p>
+                    <p>Fees: <?php echo $post->_fees?></p>
+                    <p>Starting date: <?php echo $post->_event_start_date?></p>
+                    <p>Ending date: <?php get_event_start_date()?></p>
                     <a href="<?php the_permalink() ?>"> Voir</a>
                     
                 </article>
