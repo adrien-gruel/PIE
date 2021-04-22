@@ -1,0 +1,14 @@
+.article-section{
+    position: relative;
+    .top-bot-orange{
+        height: 15vh;
+        background-color: $primary;
+    }
+    article{
+        position: absolute;
+        width: 70vw;
+        background-color: white;
+        left: 10vw;
+        right: 10vw;
+    }
+}
