@@ -8,7 +8,7 @@
 
 <section class="section-event">
 
-<?php echo apply_shortcodes('[events]'); ?>
+<?php echo apply_shortcodes('[events per_page="3" cancelled="false"]'); ?>
 
 
 </section>

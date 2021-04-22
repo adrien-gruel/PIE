@@ -110,21 +110,25 @@ get_header();
                 }
             ?>
             
+
             <?php if ( $the_query->have_posts() ) : ?>
             <?php while ( $the_query->have_posts() ) : $the_query->the_post(); 
-            $type= get_event_type();
-            // if($type[0]->term_id == $_GET['search_event_types'] || $_GET['search_event_types'] === "select" || $_GET['search_event_types'] === NULL):
+            $type = get_event_listing_types();
+            $today = date("Ymd");  
+            $timestamp = strtotime($today);
+            $expire_date = strtotime($post->_event_end_date);
+            if(($type[0]->term_id == $_GET['search_event_types'] || $_GET['search_event_types'] === "select" || $_GET['search_event_types'] === NULL) && $timestamp <= $expire_date):
                 ?>
                 <article>
                     <h3><?php the_title() ?></h3>
                     <p>Fees: <?php echo $post->_fees?></p>
-                    <p>Starting date: <?php echo $post->_event_start_date?></p>
-                    <p>Ending date: <?php get_event_start_date()?></p>
+                    <p>Starting date: <?php echo $post->_event_start_date ?></p>
+                    <p>Ending date: <?php echo $post->_event_end_date?></p>
                     <a href="<?php the_permalink() ?>"> Voir</a>
                     
                 </article>
             <?php 
-                // endif;
+                endif;
                 endwhile; 
                 wp_reset_postdata(); 
             ?>

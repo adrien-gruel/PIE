@@ -8,6 +8,10 @@ do_action('set_single_listing_view_count');
 $event = $post;
 ?>
 <div class="single_event_listing">
+    <?php display_event_type() ?>
+    <?php display_event_category() ?>
+    <?php echo $post->_country ?>
+
 
     <div class="wpem-main wpem-single-event-page">
         <?php if (get_option('event_manager_hide_expired_content', 1) && 'expired' === $post->post_status): ?>
