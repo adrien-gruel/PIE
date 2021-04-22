@@ -11,8 +11,8 @@ get_header();
 ?>
 
 	<main id="primary" class="site-main">
-		<section>
-			<div></div>
+		<section class="article-section">
+			<div class="top-bot-orange"></div>
 			<div></div>
 			<article>
 			<?php
@@ -31,7 +31,7 @@ get_header();
 			endwhile; // End of the loop.
 			?>
 			</article>
-			<div></div>
+			<div class="top-bot-orange"></div>
 		</section>
 	</main><!-- #main -->
 

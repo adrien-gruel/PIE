@@ -1479,4 +1479,34 @@ form .input {
   margin: 0px 10% 120px !important;
 }
 
+/*--------------------------------------------------------------
+# Sections account pages
+--------------------------------------------------------------*/
+.section-Account {
+  padding: 20px;
+}
+.section-Account article .shadow {
+  width: 80vw;
+  margin: 0 auto;
+  box-shadow: 5px 10px 5px #9A9A9A;
+}
+
+/*--------------------------------------------------------------
+# Sections articles
+--------------------------------------------------------------*/
+.article-section {
+  position: relative;
+}
+.article-section .top-bot-orange {
+  height: 15vh;
+  background-color: #ff8024;
+}
+.article-section article {
+  position: absolute;
+  width: 70vw;
+  background-color: white;
+  left: 10vw;
+  right: 10vw;
+}
+
 /*# sourceMappingURL=style.css.map */
