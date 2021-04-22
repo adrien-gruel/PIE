@@ -2,7 +2,12 @@
 	get_header(); 
 	$titleNews = get_field('titre_partie_news');
 	$titleContact = get_field('titre_partie_contact');
+
 ?>
+
+
+
+
 
 <h1 class="principal-title"><?php the_title() ?></h1>
 
