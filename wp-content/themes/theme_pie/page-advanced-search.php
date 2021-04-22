@@ -83,6 +83,7 @@ get_header();
         $custom_fees_end= !empty($_GET['search_fees_end']) ? array('key' => '_fees', 'value' => $_GET['search_fees_end'], 'compare' => '<=', 'type' => 'numeric') : array();
         $custom_language= !empty($_GET['search_language']) ? array('key' => '_language', 'value' => $_GET['search_language']) : array();
 
+            if($_GET['search_event_types'] != NULL){
 
                 $args = array( 
                     'post_type' => 'event_listing', 
@@ -100,22 +101,34 @@ get_header();
                  );
                 
                 $the_query = new WP_Query( $args ); 
+                } else {
+                    $args = array(
+                        'post_type' => 'event_listing'
+                    );
+                    $the_query = new WP_Query( $args ); 
 
+                }
             ?>
             
+
             <?php if ( $the_query->have_posts() ) : ?>
             <?php while ( $the_query->have_posts() ) : $the_query->the_post(); 
-            $type= get_event_type();
-            // if($type[0]->term_id == $_GET['search_event_types'] || $_GET['search_event_types'] === "select" || $_GET['search_event_types'] === NULL):
+            $type = get_event_listing_types();
+            $today = date("Ymd");  
+            $timestamp = strtotime($today);
+            $expire_date = strtotime($post->_event_end_date);
+            if(($type[0]->term_id == $_GET['search_event_types'] || $_GET['search_event_types'] === "select" || $_GET['search_event_types'] === NULL) && $timestamp <= $expire_date):
                 ?>
                 <article>
                     <h3><?php the_title() ?></h3>
-                    <p><?php echo $post->_fees?></p>
+                    <p>Fees: <?php echo $post->_fees?></p>
+                    <p>Starting date: <?php echo $post->_event_start_date ?></p>
+                    <p>Ending date: <?php echo $post->_event_end_date?></p>
                     <a href="<?php the_permalink() ?>"> Voir</a>
                     
                 </article>
             <?php 
-                // endif;
+                endif;
                 endwhile; 
                 wp_reset_postdata(); 
             ?>

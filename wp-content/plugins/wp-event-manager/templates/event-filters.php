@@ -10,7 +10,7 @@
 	<?php do_action( 'event_manager_event_filters_search_events_start', $atts ); ?>
 		 <div class="wpem-row">
 			<!-- Search by keywords section start -->
-			<div class="wpem-col">
+			<div class="wpem-col" style="display: none">
 				<!-- shows default keywords text field  start-->
 				<div class="wpem-form-group">
 				<label for="search_keywords" class="wpem-form-label"><?php _e( 'Keywords', 'wp-event-manager' ); ?></label>
@@ -21,7 +21,7 @@
 			<!-- Search by keywords section end-->
 
 			<!-- Search by location section start -->
-			<div class="wpem-col">
+			<div class="wpem-col" style="display: none">
 			<div class="wpem-form-group wpem-location-container">
 				<label for="search_location" class="wpem-form-label"><?php _e( 'Location', 'wp-event-manager' ); ?></label>
 				<input type="text" name="search_location" id="search_location"  placeholder="<?php esc_attr_e( 'Location', 'wp-event-manager' ); ?>" value="<?php echo esc_attr( $location ); ?>" />
