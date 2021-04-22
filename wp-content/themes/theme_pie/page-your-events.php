@@ -29,7 +29,7 @@ $the_query = new WP_Query( $args );
 <?php endif; ?>
 
 <div id="create-project-button">
-    <a href="./add-organizer">Create event</a>
+    <a href="./create-event">Create event</a>
 </div>
 
 
