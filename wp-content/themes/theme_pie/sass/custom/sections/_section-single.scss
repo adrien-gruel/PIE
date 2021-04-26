@@ -72,3 +72,27 @@
         padding-right: 25%;
     }
 }
+
+
+// ----------- RESPONSIVE feature cards -----------  //
+
+@media screen and (max-width: 1024px) {
+
+    .section-single article .image-mise-en-avant img {
+        height: initial;
+    }
+
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .nav-links {
+        flex-direction: column;
+    }
+
+    .post-navigation .nav-next {
+        text-align: initial;
+    }
+
+}
