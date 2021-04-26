@@ -1408,6 +1408,33 @@ form .input {
     margin: 60px 0px;
   }
 }
+/*--------------------------------------------------------------
+# Waves
+--------------------------------------------------------------*/
+.wave {
+  position: absolute;
+  overflow: hidden;
+}
+.wave-top-left {
+  top: -15%;
+  left: -13%;
+  z-index: -5;
+}
+.wave-top-right {
+  top: -8%;
+  right: -12.5%;
+  z-index: -5;
+}
+.wave-bottom-left {
+  left: -15%;
+  z-index: -5;
+}
+
+@media screen and (max-width: 850px) {
+  .wave-top-left {
+    display: none;
+  }
+}
 /* Sections */
 /*--------------------------------------------------------------
 # Sections login & register form
@@ -1456,6 +1483,7 @@ form .input {
 # Sections cards blog
 --------------------------------------------------------------*/
 .section-blog {
+  position: relative;
   padding: 0px 10% 80px;
 }
 
@@ -1473,10 +1501,19 @@ form .input {
   }
 }
 /*--------------------------------------------------------------
-# Sections cards feature
+# Sections home contact
 --------------------------------------------------------------*/
 .section-homeContact {
   margin: 0px 10% 120px !important;
+  position: relative;
+}
+
+/*--------------------------------------------------------------
+# Sections home events
+--------------------------------------------------------------*/
+.section-homeEvent {
+  margin: 60px 10%;
+  position: relative;
 }
 
 /*--------------------------------------------------------------

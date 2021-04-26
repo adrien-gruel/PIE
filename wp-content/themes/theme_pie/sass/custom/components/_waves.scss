@@ -1,0 +1,33 @@
+.wave {
+    position: absolute;
+    overflow:hidden;
+
+    &-top-left {
+        top: -15%;
+        left: -13%;
+        z-index: -5;
+    }
+    
+    &-top-right{
+        top: -8%;
+        right: -12.5%;
+        z-index: -5;
+    }
+    
+    &-bottom-left {
+        left: -15%;
+        z-index: -5;
+    }
+
+}
+
+// ----------- RESPONSIVE waves -----------  //
+
+@media screen and (max-width:850px) 
+{
+    .wave {
+        &-top-left {
+            display: none;
+        }
+    }
+}
