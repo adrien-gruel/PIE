@@ -4,14 +4,15 @@
         <?php the_post_thumbnail() ?>
         <div class="black-opacity"></div>
         <div class="headline-banner">
-            <h1><?php the_title() ?></h1>
+            <h1>PROFILE</h1>
         </div>
     </section>
 
-    <section class="section-Account">
+    <section class="section-user">
         <article>
            <?php the_content() ?> 
-        </article>          
-    </section> <!-- My Account page  -->
+        </article>
+    </section>
 
 <?php get_footer() ?>
+

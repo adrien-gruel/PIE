@@ -958,9 +958,20 @@ textarea {
   align-items: center;
 }
 
-.card-article-header div, .form-contact form p {
+.search .search_what, .card-article-header div, .form-contact form p {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.no-events-found, .title-banner .headline-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search .search_where, .search .search_when {
+  display: flex;
   justify-content: space-between;
 }
 
@@ -1435,6 +1446,40 @@ form .input {
     display: none;
   }
 }
+/*--------------------------------------------------------------
+# Title banner
+--------------------------------------------------------------*/
+.title-banner {
+  height: 200px;
+  width: 100%;
+}
+.title-banner img {
+  position: absolute;
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+.title-banner .black-opacity {
+  position: absolute;
+  height: 200px;
+  width: 100%;
+  background: #262626;
+  opacity: 0.4;
+  z-index: 3;
+}
+.title-banner .headline-banner {
+  height: 200px;
+  position: absolute;
+  width: 100%;
+}
+.title-banner .headline-banner h1 {
+  font-size: 48px;
+  z-index: 4;
+  margin: 0;
+  color: white;
+  font-family: "Oswald", sans-serif;
+}
+
 /* Sections */
 /*--------------------------------------------------------------
 # Sections login & register form
@@ -1520,12 +1565,11 @@ form .input {
 # Sections account pages
 --------------------------------------------------------------*/
 .section-Account {
-  padding: 20px;
+  margin: 120px 10%;
 }
-.section-Account article .shadow {
-  width: 80vw;
-  margin: 0 auto;
-  box-shadow: 5px 10px 5px #9A9A9A;
+.section-Account article {
+  padding: 60px 40px;
+  box-shadow: 5px 5px 10px #afafaf;
 }
 
 /*--------------------------------------------------------------
@@ -1591,39 +1635,7 @@ form .input {
 # Sections advanced search
 --------------------------------------------------------------*/
 .advanced-search {
-  margin-left: 10%;
-  margin-right: 10%;
-}
-
-.title-banner {
-  height: 200px;
-}
-.title-banner img {
-  position: absolute;
-  height: 200px;
-  width: 100%;
-  object-fit: cover;
-}
-.title-banner .div-1 {
-  position: absolute;
-  height: 200px;
-  width: 100%;
-  background: #262626;
-  opacity: 0.4;
-  z-index: 3;
-}
-.title-banner .div-2 {
-  height: 200px;
-  position: absolute;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.title-banner .div-2 h1 {
-  z-index: 4;
-  margin: 0;
-  color: white;
+  margin: 0 10%;
 }
 
 .search-form {
@@ -1635,50 +1647,29 @@ form .input {
   margin-top: 20px;
 }
 
-.search_where_container {
+.search {
   padding-top: 50px;
 }
-.search_where_container h2 {
+.search h2 {
   font-family: "Oswald", sans-serif;
   font-size: 40px;
   color: black;
 }
-.search_where_container .search_where {
-  display: flex;
-  justify-content: space-between;
-}
-
-.search_when_container {
-  padding-top: 50px;
-}
-.search_when_container h2 {
-  font-family: "Oswald", sans-serif;
-  font-size: 40px;
-  color: black;
-}
-.search_when_container .search_when {
-  display: flex;
-  justify-content: space-between;
-}
-
-.search_what_container {
-  padding-top: 50px;
-}
-.search_what_container h2 {
-  font-family: "Oswald", sans-serif;
-  font-size: 40px;
-  color: black;
-}
-.search_what_container .search_what {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
 .submit-search {
   text-align: center;
-  margin-top: 50px;
-  margin-bottom: 150px;
+  margin: 60px 0px;
+}
+
+.no-events-found {
+  background: #ffa8a8;
+  border: solid red 1px;
+  color: red;
+  padding: 20px;
+  margin: 30px auto 120px;
+  width: 80%;
+}
+.no-events-found p {
+  margin-bottom: 0px;
 }
 
 @media (max-width: 1024px) {
@@ -1741,6 +1732,15 @@ form .input {
 .section-calendar {
   width: 80%;
   margin: 80px auto;
+}
+
+/*--------------------------------------------------------------
+# Sections Calendar
+--------------------------------------------------------------*/
+.section-user {
+  margin: 120px 10%;
+  padding-top: 40px;
+  border: solid 1px #f6f6f6;
 }
 
 /*# sourceMappingURL=style.css.map */
