@@ -1586,6 +1586,43 @@ form .input {
   text-decoration: none;
   color: #ff8024;
 }
+.section-single .single_event_listing {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10%;
+}
+.section-single .single_event_listing .image-logo {
+  display: flex;
+}
+.section-single .single_event_listing .image-logo img {
+  width: 200px;
+  align-self: center;
+  justify-content: center;
+}
+.section-single .description {
+  background-color: #ff8024;
+  width: 100%;
+  padding: 20px 0;
+}
+.section-single .description h2 {
+  color: white;
+}
+.section-single .description p {
+  padding: 5px 10%;
+  color: white;
+}
+
+.event-single {
+  padding: 0 !important;
+}
+
+.single_event_listing-Place {
+  display: flex;
+  padding: 0 10%;
+}
+.single_event_listing-Place .Information {
+  padding-right: 25%;
+}
 
 /*--------------------------------------------------------------
 # Sections advanced search
@@ -1616,17 +1653,10 @@ form .input {
   height: 200px;
   position: absolute;
   width: 100%;
- 
-/*--------------------------------------------------------------
-# Sections 404
---------------------------------------------------------------*/
-.section-404 {
-  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
 .title-banner .div-2 h1 {
   z-index: 4;
   margin: 0;
@@ -1731,6 +1761,15 @@ form .input {
   .your-events-title {
     text-align: center;
   }
+}
+/*--------------------------------------------------------------
+# Sections 404
+--------------------------------------------------------------*/
+.section-404 {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /*# sourceMappingURL=style.css.map */
