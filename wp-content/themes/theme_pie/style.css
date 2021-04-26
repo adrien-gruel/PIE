@@ -1735,4 +1735,12 @@ form .input {
   justify-content: center;
 }
 
+/*--------------------------------------------------------------
+# Sections Calendar
+--------------------------------------------------------------*/
+.section-calendar {
+  width: 80%;
+  margin: 80px auto;
+}
+
 /*# sourceMappingURL=style.css.map */
