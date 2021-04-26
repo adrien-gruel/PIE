@@ -104,6 +104,7 @@ get_header();
                 if($_GET['search_event_types'] != NULL){
                     $args = array( 
                         'post_type' => 'event_listing', 
+                        'post_status' => 'published',
                         'meta_query' => array(
                             $custom_city,
                             $custom_country,
