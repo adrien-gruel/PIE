@@ -1257,15 +1257,15 @@ h1 {
 /*--------------------------------------------------------------
 # Inputs
 --------------------------------------------------------------*/
-form .input {
-  background: transparent;
-  box-shadow: none;
-  border: none;
-  outline: none;
-  padding: 10px 0px;
-  font-size: 16px;
-  font-weight: 400;
-  border-bottom: solid #262626 2px;
+.section-createEvent form input, .section-createEvent form select, form .input {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+  outline: none !important;
+  padding: 10px 0px !important;
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  border-bottom: solid #262626 2px !important;
 }
 
 .um input[type=submit].um-button, .um input[type=submit].um-button:focus, .um a.um-button.um-disabled:hover, .um a.um-button.um-disabled:focus, .um a.um-button.um-disabled:active {
@@ -1668,6 +1668,20 @@ form .input {
   padding-right: 25%;
 }
 
+@media screen and (max-width: 1024px) {
+  .section-single article .image-mise-en-avant img {
+    height: initial;
+  }
+}
+@media screen and (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+  }
+
+  .post-navigation .nav-next {
+    text-align: initial;
+  }
+}
 /*--------------------------------------------------------------
 # Sections advanced search
 --------------------------------------------------------------*/
@@ -1772,12 +1786,28 @@ form .input {
 }
 
 /*--------------------------------------------------------------
-# Sections Calendar
+# Sections User
 --------------------------------------------------------------*/
 .section-user {
   margin: 120px 10%;
   padding-top: 40px;
   border: solid 1px #f6f6f6;
+}
+
+/*--------------------------------------------------------------
+# Sections create event
+--------------------------------------------------------------*/
+.section-createEvent form {
+  width: 80%;
+  margin: auto;
+}
+.section-createEvent h2 {
+  font-family: "Oswald", sans-serif;
+}
+
+.wpem-form-wrapper .wpem-form-group {
+  margin-bottom: 30px !important;
+  margin-top: 20px !important;
 }
 
 /*# sourceMappingURL=style.css.map */
