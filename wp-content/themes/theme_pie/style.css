@@ -1546,4 +1546,14 @@ form .input {
   right: 10vw;
 }
 
+/*--------------------------------------------------------------
+# Sections 404
+--------------------------------------------------------------*/
+.section-404 {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /*# sourceMappingURL=style.css.map */
