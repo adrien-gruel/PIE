@@ -36,5 +36,39 @@
                 color: $primary;
             }
         }
-    
+    .single_event_listing{
+        display: flex;
+        justify-content: space-between;
+        padding: 0 10%;
+        .image-logo{
+            display: flex;
+            img{
+                width: 200px;
+                align-self: center;
+                justify-content: center;
+            }
+        }
+    }
+    .description{
+        background-color: $primary;
+        width: 100%;
+        padding: 20px 0;
+        h2{
+            color: $white;
+        }
+        p{
+            padding: 5px 10%;
+            color: $white;
+        }
+    }
+}
+.event-single{
+    padding: 0 !important;
+}
+.single_event_listing-Place{
+    display: flex; 
+    padding: 0 10% ;
+    .Information{
+        padding-right: 25%;
+    }
 }

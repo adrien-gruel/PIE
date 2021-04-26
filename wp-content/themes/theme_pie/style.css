@@ -1630,13 +1630,47 @@ form .input {
   text-decoration: none;
   color: #ff8024;
 }
+.section-single .single_event_listing {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10%;
+}
+.section-single .single_event_listing .image-logo {
+  display: flex;
+}
+.section-single .single_event_listing .image-logo img {
+  width: 200px;
+  align-self: center;
+  justify-content: center;
+}
+.section-single .description {
+  background-color: #ff8024;
+  width: 100%;
+  padding: 20px 0;
+}
+.section-single .description h2 {
+  color: white;
+}
+.section-single .description p {
+  padding: 5px 10%;
+  color: white;
+}
+
+.event-single {
+  padding: 0 !important;
+}
+
+.single_event_listing-Place {
+  display: flex;
+  padding: 0 10%;
+}
+.single_event_listing-Place .Information {
+  padding-right: 25%;
+}
 
 /*--------------------------------------------------------------
 # Sections advanced search
 --------------------------------------------------------------*/
-.advanced-search {
-  margin: 0 10%;
-}
 
 .search-form {
   width: 60%;
@@ -1716,6 +1750,7 @@ form .input {
     text-align: center;
   }
 }
+
 /*--------------------------------------------------------------
 # Sections 404
 --------------------------------------------------------------*/
