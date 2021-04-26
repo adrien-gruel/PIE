@@ -1,24 +1,32 @@
 %cta {
-    color: $white;
-    background: $primary;
-    font-size: $size16;
-    font-family: $roboto;
-    border: solid $primary 2px; 
-    font-weight: $weight700;
-    text-transform: uppercase;
-    padding: 10px 12px;
-    width: 200px;
-    cursor: pointer;
-    display: block;
-    margin: auto;
-    text-decoration: none;
+    color: $white !important;
+    background: $primary !important;
+    font-size: $size16 !important;
+    font-family: $roboto !important;
+    border: solid $primary 2px !important; 
+    font-weight: $weight700 !important;
+    text-transform: uppercase !important;
+    padding: 10px 12px !important;
+    width: 200px !important;
+    cursor: pointer !important;
+    display: block !important;
+    margin: auto !important;
+    text-decoration: none !important;
     &:hover {
-        color: $primary;
-        border: solid $primary 2px;
-        background: $white;   
+        color: $primary !important;
+        border: solid $primary 2px !important;
+        background: $white !important;   
     }
 }
 
 .form-contact form p .cta {
     @extend %cta;
+}
+
+.cta-advanced-search{
+    @extend %cta;
+}
+
+.cta-create-project-button{
+    @extend %cta 
 }

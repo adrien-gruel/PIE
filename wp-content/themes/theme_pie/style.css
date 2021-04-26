@@ -1125,25 +1125,25 @@ textarea {
 /*--------------------------------------------------------------
 # Call to actions
 --------------------------------------------------------------*/
-.card-feature a, .form-contact form p .cta {
-  color: white;
-  background: #ff8024;
-  font-size: 16px;
-  font-family: "Roboto", sans-serif;
-  border: solid #ff8024 2px;
-  font-weight: 700;
-  text-transform: uppercase;
-  padding: 10px 12px;
-  width: 200px;
-  cursor: pointer;
-  display: block;
-  margin: auto;
-  text-decoration: none;
+.card-feature a, .cta-create-project-button, .cta-advanced-search, .form-contact form p .cta {
+  color: white !important;
+  background: #ff8024 !important;
+  font-size: 16px !important;
+  font-family: "Roboto", sans-serif !important;
+  border: solid #ff8024 2px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  padding: 10px 12px !important;
+  width: 200px !important;
+  cursor: pointer !important;
+  display: block !important;
+  margin: auto !important;
+  text-decoration: none !important;
 }
-.card-feature a:hover, .form-contact form p .cta:hover {
-  color: #ff8024;
-  border: solid #ff8024 2px;
-  background: white;
+.card-feature a:hover, .cta-create-project-button:hover, .cta-advanced-search:hover, .form-contact form p .cta:hover {
+  color: #ff8024 !important;
+  border: solid #ff8024 2px !important;
+  background: white !important;
 }
 
 /*--------------------------------------------------------------
@@ -1408,6 +1408,33 @@ form .input {
     margin: 60px 0px;
   }
 }
+/*--------------------------------------------------------------
+# Waves
+--------------------------------------------------------------*/
+.wave {
+  position: absolute;
+  overflow: hidden;
+}
+.wave-top-left {
+  top: -15%;
+  left: -13%;
+  z-index: -5;
+}
+.wave-top-right {
+  top: -8%;
+  right: -12.5%;
+  z-index: -5;
+}
+.wave-bottom-left {
+  left: -15%;
+  z-index: -5;
+}
+
+@media screen and (max-width: 850px) {
+  .wave-top-left {
+    display: none;
+  }
+}
 /* Sections */
 /*--------------------------------------------------------------
 # Sections login & register form
@@ -1456,6 +1483,7 @@ form .input {
 # Sections cards blog
 --------------------------------------------------------------*/
 .section-blog {
+  position: relative;
   padding: 0px 10% 80px;
 }
 
@@ -1473,10 +1501,19 @@ form .input {
   }
 }
 /*--------------------------------------------------------------
-# Sections cards feature
+# Sections home contact
 --------------------------------------------------------------*/
 .section-homeContact {
   margin: 0px 10% 120px !important;
+  position: relative;
+}
+
+/*--------------------------------------------------------------
+# Sections home events
+--------------------------------------------------------------*/
+.section-homeEvent {
+  margin: 60px 10%;
+  position: relative;
 }
 
 /*--------------------------------------------------------------
@@ -1548,6 +1585,152 @@ form .input {
 .section-single article a {
   text-decoration: none;
   color: #ff8024;
+}
+
+/*--------------------------------------------------------------
+# Sections advanced search
+--------------------------------------------------------------*/
+.advanced-search {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.title-banner {
+  height: 200px;
+}
+.title-banner img {
+  position: absolute;
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+.title-banner .div-1 {
+  position: absolute;
+  height: 200px;
+  width: 100%;
+  background: #262626;
+  opacity: 0.4;
+  z-index: 3;
+}
+.title-banner .div-2 {
+  height: 200px;
+  position: absolute;
+  width: 100%;
+ 
+/*--------------------------------------------------------------
+# Sections 404
+--------------------------------------------------------------*/
+.section-404 {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title-banner .div-2 h1 {
+  z-index: 4;
+  margin: 0;
+  color: white;
+}
+
+.search-form {
+  width: 60%;
+}
+.search-form .input {
+  font-size: 20px;
+  width: 200px;
+  margin-top: 20px;
+}
+
+.search_where_container {
+  padding-top: 50px;
+}
+.search_where_container h2 {
+  font-family: "Oswald", sans-serif;
+  font-size: 40px;
+  color: black;
+}
+.search_where_container .search_where {
+  display: flex;
+  justify-content: space-between;
+}
+
+.search_when_container {
+  padding-top: 50px;
+}
+.search_when_container h2 {
+  font-family: "Oswald", sans-serif;
+  font-size: 40px;
+  color: black;
+}
+.search_when_container .search_when {
+  display: flex;
+  justify-content: space-between;
+}
+
+.search_what_container {
+  padding-top: 50px;
+}
+.search_what_container h2 {
+  font-family: "Oswald", sans-serif;
+  font-size: 40px;
+  color: black;
+}
+.search_what_container .search_what {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.submit-search {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 150px;
+}
+
+@media (max-width: 1024px) {
+  .wpem-event-details {
+    text-align: left;
+  }
+
+  .advanced-search {
+    text-align: center;
+  }
+
+  .search-form {
+    width: auto;
+    text-align: center;
+  }
+
+  .search_where_container .search_where {
+    flex-direction: column;
+  }
+  .search_when_container .search_when {
+    flex-direction: column;
+  }
+  .search_what_container .search_what {
+    flex-direction: column;
+  }
+}
+/*--------------------------------------------------------------
+# Sections your events
+--------------------------------------------------------------*/
+.container-events {
+  margin: 0px 10%;
+  margin-top: 100px;
+}
+
+.create-project-button-container {
+  margin: 50px 0px;
+}
+.create-project-button-container .cta-create-project-button {
+  text-align: center;
+}
+
+@media screen and (max-width: 1024px) {
+  .your-events-title {
+    text-align: center;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
