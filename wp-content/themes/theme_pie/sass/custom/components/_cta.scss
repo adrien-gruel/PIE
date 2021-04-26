@@ -24,5 +24,9 @@
 }
 
 .cta-advanced-search{
+    @extend %cta;
+}
+
+.cta-create-project-button{
     @extend %cta 
 }
