@@ -16,13 +16,15 @@ get_header();
 ?>
 
 	<main id="primary" class="site-main">
+
         <section class="title-banner">
             <?php the_post_thumbnail() ?>
-            <div class="div-1"></div>
-            <div class="div-2">
-                <h1>Advanced search</h1>
+            <div class="black-opacity"></div>
+            <div class="headline-banner">
+                <h1><?php the_title() ?></h1>
             </div>
         </section>
+        
         <section class="advanced-search">
             <div>
                 <form method="GET" action="advanced-search" class="search-form">
@@ -185,7 +187,9 @@ get_header();
                         wp_reset_postdata(); 
                     ?>
                     <?php else:  ?>
-                        <p>No events found</p>
+                        <div class="no-events-found">
+                            <p>No events found</p>
+                        </div>
                     <?php endif; ?>
                 </div>
 

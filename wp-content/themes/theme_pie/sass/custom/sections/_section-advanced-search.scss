@@ -1,104 +1,49 @@
 .advanced-search{
-    margin-left: 10%;
-    margin-right: 10%;
-
-}
-
-
-.title-banner{
-    height: 200px;
-    img{
-        position: absolute;
-        height: 200px;
-        width: 100%;
-        object-fit: cover;
-    }
-
-    .div-1{
-        position: absolute;
-        height: 200px;
-        width: 100%;
-        background: $black;
-        opacity: 0.4;
-        z-index: 3;
-    }
-
-    .div-2{
-        height: 200px;
-        position: absolute;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        h1{
-            z-index: 4;
-            margin: 0;
-            color: $white;
-        }
-    }
+    margin: 0 10%;
 }
 
 .search-form{
+    width: 60%;
     .input{
         font-size: 20px;
         width: 200px;
         margin-top: 20px;
     }
-    width: 60%;
 }
 
-.search_where_container{
+.search {
     padding-top: 50px;
-
-
-    h2{
+    h2 {
         font-family: $oswald;
         font-size: 40px;
         color: black;
     }
+    .search_where, .search_when {
+        @extend %flexJbetween;
+    }
 
-    .search_where{
-        display: flex;
-        justify-content: space-between;
+    .search_what {
+        @extend %flexWrapJbetween;
     }
 }
 
-.search_when_container{
-    padding-top: 50px;
-
-    h2{
-        font-family: $oswald;
-        font-size: 40px;
-        color: black;
-    }
-
-    .search_when{
-        display: flex;
-        justify-content: space-between;
-    }
-}
-
-.search_what_container{
-    padding-top: 50px;
-
-    h2{
-        font-family: $oswald;
-        font-size: 40px;
-        color: black;
-    }
-
-    .search_what{
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-    }
-}
 
 .submit-search{
     text-align: center;
-    margin-top: 50px;
-    margin-bottom: 150px;
+    margin: 60px 0px;
+}
+
+.no-events-found {
+    background: rgb(255, 168, 168);
+    border: solid red 1px;
+    color: red;
+    padding: 20px;
+    margin: 30px auto 120px;
+    width: 80%;
+    @extend %flexJcenterAcenter;
+    p {
+        margin-bottom: 0px;
+    }
 }
 
 @media (max-width: 1024px){
