@@ -13,7 +13,7 @@
 
 <section class="section-event">
 
-<?php echo apply_shortcodes('[events per_page="3" cancelled="false"]'); ?>
+<?php echo apply_shortcodes('[events per_page="3" orderby="event_start_date" cancelled="false" layout_type="box" show_more="false"]'); ?>
 
 
 </section>
