@@ -1125,7 +1125,7 @@ textarea {
 /*--------------------------------------------------------------
 # Call to actions
 --------------------------------------------------------------*/
-.card-feature a, .cta-advanced-search, .form-contact form p .cta {
+.card-feature a, .cta-create-project-button, .cta-advanced-search, .form-contact form p .cta {
   color: white !important;
   background: #ff8024 !important;
   font-size: 16px !important;
@@ -1140,7 +1140,7 @@ textarea {
   margin: auto !important;
   text-decoration: none !important;
 }
-.card-feature a:hover, .cta-advanced-search:hover, .form-contact form p .cta:hover {
+.card-feature a:hover, .cta-create-project-button:hover, .cta-advanced-search:hover, .form-contact form p .cta:hover {
   color: #ff8024 !important;
   border: solid #ff8024 2px !important;
   background: white !important;
@@ -1669,6 +1669,26 @@ form .input {
   }
   .search_what_container .search_what {
     flex-direction: column;
+  }
+}
+/*--------------------------------------------------------------
+# Sections your events
+--------------------------------------------------------------*/
+.container-events {
+  margin: 0px 10%;
+  margin-top: 100px;
+}
+
+.create-project-button-container {
+  margin: 50px 0px;
+}
+.create-project-button-container .cta-create-project-button {
+  text-align: center;
+}
+
+@media screen and (max-width: 1024px) {
+  .your-events-title {
+    text-align: center;
   }
 }
 
