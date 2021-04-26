@@ -1,0 +1,18 @@
+.container-events{
+    margin: 0px 10%;
+    margin-top: 100px;
+}
+
+
+.create-project-button-container{
+    margin: 50px 0px;
+    .cta-create-project-button{
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .your-events-title{
+        text-align: center;
+    }
+}
