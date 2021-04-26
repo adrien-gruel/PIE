@@ -37,3 +37,14 @@
     flex-wrap: wrap;
     justify-content: center;
 }
+
+%flexJcenterAcenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+%flexJbetween {
+    display: flex;
+    justify-content: space-between;
+}
