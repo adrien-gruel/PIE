@@ -1575,17 +1575,10 @@ form .input {
   height: 200px;
   position: absolute;
   width: 100%;
- 
-/*--------------------------------------------------------------
-# Sections 404
---------------------------------------------------------------*/
-.section-404 {
-  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
 .title-banner .div-2 h1 {
   z-index: 4;
   margin: 0;
@@ -1691,6 +1684,14 @@ form .input {
     text-align: center;
   }
 }
-
+/*--------------------------------------------------------------
+# Sections 404
+--------------------------------------------------------------*/
+.section-404 {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 /*# sourceMappingURL=style.css.map */
