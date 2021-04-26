@@ -139,6 +139,7 @@ get_header();
                                 <div class="event_listing event-type-appearance-or-signing post-274 type-event_listing status-expired has-post-thumbnail hentry event_listing_type-appearance-or-signing"> 
                                     <a href="<?php the_permalink() ?>" class="wpem-event-action-url event-style-color dinner-or-gala">
                                         <div class="wpem-event-banner">
+                                            
                                             <div class="wpem-event-banner-img" style="background-image: url('<?php echo get_event_thumbnail() ?>')">
                                                 <div class="wpem-event-date">
                                                     <div class="wpem-event-date-type">
