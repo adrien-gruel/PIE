@@ -1,4 +1,6 @@
-<?php get_header(); ?>
+<?php get_header(); 
+?>
+
 
 <h1 class="principal-title"><?php the_title() ?></h1>
 

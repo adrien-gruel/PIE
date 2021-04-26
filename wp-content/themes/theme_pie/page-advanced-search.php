@@ -17,7 +17,7 @@ get_header();
 
 	<main id="primary" class="site-main">
         <div class="title-banner">
-        <h1>Advanced search</h1>
+            <h1>Advanced search</h1>
         </div>
 
         <form method="GET" action="advanced-search">
@@ -113,7 +113,7 @@ get_header();
 
             <?php if ( $the_query->have_posts() ) : ?>
             <?php while ( $the_query->have_posts() ) : $the_query->the_post(); 
-            $type = get_event_listing_types();
+            $type = get_event_type();
             $today = date("Ymd");  
             $timestamp = strtotime($today);
             $expire_date = strtotime($post->_event_end_date);
@@ -121,7 +121,10 @@ get_header();
                 ?>
                 <article>
                     <h3><?php the_title() ?></h3>
+                    <p>Type: <?php echo display_event_type() ?></p>
                     <p>Fees: <?php echo $post->_fees?></p>
+                    <p>City: <?php echo $post->_city ?></p>
+                    <p>Country: <?php echo $post->_country ?></p>
                     <p>Starting date: <?php echo $post->_event_start_date ?></p>
                     <p>Ending date: <?php echo $post->_event_end_date?></p>
                     <a href="<?php the_permalink() ?>"> Voir</a>
