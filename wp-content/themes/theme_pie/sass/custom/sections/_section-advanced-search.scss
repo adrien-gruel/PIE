@@ -1,0 +1,139 @@
+.advanced-search{
+    margin-left: 10%;
+    margin-right: 10%;
+
+}
+
+
+.title-banner{
+    height: 200px;
+    img{
+        position: absolute;
+        height: 200px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .div-1{
+        position: absolute;
+        height: 200px;
+        width: 100%;
+        background: $black;
+        opacity: 0.4;
+        z-index: 3;
+    }
+
+    .div-2{
+        height: 200px;
+        position: absolute;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        h1{
+            z-index: 4;
+            margin: 0;
+            color: $white;
+        }
+    }
+}
+
+.search-form{
+    .input{
+        font-size: 20px;
+        width: 200px;
+        margin-top: 20px;
+    }
+    width: 60%;
+}
+
+.search_where_container{
+    padding-top: 50px;
+
+
+    h2{
+        font-family: $oswald;
+        font-size: 40px;
+        color: black;
+    }
+
+    .search_where{
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.search_when_container{
+    padding-top: 50px;
+
+    h2{
+        font-family: $oswald;
+        font-size: 40px;
+        color: black;
+    }
+
+    .search_when{
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.search_what_container{
+    padding-top: 50px;
+
+    h2{
+        font-family: $oswald;
+        font-size: 40px;
+        color: black;
+    }
+
+    .search_what{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+}
+
+.submit-search{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 150px;
+}
+
+@media (max-width: 1024px){
+
+    .wpem-event-details{
+        text-align: left;
+    }
+
+
+    .advanced-search{
+        text-align: center;
+    }
+
+    .search-form{
+        width: auto;
+        text-align: center;
+    }
+
+    .search{
+        &_where_container{
+            .search_where{
+                flex-direction: column;
+            }
+        }
+
+        &_when_container{
+            .search_when{
+                flex-direction: column;
+            }
+        }
+
+        &_what_container{
+            .search_what{
+                flex-direction: column;
+            }
+        }
+    }
+}

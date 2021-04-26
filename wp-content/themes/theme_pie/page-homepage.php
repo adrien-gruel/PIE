@@ -8,7 +8,7 @@
 
 <section class="section-homeEvent">
 	<img class="wave wave-top-left" src="<?= get_template_directory_uri(); ?>/assets/waves-design/wave.png" alt="design wave">
-	<?php echo apply_shortcodes('[events per_page="3" cancelled="false"]'); ?>
+	<?php echo apply_shortcodes('[events per_page="3" orderby="event_start_date" cancelled="false" layout_type="box" show_more="false"]'); ?>
 	<img class="wave wave-top-right" src="<?= get_template_directory_uri(); ?>/assets/waves-design/wave-3.png" alt="design wave">
 </section> <!-- Section of three recents events -->
 
