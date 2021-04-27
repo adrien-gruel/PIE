@@ -970,6 +970,13 @@ textarea {
   justify-content: center;
 }
 
+.section-ads section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
 .search .search_where, .search .search_when {
   display: flex;
   justify-content: space-between;
@@ -1529,7 +1536,7 @@ h1 {
 --------------------------------------------------------------*/
 .section-blog {
   position: relative;
-  padding: 0px 10% 80px;
+  padding: 0px 10%;
 }
 
 /*--------------------------------------------------------------
@@ -1832,6 +1839,20 @@ h1 {
 .wpem-form-wrapper .wpem-form-group {
   margin-bottom: 30px !important;
   margin-top: 20px !important;
+}
+
+/*--------------------------------------------------------------
+# Sections ads
+--------------------------------------------------------------*/
+.section-ads {
+  border-top: solid 5px #ffef9a;
+  border-bottom: solid 5px #ffef9a;
+  margin: 120px 0px;
+}
+.section-ads section {
+  max-width: 1200px;
+  margin: 0px auto;
+  padding: 60px 0px;
 }
 
 /*# sourceMappingURL=style.css.map */
