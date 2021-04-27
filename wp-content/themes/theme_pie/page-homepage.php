@@ -56,6 +56,14 @@
     </section>
 </section><!-- Section of the most recent articles -->
 
+<section class="section-ads">
+	
+	<section>
+		<?php the_ad_group(83); ?>
+	</section>
+
+</section><!-- Ads Section -->
+
 <section class="section-featureCards">
 	
 	<?php 
@@ -97,5 +105,13 @@
 	
 
 </section><!-- Contact Section -->
+
+<section class="section-ads">
+	
+	<section>
+		<?php the_ad_group(83); ?>
+	</section>
+
+</section><!-- Ads Section -->
 
 <?php get_footer();
