@@ -26,38 +26,38 @@ get_header();
     </section>
 
     <section class="advanced-search">
-        <div>
             <form method="GET" action="advanced-search" class="search-form">
-                <section class="search search_where_container">
-                    <h2>Where ?</h2>
-                    <div class="search_where">
-                        <p>
-                            <input class="input" placeholder="Country" type="text" id="search_country"
-                                name="search_country" />
-                        </p>
-                        <p>
-                            <input class="input" placeholder="City" type="text" id="search_city" name="search_city" />
-                        </p>
-                        <p style="width : 200px"></p>
+                <section class="">
+                    <section class="search search_where_container">
+                        <h2>Where ?</h2>
+                        <div class="search_where">
+                            <p>
+                                <input class="input" placeholder="Country" type="text" id="search_country"
+                                    name="search_country" />
+                            </p>
+                            <p>
+                                <input class="input" placeholder="City" type="text" id="search_city" name="search_city" />
+                            </p>
+                            <p style="width : 200px"></p>
 
-                    </div>
+                        </div>
+                    </section>
+
+                    <section class="search search_when_container">
+                        <h2>When ?</h2>
+                        <div class="search_when">
+                            <p>
+                                <input class="input" placeholder="From" type="date" id="search_start_date"
+                                    name="search_start_date" />
+                            </p>
+                            <p>
+                                <input class="input" placeholder="To" type="date" id="search_end_date"
+                                    name="search_end_date" />
+                            </p>
+                            <p style="width : 200px"></p>
+                        </div>
+                    </section>
                 </section>
-
-                <section class="search search_when_container">
-                    <h2>When ?</h2>
-                    <div class="search_when">
-                        <p>
-                            <input class="input" placeholder="From" type="date" id="search_start_date"
-                                name="search_start_date" />
-                        </p>
-                        <p>
-                            <input class="input" placeholder="To" type="date" id="search_end_date"
-                                name="search_end_date" />
-                        </p>
-                        <p style="width : 200px"></p>
-                    </div>
-                </section>
-
                 <section class="search search_what_container">
                     <h2>What ?</h2>
                     <div class="search_what">
@@ -100,7 +100,6 @@ get_header();
                     <input type="submit" value="Search" class="cta-advanced-search" />
                 </p>
             </form>
-        </div>
 
 
         <?php 
