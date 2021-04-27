@@ -1,12 +1,12 @@
 %customInput {
-    background: transparent;
-    box-shadow: none;
-    border: none;
-    outline: none;
-    padding: 10px 0px;
-    font-size: $size16;
-    font-weight: $weight400;
-    border-bottom: solid $black 2px;
+    background: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+    outline: none !important;
+    padding: 10px 0px !important;
+    font-size: $size16 !important;
+    font-weight: $weight400 !important;
+    border-bottom: solid $black 2px !important;
 }
 
 form .input {
