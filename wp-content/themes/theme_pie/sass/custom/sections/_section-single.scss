@@ -19,10 +19,14 @@
                 padding: 0 0 30px 0;
                 margin: 0;
             }
+            h2{
+                margin-bottom: 25px;
+            }
             p{
                 font-family: $roboto;
                 font-size: $size16;
                 color: $black;
+                margin-bottom: 10px;
             }
             .image-mise-en-avant{
                 img{
@@ -40,6 +44,7 @@
         display: flex;
         justify-content: space-between;
         padding: 0 10%;
+        margin-bottom: 50px;
         .image-logo{
             display: flex;
             img{
@@ -53,6 +58,8 @@
         background-color: $primary;
         width: 100%;
         padding: 20px 0;
+        margin-bottom: 50px;
+        margin-top: 50px;
         h2{
             color: $white;
         }
@@ -68,6 +75,7 @@
 .single_event_listing-Place{
     display: flex; 
     padding: 0 10% ;
+    margin-bottom: 50px;
     .Information{
         padding-right: 25%;
     }

@@ -1616,10 +1616,14 @@ h1 {
   padding: 0 0 30px 0;
   margin: 0;
 }
+.section-single article h2 {
+  margin-bottom: 25px;
+}
 .section-single article p {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   color: #262626;
+  margin-bottom: 10px;
 }
 .section-single article .image-mise-en-avant img {
   width: 100%;
@@ -1634,6 +1638,7 @@ h1 {
   display: flex;
   justify-content: space-between;
   padding: 0 10%;
+  margin-bottom: 50px;
 }
 .section-single .single_event_listing .image-logo {
   display: flex;
@@ -1647,6 +1652,8 @@ h1 {
   background-color: #ff8024;
   width: 100%;
   padding: 20px 0;
+  margin-bottom: 50px;
+  margin-top: 50px;
 }
 .section-single .description h2 {
   color: white;
@@ -1663,6 +1670,7 @@ h1 {
 .single_event_listing-Place {
   display: flex;
   padding: 0 10%;
+  margin-bottom: 50px;
 }
 .single_event_listing-Place .Information {
   padding-right: 25%;
