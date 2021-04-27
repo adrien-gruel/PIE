@@ -138,7 +138,7 @@ get_header();
                     $today = date("Ymd");  
                     $timestamp = strtotime($today);
                     $expire_date = strtotime($post->_event_end_date);
-                    if(($type[0]->term_id == $_GET['search_event_types'] || $_GET['search_event_types'] === "select" || $_GET['search_event_types'] === NULL) && ($_GET['search_language'] === "select" || $_GET['search_language'] === $post->_language[0]) && $timestamp <= $expire_date):
+                    if(($type[0]->term_id == $_GET['search_event_types'] || $_GET['search_event_types'] === "select" || $_GET['search_event_types'] === NULL) && ($_GET['search_language'] === "select" || $_GET['search_language'] === $post->_language[0] || $_GET['search_event_types'] === NULL) && $timestamp <= $expire_date):
                         ?>
                         <div class="wpem-event-box-col wpem-col wpem-col-12 wpem-col-md-6 wpem-col-lg-4">
                             <div class="wpem-event-layout-wrapper">        
@@ -154,7 +154,7 @@ get_header();
                                                                 $eventDate = strtotime(get_event_start_date());
                                                                 echo date("d", $eventDate);
                                                             ?></div>
-                                                            <div class="wpem-month"><?php echo date("m", $eventDate);?></div>
+                                                            <div class="wpem-month"><?php echo date("M", $eventDate);?></div>
                                                         </div>
                                                     </div>
                                                 </div>   
@@ -174,7 +174,7 @@ get_header();
                                                 </div>
                                                 <div class="wpem-event-location">
                                                     <span class="wpem-event-location-text">
-                                                        <?php echo $post->_country ?>
+                                                        <?php echo $post->_country . " | " . $post->_city ?>
                                                     </span>
                                                 </div>
                                             </a>

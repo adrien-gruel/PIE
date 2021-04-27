@@ -31,7 +31,7 @@ $the_query = new WP_Query( $args );
                                                                 $eventDate = strtotime(get_event_start_date());
                                                                 echo date("d", $eventDate);
                                                             ?></div>
-                                                            <div class="wpem-month"><?php echo date("m", $eventDate);?></div>
+                                                            <div class="wpem-month"><?php echo date("M", $eventDate);?></div>
                                                         </div>
                                                     </div>
                                                 </div>   
@@ -51,7 +51,7 @@ $the_query = new WP_Query( $args );
                                                 </div>
                                                 <div class="wpem-event-location">
                                                     <span class="wpem-event-location-text">
-                                                        <?php echo $post->_event_online ?>
+                                                        <?php echo $post->_country . " | " . $post->_city ?>
                                                     </span>
                                                 </div>
                                             </a>
