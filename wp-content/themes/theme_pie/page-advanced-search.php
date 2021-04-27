@@ -37,14 +37,8 @@ get_header();
                             <p>
                                 <input class="input" placeholder="City" type="text" id="search_city" name="search_city" />
                             </p>
-                            <p>
-                                <select class="input" id="search_accessibility" name="search_accessibility">
-                                    <option value="select">Accessibility</option>
-                                    <option value="physical">Physical</option>
-                                    <option value="virtual">Virtual</option>
-                                    <option value="hybrid">Hybrid</option>
-                                </select>
-                            </p>
+                            <p style="width : 200px"></p>
+
                         </div>
                     </section>
 
@@ -72,7 +66,19 @@ get_header();
                                 <input class="input" placeholder="To $" min="1" type="number" id="search_fees_end" name="search_fees_end" />
                             </p>
                             <p>
-                                <input class="input" placeholder="Language" type="text" id="search_language" name="search_language" />
+                            <select class="input" id="search_language" name="search_language">
+                                <option value="select">Select language</option>
+                                <option value="english">English</option>
+                                <option value="spanish">Spanish</option>
+                                <option value="french">French</option>
+                                <option value="portuguese">Portuguese</option>
+                                <option value="german">German</option>
+                                <option value="russian">Russian</option>
+                                <option value="chinese">Chinese</option>
+                                <option value="arabic">Arabic</option>
+                                <option value="other">Other</option>
+                                
+                                </select>
                             </p>
                             <p>
                                 <select class="input" id="search_event_types" name="search_event_types">
@@ -94,26 +100,22 @@ get_header();
             <?php 
             $custom_city = !empty($_GET['search_city']) ? array('key' => '_city', 'value' => $_GET['search_city']) : array();
             $custom_country= !empty($_GET['search_country']) ? array('key' => '_country', 'value' => $_GET['search_country']) : array();
-            $custom_accessibility= $_GET['search_accessibility'] != 'select' ? array('key' => '_accessibility', 'value' => $_GET['search_accessibility']) : array();
             $custom_start_date= !empty($_GET['search_start_date']) ? array('key' => '_event_start_date', 'value' => $_GET['search_start_date'], 'compare' => '>=', 'type' => 'DATE') : array();
             $custom_end_date= !empty($_GET['search_end_date']) ? array('key' => '_event_end_date', 'value' => $_GET['search_end_date'], 'compare' => '<=', 'type' => 'DATE') : array();
             $custom_fees_start= !empty($_GET['search_fees_start']) ? array('key' => '_fees', 'value' => $_GET['search_fees_start'], 'type' => 'numeric', 'compare' => '>=') : array();
             $custom_fees_end= !empty($_GET['search_fees_end']) ? array('key' => '_fees', 'value' => $_GET['search_fees_end'], 'type' => 'numeric', 'compare' => '<=') : array();
-            $custom_language= !empty($_GET['search_language']) ? array('key' => '_language', 'value' => $_GET['search_language']) : array();
 
                 if($_GET['search_event_types'] != NULL){
                     $args = array( 
                         'post_type' => 'event_listing', 
-                        'post_status' => 'published',
+                        'post_status' => 'publish',
                         'meta_query' => array(
                             $custom_city,
                             $custom_country,
-                            $custom_accessibility,
                             $custom_start_date,
                             $custom_end_date,
                             $custom_fees_start,
                             $custom_fees_end,
-                            $custom_language,
                         ),
                     );
                     
@@ -121,6 +123,7 @@ get_header();
                     } else {
                         $args = array(
                             'post_type' => 'event_listing',
+                            'post_status' => 'publish',
                             'posts_per_page' => 4
                         );
                         $the_query = new WP_Query( $args ); 
@@ -135,7 +138,7 @@ get_header();
                     $today = date("Ymd");  
                     $timestamp = strtotime($today);
                     $expire_date = strtotime($post->_event_end_date);
-                    if(($type[0]->term_id == $_GET['search_event_types'] || $_GET['search_event_types'] === "select" || $_GET['search_event_types'] === NULL) && $timestamp <= $expire_date):
+                    if(($type[0]->term_id == $_GET['search_event_types'] || $_GET['search_event_types'] === "select" || $_GET['search_event_types'] === NULL) && ($_GET['search_language'] === "select" || $_GET['search_language'] === $post->_language[0] || $_GET['search_event_types'] === NULL) && $timestamp <= $expire_date):
                         ?>
                         <div class="wpem-event-box-col wpem-col wpem-col-12 wpem-col-md-6 wpem-col-lg-4">
                             <div class="wpem-event-layout-wrapper">        
@@ -151,7 +154,7 @@ get_header();
                                                                 $eventDate = strtotime(get_event_start_date());
                                                                 echo date("d", $eventDate);
                                                             ?></div>
-                                                            <div class="wpem-month"><?php echo date("m", $eventDate);?></div>
+                                                            <div class="wpem-month"><?php echo date("M", $eventDate);?></div>
                                                         </div>
                                                     </div>
                                                 </div>   
@@ -171,7 +174,7 @@ get_header();
                                                 </div>
                                                 <div class="wpem-event-location">
                                                     <span class="wpem-event-location-text">
-                                                        <?php echo $post->_event_online ?>
+                                                        <?php echo $post->_country . " | " . $post->_city ?>
                                                     </span>
                                                 </div>
                                             </a>
