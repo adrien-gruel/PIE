@@ -1681,6 +1681,16 @@ h1 {
   .post-navigation .nav-next {
     text-align: initial;
   }
+
+  .single_event_listing-Place {
+    flex-direction: column;
+  }
+
+  .single_event_listing {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 0 10%;
+  }
 }
 /*--------------------------------------------------------------
 # Sections advanced search
