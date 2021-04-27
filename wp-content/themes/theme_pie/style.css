@@ -1613,7 +1613,7 @@ h1 {
 }
 .section-single article h1 {
   text-align: center;
-  padding: 0 0 30px 0;
+  padding: 30px 0 50px 0;
   margin: 0;
 }
 .section-single article h2 {
@@ -1633,6 +1633,12 @@ h1 {
 .section-single article a {
   text-decoration: none;
   color: #ff8024;
+}
+.section-single .second-headline {
+  margin-bottom: 30px;
+}
+.section-single .place-venue {
+  margin-top: 30px;
 }
 .section-single .single_event_listing {
   display: flex;
