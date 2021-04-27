@@ -26,7 +26,6 @@ get_header();
         </section>
         
         <section class="advanced-search">
-            <div>
                 <form method="GET" action="advanced-search" class="search-form">
                     <section class="search search_where_container">
                         <h2>Where ?</h2>
@@ -88,7 +87,6 @@ get_header();
                                     <?php endforeach; ?>
                                 </select>
                             </p>
-                        </div>
                     </section>
                     <p class="submit-search">
                         <input type="submit" value="Search" class="cta-advanced-search"/>
