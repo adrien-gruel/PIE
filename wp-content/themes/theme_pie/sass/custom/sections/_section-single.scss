@@ -16,13 +16,17 @@
             padding: 60px 30px;
             h1{
                 text-align: center;
-                padding: 0 0 30px 0;
+                padding: 30px 0 50px 0;
                 margin: 0;
+            }
+            h2{
+                margin-bottom: 25px;
             }
             p{
                 font-family: $roboto;
                 font-size: $size16;
                 color: $black;
+                margin-bottom: 10px;
             }
             .image-mise-en-avant{
                 img{
@@ -36,10 +40,22 @@
                 color: $primary;
             }
         }
+    
+    .second-headline{
+        margin-bottom: 30px;
+    }
+
+    .place-venue{
+        margin-top: 30px;
+    }
+
+
     .single_event_listing{
         display: flex;
         justify-content: space-between;
         padding: 0 10%;
+        
+        margin-bottom: 50px;
         .image-logo{
             display: flex;
             img{
@@ -53,6 +69,8 @@
         background-color: $primary;
         width: 100%;
         padding: 20px 0;
+        margin-bottom: 50px;
+        margin-top: 50px;
         h2{
             color: $white;
         }
@@ -68,6 +86,7 @@
 .single_event_listing-Place{
     display: flex; 
     padding: 0 10% ;
+    margin-bottom: 50px;
     .Information{
         padding-right: 25%;
     }
@@ -94,5 +113,12 @@
     .post-navigation .nav-next {
         text-align: initial;
     }
-
+    .single_event_listing-Place{
+        flex-direction: column;
+    }
+    .single_event_listing{
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 0 10%;
+    }
 }

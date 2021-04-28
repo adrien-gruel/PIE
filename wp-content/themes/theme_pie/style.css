@@ -970,6 +970,13 @@ textarea {
   justify-content: center;
 }
 
+.section-ads section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
 .search .search_where, .search .search_when {
   display: flex;
   justify-content: space-between;
@@ -1529,7 +1536,7 @@ h1 {
 --------------------------------------------------------------*/
 .section-blog {
   position: relative;
-  padding: 0px 10% 80px;
+  padding: 0px 10%;
 }
 
 /*--------------------------------------------------------------
@@ -1613,13 +1620,17 @@ h1 {
 }
 .section-single article h1 {
   text-align: center;
-  padding: 0 0 30px 0;
+  padding: 30px 0 50px 0;
   margin: 0;
+}
+.section-single article h2 {
+  margin-bottom: 25px;
 }
 .section-single article p {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   color: #262626;
+  margin-bottom: 10px;
 }
 .section-single article .image-mise-en-avant img {
   width: 100%;
@@ -1630,10 +1641,17 @@ h1 {
   text-decoration: none;
   color: #ff8024;
 }
+.section-single .second-headline {
+  margin-bottom: 30px;
+}
+.section-single .place-venue {
+  margin-top: 30px;
+}
 .section-single .single_event_listing {
   display: flex;
   justify-content: space-between;
   padding: 0 10%;
+  margin-bottom: 50px;
 }
 .section-single .single_event_listing .image-logo {
   display: flex;
@@ -1647,6 +1665,8 @@ h1 {
   background-color: #ff8024;
   width: 100%;
   padding: 20px 0;
+  margin-bottom: 50px;
+  margin-top: 50px;
 }
 .section-single .description h2 {
   color: white;
@@ -1663,6 +1683,7 @@ h1 {
 .single_event_listing-Place {
   display: flex;
   padding: 0 10%;
+  margin-bottom: 50px;
 }
 .single_event_listing-Place .Information {
   padding-right: 25%;
@@ -1680,6 +1701,16 @@ h1 {
 
   .post-navigation .nav-next {
     text-align: initial;
+  }
+
+  .single_event_listing-Place {
+    flex-direction: column;
+  }
+
+  .single_event_listing {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 0 10%;
   }
 }
 /*--------------------------------------------------------------
@@ -1808,6 +1839,20 @@ h1 {
 .wpem-form-wrapper .wpem-form-group {
   margin-bottom: 30px !important;
   margin-top: 20px !important;
+}
+
+/*--------------------------------------------------------------
+# Sections ads
+--------------------------------------------------------------*/
+.section-ads {
+  border-top: solid 5px #ffef9a;
+  border-bottom: solid 5px #ffef9a;
+  margin: 120px 0px;
+}
+.section-ads section {
+  max-width: 1200px;
+  margin: 0px auto;
+  padding: 60px 0px;
 }
 
 /*# sourceMappingURL=style.css.map */
