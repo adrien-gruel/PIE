@@ -109,6 +109,8 @@ get_header();
             $custom_end_date= !empty($_GET['search_end_date']) ? array('key' => '_event_end_date', 'value' => $_GET['search_end_date'], 'compare' => '<=', 'type' => 'DATE') : array();
             $custom_fees_start= !empty($_GET['search_fees_start']) ? array('key' => '_fees', 'value' => $_GET['search_fees_start'], 'type' => 'numeric', 'compare' => '>=') : array();
             $custom_fees_end= !empty($_GET['search_fees_end']) ? array('key' => '_fees', 'value' => $_GET['search_fees_end'], 'type' => 'numeric', 'compare' => '<=') : array();
+            $custom_language= $_GET['search_language'] != "select" ? array('key' => '_language', 'value' => $_GET['search_language'], 'compare' => 'LIKE') : array();
+            $custom_type= $_GET['search_event_types'] != "select" ? array('taxonomy' => 'event_listing_type', 'field' => 'term_id', 'terms' => $_GET['search_event_types']) : array('taxonomy' => 'event_listing_type', 'operator' => 'EXISTS');
 
                 if($_GET['search_event_types'] != NULL){
                     $args = array( 
@@ -121,7 +123,11 @@ get_header();
                             $custom_end_date,
                             $custom_fees_start,
                             $custom_fees_end,
+                            $custom_language
                         ),
+                        'tax_query' => array(
+                            $custom_type
+                        )
                     );
                     
                     $the_query = new WP_Query( $args ); 
@@ -143,7 +149,7 @@ get_header();
                     $today = date("Ymd");  
                     $timestamp = strtotime($today);
                     $expire_date = strtotime($post->_event_end_date);
-                    if(($type[0]->term_id == $_GET['search_event_types'] || $_GET['search_event_types'] === "select" || $_GET['search_event_types'] === NULL) && ($_GET['search_language'] === "select" || $_GET['search_language'] === $post->_language[0] || $_GET['search_event_types'] === NULL) && $timestamp <= $expire_date):
+                    if($timestamp <= $expire_date):
                         ?>
             <div class="wpem-event-box-col wpem-col wpem-col-12 wpem-col-md-6 wpem-col-lg-4">
                 <div class="wpem-event-layout-wrapper">
