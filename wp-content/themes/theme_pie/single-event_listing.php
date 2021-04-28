@@ -1,16 +1,19 @@
 <?php
-get_header();
-global $post;
-$start_date = get_event_start_date();
-$end_date   = get_event_end_date();
-$eventDate = strtotime(get_event_start_date());
-$eventDateEnd = strtotime(get_event_end_date());
-$event = $post;
+    get_header();
+    global $post;
+    $start_date = get_event_start_date();
+    $end_date   = get_event_end_date();
+    $eventDate = strtotime(get_event_start_date());
+    $eventDateEnd = strtotime(get_event_end_date());
+    $event = $post;
 ?>
 
 <section class="section section-single section-event-listing">
+    
     <div class="top-bot-orange single-top"></div>
+    
     <div class="container">
+        
         <article class="event-single">
             <h1><?php the_title() ?></h1>
             <h2 class="second-headline">INFORMATIONS</h2>
@@ -65,7 +68,8 @@ $event = $post;
                 </div>
             </div>
         </article>
+
     </div>
 </section>
-<?php
-get_footer();
+
+<?php get_footer();
