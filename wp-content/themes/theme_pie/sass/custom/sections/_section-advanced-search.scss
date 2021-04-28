@@ -2,13 +2,25 @@
     margin: 0 10%;
 }
 
+.search-content{
+    min-height: 500px;
+}
+
 .search-form{
-    width: 60%;
+    .sections-container{
+        display: flex;
+        justify-content: space-between;
+    }
+
     .input{
         font-size: 20px;
         width: 200px;
         margin-top: 20px;
     }
+}
+
+.search_when_container, .search_where_container{
+    width: 42.5%;
 }
 
 .search {
@@ -46,7 +58,14 @@
     }
 }
 
-@media (max-width: 1024px){
+@media (max-width: 640px){
+    .sections-container{
+        flex-direction: column;
+    }
+
+    .search_when_container, .search_where_container{
+        width: 100%;
+    }
 
     .wpem-event-details{
         text-align: left;
