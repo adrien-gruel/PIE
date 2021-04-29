@@ -958,7 +958,7 @@ textarea {
   align-items: center;
 }
 
-.search .search_what, .card-article-header div, .form-contact form p {
+.search .search_what, .form-advanced-search article:nth-child(3), .form-advanced-search, .card-article-header div, .form-contact form p {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -977,7 +977,7 @@ textarea {
   justify-content: space-around;
 }
 
-.search .search_where, .search .search_when {
+.search .search_where, .search .search_when, .form-advanced-search article div {
   display: flex;
   justify-content: space-between;
 }
@@ -1143,7 +1143,7 @@ textarea {
 /*--------------------------------------------------------------
 # Call to actions
 --------------------------------------------------------------*/
-.card-feature a, .cta-create-project-button, .cta-advanced-search, .form-contact form p .cta {
+.card-feature a, .cta-home-search, .cta-create-project-button, .cta-advanced-search, .form-contact form p .cta {
   color: white !important;
   background: #ff8024 !important;
   font-size: 16px !important;
@@ -1158,10 +1158,18 @@ textarea {
   margin: auto !important;
   text-decoration: none !important;
 }
-.card-feature a:hover, .cta-create-project-button:hover, .cta-advanced-search:hover, .form-contact form p .cta:hover {
+.card-feature a:hover, .cta-home-search:hover, .cta-create-project-button:hover, .cta-advanced-search:hover, .form-contact form p .cta:hover {
   color: #ff8024 !important;
   border: solid #ff8024 2px !important;
   background: white !important;
+}
+
+.cta-advanced-search {
+  margin: 50px auto !important;
+}
+
+.cta-home-search {
+  width: 100px !important;
 }
 
 /*--------------------------------------------------------------
@@ -1181,30 +1189,35 @@ textarea {
   text-transform: uppercase;
 }
 
+.second-title-adSearch, .second-title-homepage, .second-headline {
+  font-family: "Oswald", sans-serif;
+  font-size: 32px;
+  color: #262626;
+}
+
 h1 {
   margin: 80px 0 0 10%;
 }
 
 .second-headline {
-  font-family: "Oswald", sans-serif;
-  font-size: 32px;
-  color: #262626;
   margin: 0 0 0 10%;
 }
 
 .principal-title {
   text-align: center;
-  margin: 80px 0 0 0;
+  margin: 40px 0 0px 0;
 }
 
 .second-title-homepage {
   text-align: center;
-  font-family: "Oswald", sans-serif;
-  font-size: 32px;
-  color: #262626;
   text-transform: uppercase;
   text-decoration: underline;
-  padding-bottom: 40px;
+  padding-bottom: 30px;
+}
+
+.second-title-adSearch {
+  width: 100%;
+  padding-bottom: 20px;
 }
 
 @media screen and (max-width: 600px) {
@@ -1532,6 +1545,54 @@ h1 {
     transform: translate3d(0, -20px, 0) scale(0.9, 1.1);
   }
 }
+/*--------------------------------------------------------------
+# Form advanced search
+--------------------------------------------------------------*/
+.form-advanced-search {
+  padding: 60px 10%;
+}
+.form-advanced-search article:nth-child(3) {
+  margin-top: 40px;
+  width: 100%;
+}
+.form-advanced-search article:nth-child(3) div {
+  width: calc(50% - 40px);
+}
+.form-advanced-search article:nth-child(1), .form-advanced-search article:nth-child(2) {
+  width: calc(50% - 40px);
+}
+
+/*--------------------------------------------------------------
+# Form adSearch in homepage
+--------------------------------------------------------------*/
+.form-adSearch-home {
+  background: #f6f6f6;
+  width: 900px;
+  margin: 0px auto 30px;
+  padding: 20px 30px;
+  border-radius: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.form-adSearch-home div {
+  padding: 0px 20px;
+}
+.form-adSearch-home div:nth-child(2) {
+  border-left: solid black 1px;
+  border-right: solid black 1px;
+}
+.form-adSearch-home div:nth-child(3) {
+  border-right: solid black 1px;
+}
+.form-adSearch-home a {
+  text-align: right;
+}
+.form-adSearch-home input {
+  width: 140px;
+}
+
 /* Sections */
 /*--------------------------------------------------------------
 # Sections login & register form
@@ -1609,7 +1670,7 @@ h1 {
 # Sections home events
 --------------------------------------------------------------*/
 .section-homeEvent {
-  margin: 60px 10%;
+  margin: 0px 10%;
   position: relative;
 }
 
