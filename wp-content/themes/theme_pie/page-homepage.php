@@ -26,102 +26,16 @@
             <option value="other">Other</option>
 		 </select>
 		 <input class="input" placeholder="Title of the event" type="text" id="search_title_home" name="search_title_home" />
-		 <input type="submit" value="Search" class="cta-home-search" />									
+		 <input type="submit" value="Search" class="cta-home-search" id="home-search-button"/>									
 	</form>
-	<?php 
-	$custom_start_date= !empty($_GET['search_start_date_home']) ? array('key' => '_event_start_date', 'value' => $_GET['search_start_date_home'], 'compare' => '>=', 'type' => 'DATE') : array();
-	$custom_end_date= !empty($_GET['search_end_date_home']) ? array('key' => '_event_end_date', 'value' => $_GET['search_end_date_home'], 'compare' => '<=', 'type' => 'DATE') : array();
-	$custom_country= !empty($_GET['search_country_home']) ? array('key' => '_country', 'value' => $_GET['search_country_home']) : array();
-	$custom_title= !empty($_GET['search_title_home']) ? array('key' => '_event_title', 'value' => $_GET['search_title_home'], 'compare' => 'LIKE') : array();
-    $custom_language= $_GET['search_country'] != "select" ? array('key' => '_language', 'value' => $data[7]['value'], 'compare' => 'LIKE') : array();
-	$args = array( 
-		'post_type' => 'event_listing', 
-		'post_status' => 'publish',
-		'meta_query' => array(
-			$custom_start_date,
-			$custom_end_date,
-			$custom_country,
-			$custom_title,
-			$custom_language
-		));
-		$your_events_query = new WP_Query( $args ); ?>
 
-	<div class="wpem-main wpem-event-listings event_listings wpem-row wpem-event-listing-box-view">
-            <?php if ( $your_events_query->have_posts() ) : ?>
-            <?php while ( $your_events_query->have_posts() ) : $your_events_query->the_post(); ?>
-            
-            <div class="wpem-event-box-col wpem-col wpem-col-12 wpem-col-md-6 wpem-col-lg-4">
-                <div class="wpem-event-layout-wrapper">
-                    <div
-                        class="event_listing event-type-appearance-or-signing post-274 type-event_listing status-expired has-post-thumbnail hentry event_listing_type-appearance-or-signing">
-                        <a href="<?php the_permalink() ?>"
-                            class="wpem-event-action-url event-style-color dinner-or-gala">
-                            <div class="wpem-event-banner">
-
-                                <div class="wpem-event-banner-img"
-                                    style="background-image: url('<?php echo get_event_thumbnail() ?>')">
-                                    <div class="wpem-event-date">
-                                        <div class="wpem-event-date-type">
-                                            <div class="wpem-from-date">
-                                                <div class="wpem-date"><?php 
-                                                                $eventDate = strtotime(get_event_start_date());
-                                                                echo date("d", $eventDate);
-                                                            ?></div>
-                                                <div class="wpem-month"><?php echo date("M", $eventDate);?></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        <div class="wpem-event-infomation">
-                            <div class="wpem-event-details">
-                                <a href="<?php the_permalink() ?>"
-                                    class="wpem-event-action-url event-style-color dinner-or-gala">
-                                    <div class="wpem-event-title">
-                                        <h3 class="wpem-heading-text"><?php display_event_title() ?></h3>
-                                    </div>
-                                    <div class="wpem-event-date-time">
-                                        <span class="wpem-event-date-time-text">
-                                            <?php display_event_start_date() ?> @ <?php display_event_start_time() ?> -
-                                            <?php display_event_end_date() ?> @ <?php display_event_end_time() ?>
-                                        </span>
-                                    </div>
-                                    <div class="wpem-event-location">
-                                        <span class="wpem-event-location-text">
-                                            <?php echo $post->_country . " | " . $post->_city ?>
-                                        </span>
-                                    </div>
-                                </a>
-                                <div class="wpem-event-type">
-                                    <?php display_event_type() ?>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <?php 
-                endwhile; 
-                wp_reset_postdata(); 
-            ?>
-            <?php else:  ?>
-            <div class="no-events-found">
-                <p>No events found</p>
-            </div>
-            <?php endif; ?>
-        </div>
-
+	<div class="wpem-main wpem-event-listings event_listings wpem-row wpem-event-listing-box-view" id="json_resp">
+	</div>
 </section>
 
 <section class="section-homeEvent">
 	<img class="wave wave-top-left" src="<?= get_template_directory_uri(); ?>/assets/waves-design/wave.png" alt="design wave">
-	<div>
 
-	</div>
-	<div>
-		<?php echo apply_shortcodes('[events per_page="3" orderby="event_start_date" cancelled="false" layout_type="box" show_more="false" featured="true" show_filters="false"]'); ?>
-	</div>
 	<img class="wave wave-top-right" src="<?= get_template_directory_uri(); ?>/assets/waves-design/wave-3.png" alt="design wave">
 </section> <!-- Section of three recents events -->
 
@@ -226,4 +140,63 @@
 
 </section><!-- Ads Section -->
 
+<script>
+    jQuery(document).ready(function(jQuery) {
+		let formData = {
+			'search_start_date_home': jQuery('input[name=search_start_date_home]').val(),
+            'search_end_date_home': jQuery('input[name=search_end_date_home]').val(),
+            'search_country_home': jQuery('input[name=search_country_home]').val(),
+            'search_language_home': jQuery('select[name=search_language_home]').val(),
+            'search_title_home': jQuery('input[name=search_title_home]').val(),
+			'search_featured': true
+        }
+
+        jQuery.ajax({
+                method: 'POST',
+                url: adminAjax,
+                data: {
+                    action: 'search_ajax_home',
+                    data: formData
+                },
+                beforeSend:function(){
+                    jQuery('#json_resp').empty()
+                    jQuery(".loader-container").fadeIn()
+                },
+                success: function(response){
+                    jQuery.when(jQuery(".loader-container").fadeOut()).then(function(){
+                            jQuery('#json_resp').empty().append(response)
+                    })
+                    console.log(response)
+                }
+            })
+        jQuery('#home-search-button').click(function(event) {
+            event.preventDefault()
+            let formData = {
+                'search_start_date_home': jQuery('input[name=search_start_date_home]').val(),
+                'search_end_date_home': jQuery('input[name=search_end_date_home]').val(),
+                'search_country_home': jQuery('input[name=search_country_home]').val(),
+                'search_language_home': jQuery('select[name=search_language_home]').val(),
+                'search_title_home': jQuery('input[name=search_title_home]').val()
+            }
+            jQuery.ajax({
+                method: 'POST',
+                url: adminAjax,
+                data: {
+                    action: 'search_ajax_home',
+                    data: formData
+                },
+                beforeSend:function(){
+                    jQuery('#json_resp').empty()
+                    jQuery(".loader-container").fadeIn()
+                },
+                success: function(response){
+                    jQuery.when(jQuery(".loader-container").fadeOut()).then(function(){
+                        jQuery('#json_resp').empty().append(response)
+                    })
+                    console.log(response)
+                }
+            })
+        })
+    })
+</script>
 <?php get_footer();
