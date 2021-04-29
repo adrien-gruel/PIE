@@ -23,13 +23,16 @@
                     <?php display_event_category() ?>
                     <p>Start: <?php echo date("d/m/y", $eventDate) . " | " . get_event_start_time()?></p>
                     <p>End: <?php echo date("d/m/y", $eventDateEnd) . " | " . get_event_end_time()?></p>
-                    <p>Main language: <?php 
-                    echo ucfirst($post->_language[0]) ?></p>
-                    <p>Event webpage:  <?php echo $post->_event_webpage?></p>
+                    <p>Languages: <?php 
+                    foreach($post->_language as $language){
+                        echo ucfirst($language)." | ";
+                    } ?>
+                    </p>
+                    <p>Event webpage: <a href="<?php echo $post->_event_webpage?>"><?php echo $post->_event_webpage?></a></p>
                     <p>Contact Us: <?php display_organizer_email()?></p>
                 </div>
                 <div class="image-logo">
-                    <img src="<?php echo get_event_thumbnail() ?>" alt="">
+                   <?php display_organizer_logo() ?>
                 </div>
             </div>
             <div class="description">
@@ -46,7 +49,13 @@
                 </div>
                 <div class="Information"> 
                     <p>Access: <?php echo ucfirst($post->_access) ?></p>
-                    <p>Fees: <?php echo $post->_fees ?></p>
+                    <p>Fees: <?php
+                    if($post->_fees != ""){
+                        echo $post->_fees . " $"; 
+                    } else {
+                        echo "Free";
+                    }
+                     ?></p>
                 </div>
             </div>
             <h2 class="second-headline">EVENT DETAILS</h2>
