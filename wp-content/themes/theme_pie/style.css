@@ -1551,9 +1551,6 @@ h1 {
     margin: 10px 0 10px 0;
   }
 
-  .register {
-    max-height: fit-content;
-  }
   .register article {
     height: fit-content;
   }
@@ -1562,6 +1559,7 @@ h1 {
   }
   .register aside img {
     height: 100%;
+    object-fit: cover;
   }
 }
 /*--------------------------------------------------------------
