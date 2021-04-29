@@ -26,7 +26,6 @@
 		 	<input class="input" placeholder="Name of the event" type="text" id="search_title_home" name="search_title_home" />
 		</div>
 		<input type="submit" value="Search" class="cta-home-search" />
-		<!-- <a href="advanced-search" title="advanced-search">Advanced Search</a>								 -->
 	</form>
 <section class="section-homeEvent">
 	<?php 
@@ -169,7 +168,7 @@
 <section class="section-ads">
 	
 	<section>
-		<?php the_ad_group(83); ?>
+		<?php the_ad_group(84); ?>
 	</section>
 
 </section><!-- Ads Section -->
@@ -219,7 +218,7 @@
 <section class="section-ads">
 	
 	<section>
-		<?php the_ad_group(83); ?>
+		<?php the_ad_group(85); ?>
 	</section>
 
 </section><!-- Ads Section -->
