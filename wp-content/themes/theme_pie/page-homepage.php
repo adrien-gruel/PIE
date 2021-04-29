@@ -13,16 +13,22 @@
 	
 	<form method="GET" action="homepage" class="form-adSearch-home">
 		<div>
-			<h3>From ?</h3>
+			<h3>When ?</h3>
 			<input class="input" placeholder="From" type="date" id="search_start_date_home" name="search_start_date_home" />
-		</div>
-		<div>
-			<h3>To ?</h3>
-			<input class="input" placeholder="To" type="date" id="search_end_date_home" name="search_end_date_home" />
 		</div>
 		<div>
 			<h3>Where ?</h3>
 			<input class="input" placeholder="Country" type="text" id="search_country_home" name="search_country_home" />
+		</div>
+		<div>
+			<h3>What ?</h3>
+			<select class="input" id="search_event_types_home" name="search_event_types_home">
+                <option value="select">Select type</option>
+					<?php foreach ( get_event_listing_types() as $types ) : ?>
+						<option value="<?php echo esc_attr( $types->term_id ); ?>">
+					<?php echo esc_html( $types->name ); ?></option>
+                <?php endforeach; ?>
+                </select>
 		</div>
 		 <div>
 			 <h3>A Name ?</h3>
@@ -149,9 +155,9 @@
     jQuery(document).ready(function(jQuery) {
 		let formData = {
 			'search_start_date_home': jQuery('input[name=search_start_date_home]').val(),
-            'search_end_date_home': jQuery('input[name=search_end_date_home]').val(),
             'search_country_home': jQuery('input[name=search_country_home]').val(),
             'search_title_home': jQuery('input[name=search_title_home]').val(),
+			'search_event_types_home': jQuery('select[name=search_event_types_home]').val(),
 			'search_featured': true
         }
 
@@ -177,9 +183,9 @@
             event.preventDefault()
             let formData = {
                 'search_start_date_home': jQuery('input[name=search_start_date_home]').val(),
-                'search_end_date_home': jQuery('input[name=search_end_date_home]').val(),
                 'search_country_home': jQuery('input[name=search_country_home]').val(),
-                'search_title_home': jQuery('input[name=search_title_home]').val()
+                'search_title_home': jQuery('input[name=search_title_home]').val(),
+				'search_event_types_home': jQuery('select[name=search_event_types_home]').val(),
             }
             jQuery.ajax({
                 method: 'POST',
