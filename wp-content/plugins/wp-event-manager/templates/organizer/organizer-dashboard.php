@@ -40,7 +40,7 @@
 						<td data-title="<?php echo esc_html( $column ); ?>" class="<?php echo esc_attr( $key ); ?>">
 							<?php if ('organizer_name' === $key ) : ?>
 								<div class="wpem-organizer-logo"><?php display_organizer_logo('', '', $organizer); ?></div>
-								<a href="<?php echo get_permalink( $organizer->ID ); ?>"><?php echo esc_html( $organizer->post_title ); ?></a>
+								<a href="<?php echo esc_url($organizer_website); ?>"><?php echo esc_html( $organizer->post_title ); ?></a>
 								
 							<?php elseif ('organizer_details' === $key ) :?>
 								<div class="wpem-organizer-social-links">
@@ -133,10 +133,10 @@
 										);
 										break;
 								}
-								$actions ['delete'] = array (
-										'label' => __ ( 'Delete', 'wp-event-manager' ),
-										'nonce' => true
-								);
+								// $actions ['delete'] = array (
+								// 		'label' => __ ( 'Delete', 'wp-event-manager' ),
+								// 		'nonce' => true
+								// );
 								$actions = apply_filters ( 'event_manager_my_organizer_actions', $actions, $organizer );
 								foreach ( $actions as $action => $value ) {
 									$action_url = add_query_arg ( array (

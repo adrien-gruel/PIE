@@ -265,10 +265,6 @@
 														break;
 												}
 
-												$actions ['delete'] = array (
-														'label' => __ ( 'Delete', 'wp-event-manager' ),
-														'nonce' => true
-												);
 												
 												$actions = apply_filters ( 'event_manager_my_event_actions', $actions, $event );
 

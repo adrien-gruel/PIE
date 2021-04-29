@@ -24,10 +24,9 @@ function search_ajax(){
     $custom_country= !empty($data['country']) ? array('key' => '_country', 'value' => $data['country']) : array();
     $custom_start_date= !empty($data['search_start_date']) ? array('key' => '_event_start_date', 'value' => $data['search_start_date'], 'compare' => '>=', 'type' => 'DATE') : array();
     $custom_end_date= !empty($data['search_end_date']) ? array('key' => '_event_end_date', 'value' => $data['search_end_date'], 'compare' => '<=', 'type' => 'DATE') : array();
-    $custom_fees_start= !empty(intval($data['search_fees_start'])) ? array('key' => '_fees', 'value' => intval($data['search_fees_start']), 'type' => 'numeric', 'compare' => '>=') : array();
-    $custom_fees_end= !empty(intval($data['search_fees_end'])) ? array('key' => '_fees', 'value' => intval($data['search_fees_end']), 'type' => 'numeric', 'compare' => '<=') : array();
     $custom_language= $data['search_language'] != "select" ? array('key' => '_language', 'value' => $data['search_language'], 'compare' => 'LIKE') : array();
     $custom_type= $data['search_event_types'] != "select" ? array('taxonomy' => 'event_listing_type', 'field' => 'term_id', 'terms' => $data['search_event_types']) : array('taxonomy' => 'event_listing_type', 'operator' => 'EXISTS');
+    $custom_title= !empty($data['search_title']) ? array('key' => '_event_title', 'value' => $data['search_title'], 'compare' => 'LIKE') : array();
 
 
     $args = array( 
@@ -38,9 +37,8 @@ function search_ajax(){
             $custom_country,
             $custom_start_date,
             $custom_end_date,
-            $custom_fees_start,
-            $custom_fees_end,
             $custom_language,
+            $custom_title
         ),
         'tax_query' => array(
             $custom_type
@@ -126,10 +124,14 @@ add_action( 'template_redirect', 'redirect_to_specific_page' );
 
 function redirect_to_specific_page() {
 
-if ( (is_page('my-pie') || is_page('create-event'))&& ! is_user_logged_in() ) {
+    if ( (is_page('my-pie') || is_page('create-event') || is_page('user') && ! is_user_logged_in() )) {
+        wp_redirect( './login');
+        exit;
+    }
 
-wp_redirect( './login'); 
-  exit;
+    if ( (is_page('login') || is_page('register')) &&  is_user_logged_in() ) {
+        wp_redirect( './user'); 
+        exit;
     }
 }
 
@@ -139,9 +141,9 @@ add_action( 'wp_ajax_nopriv_search_ajax_home', 'search_ajax_home');
 function search_ajax_home(){
     $data = $_POST['data'];
     $custom_start_date= !empty($data['search_start_date_home']) ? array('key' => '_event_start_date', 'value' => $data['search_start_date_home'], 'compare' => '>=', 'type' => 'DATE') : array();
-	$custom_end_date= !empty($data['search_end_date_home']) ? array('key' => '_event_end_date', 'value' => $data['search_end_date_home'], 'compare' => '<=', 'type' => 'DATE') : array();
 	$custom_country= !empty($data['search_country_home']) ? array('key' => '_country', 'value' => $data['search_country_home']) : array();
 	$custom_title= !empty($data['search_title_home']) ? array('key' => '_event_title', 'value' => $data['search_title_home'], 'compare' => 'LIKE') : array();
+    $custom_type= $data['search_event_types_home'] != "select" ? array('taxonomy' => 'event_listing_type', 'field' => 'term_id', 'terms' => $data['search_event_types_home']) : array('taxonomy' => 'event_listing_type', 'operator' => 'EXISTS');
     $custom_featured = $data['search_featured'] ? array('key' => '_featured', 'value' => 1) : array();
 	$args = array( 
 		'post_type' => 'event_listing', 
@@ -149,11 +151,14 @@ function search_ajax_home(){
         'posts_per_page' => 3,
 		'meta_query' => array(
 			$custom_start_date,
-			$custom_end_date,
 			$custom_country,
 			$custom_title,
             $custom_featured
-		));
+        ),
+        'tax_query' => array(
+            $custom_type
+        )
+    );
 		$your_events_query = new WP_Query( $args ); 
         ob_start();
 

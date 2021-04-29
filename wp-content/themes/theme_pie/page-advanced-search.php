@@ -42,13 +42,6 @@
                     <h2>What ?</h2>
                     <div class="search_what">
                         <p>
-                            <input class="input" placeholder="From $ minimum" type="number" id="search_fees_start" name="search_fees_start" />
-                        </p>
-
-                        <p>
-                            <input class="input" placeholder="From $ maximum" min="1" type="number" id="search_fees_end" name="search_fees_end" />
-                        </p>
-                        <p>
                             <select class="input" id="search_language" name="search_language">
                                 <option value="select">Select language</option>
                                 <option value="english">English</option>
@@ -70,6 +63,9 @@
                                     <?php echo esc_html( $types->name ); ?></option>
                                 <?php endforeach; ?>
                             </select>
+                        </p>
+                        <p>
+                            <input class="input" placeholder="Name" type="text" id="search_title" name="search_title" />
                         </p>
                     </div>
                 </section>
@@ -108,10 +104,9 @@
             'city': jQuery('input[name=search_city]').val(),
             'search_start_date': jQuery('input[name=search_start_date]').val(),
             'search_end_date': jQuery('input[name=search_end_date]').val(),
-            'search_fees_start': jQuery('input[name=search_fees_start]').val(),
-            'search_fees_end': jQuery('input[name=search_fees_end]').val(),
             'search_language': jQuery('select[name=search_language]').val(),
-            'search_event_types': jQuery('select[name=search_event_types]').val()
+            'search_event_types': jQuery('select[name=search_event_types]').val(),
+            'search_title': jQuery('input[name=search_title]').val()
         }
 
         jQuery.ajax({
@@ -139,10 +134,10 @@
                 'city': jQuery('input[name=search_city]').val(),
                 'search_start_date': jQuery('input[name=search_start_date]').val(),
                 'search_end_date': jQuery('input[name=search_end_date]').val(),
-                'search_fees_start': jQuery('input[name=search_fees_start]').val(),
-                'search_fees_end': jQuery('input[name=search_fees_end]').val(),
                 'search_language': jQuery('select[name=search_language]').val(),
-                'search_event_types': jQuery('select[name=search_event_types]').val()
+                'search_event_types': jQuery('select[name=search_event_types]').val(),
+                'search_title': jQuery('input[name=search_title]').val()
+
             }
             jQuery.ajax({
                 method: 'POST',
