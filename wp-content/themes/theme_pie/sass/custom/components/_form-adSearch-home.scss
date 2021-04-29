@@ -1,0 +1,29 @@
+.form-adSearch-home {
+    background: $lightGray;
+    width: 900px;
+    margin: 0px auto 30px;
+    padding: 20px 30px;
+    border-radius: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    div {
+       padding: 0px 20px;
+       &:nth-child(2) {
+           border-left: solid black 1px;
+           border-right: solid black 1px;
+       }
+       &:nth-child(3) {
+           border-right: solid black 1px;
+        }
+    }
+
+    a {
+        text-align: right;
+    }
+
+    input {
+        width: 140px;
+    }
+}

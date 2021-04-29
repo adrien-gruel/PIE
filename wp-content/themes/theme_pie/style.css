@@ -958,7 +958,7 @@ textarea {
   align-items: center;
 }
 
-.search .search_what, .card-article-header div, .form-contact form p {
+.search .search_what, .form-advanced-search article:nth-child(3), .form-advanced-search, .card-article-header div, .form-contact form p {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -970,7 +970,14 @@ textarea {
   justify-content: center;
 }
 
-.search .search_where, .search .search_when {
+.section-ads section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.search .search_where, .search .search_when, .form-advanced-search article div {
   display: flex;
   justify-content: space-between;
 }
@@ -1136,7 +1143,7 @@ textarea {
 /*--------------------------------------------------------------
 # Call to actions
 --------------------------------------------------------------*/
-.card-feature a, .cta-create-project-button, .cta-advanced-search, .form-contact form p .cta {
+.card-feature a, .cta-home-search, .cta-create-project-button, .cta-advanced-search, .form-contact form p .cta {
   color: white !important;
   background: #ff8024 !important;
   font-size: 16px !important;
@@ -1151,10 +1158,18 @@ textarea {
   margin: auto !important;
   text-decoration: none !important;
 }
-.card-feature a:hover, .cta-create-project-button:hover, .cta-advanced-search:hover, .form-contact form p .cta:hover {
+.card-feature a:hover, .cta-home-search:hover, .cta-create-project-button:hover, .cta-advanced-search:hover, .form-contact form p .cta:hover {
   color: #ff8024 !important;
   border: solid #ff8024 2px !important;
   background: white !important;
+}
+
+.cta-advanced-search {
+  margin: 50px auto !important;
+}
+
+.cta-home-search {
+  width: 100px !important;
 }
 
 /*--------------------------------------------------------------
@@ -1174,30 +1189,35 @@ textarea {
   text-transform: uppercase;
 }
 
+.second-title-adSearch, .second-title-homepage, .second-headline {
+  font-family: "Oswald", sans-serif;
+  font-size: 32px;
+  color: #262626;
+}
+
 h1 {
   margin: 80px 0 0 10%;
 }
 
 .second-headline {
-  font-family: "Oswald", sans-serif;
-  font-size: 32px;
-  color: #262626;
   margin: 0 0 0 10%;
 }
 
 .principal-title {
   text-align: center;
-  margin: 80px 0 0 0;
+  margin: 40px 0 0px 0;
 }
 
 .second-title-homepage {
   text-align: center;
-  font-family: "Oswald", sans-serif;
-  font-size: 32px;
-  color: #262626;
   text-transform: uppercase;
   text-decoration: underline;
-  padding-bottom: 40px;
+  padding-bottom: 30px;
+}
+
+.second-title-adSearch {
+  width: 100%;
+  padding-bottom: 20px;
 }
 
 @media screen and (max-width: 600px) {
@@ -1480,11 +1500,108 @@ h1 {
   font-family: "Oswald", sans-serif;
 }
 
+/*--------------------------------------------------------------
+# Ajax loader
+--------------------------------------------------------------*/
+.loader-container {
+  display: none;
+}
+.loader-container .Loader {
+  margin: 0 auto;
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.LoaderBalls {
+  width: 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.LoaderBalls__item {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #ff8024;
+}
+.LoaderBalls__item:nth-child(1) {
+  animation: bouncing 0.4s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95);
+}
+.LoaderBalls__item:nth-child(2) {
+  animation: bouncing 0.4s 0.1s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
+}
+.LoaderBalls__item:nth-child(3) {
+  animation: bouncing 0.4s 0.2s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
+}
+
+@keyframes bouncing {
+  0% {
+    transform: translate3d(0, 10px, 0) scale(1.2, 0.85);
+  }
+  100% {
+    transform: translate3d(0, -20px, 0) scale(0.9, 1.1);
+  }
+}
+/*--------------------------------------------------------------
+# Form advanced search
+--------------------------------------------------------------*/
+.form-advanced-search {
+  padding: 60px 10%;
+}
+.form-advanced-search article:nth-child(3) {
+  margin-top: 40px;
+  width: 100%;
+}
+.form-advanced-search article:nth-child(3) div {
+  width: calc(50% - 40px);
+}
+.form-advanced-search article:nth-child(1), .form-advanced-search article:nth-child(2) {
+  width: calc(50% - 40px);
+}
+
+/*--------------------------------------------------------------
+# Form adSearch in homepage
+--------------------------------------------------------------*/
+.form-adSearch-home {
+  background: #f6f6f6;
+  width: 900px;
+  margin: 0px auto 30px;
+  padding: 20px 30px;
+  border-radius: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.form-adSearch-home div {
+  padding: 0px 20px;
+}
+.form-adSearch-home div:nth-child(2) {
+  border-left: solid black 1px;
+  border-right: solid black 1px;
+}
+.form-adSearch-home div:nth-child(3) {
+  border-right: solid black 1px;
+}
+.form-adSearch-home a {
+  text-align: right;
+}
+.form-adSearch-home input {
+  width: 140px;
+}
+
 /* Sections */
 /*--------------------------------------------------------------
 # Sections login & register form
 --------------------------------------------------------------*/
+.section-login-register {
+  height: fit-content;
+}
 .section-login-register article {
+  height: 90vh;
   width: 50%;
   padding: 0% 10%;
 }
@@ -1496,11 +1613,22 @@ h1 {
 }
 .section-login-register aside {
   width: 50%;
+  height: 90vh;
 }
 .section-login-register aside img {
-  height: 100%;
+  height: 90vh;
   width: 100%;
   object-fit: cover;
+}
+
+.register article {
+  height: 110vh;
+}
+.register aside {
+  height: 110vh;
+}
+.register aside img {
+  height: 110vh;
 }
 
 @media (max-width: 768px) {
@@ -1508,6 +1636,7 @@ h1 {
     align-items: center;
     justify-content: center;
     padding: 80px 0;
+    max-height: fit-content;
   }
   .section-login-register aside {
     position: absolute;
@@ -1515,13 +1644,30 @@ h1 {
     width: 100%;
     height: 100%;
   }
+  .section-login-register aside img {
+    height: 100%;
+  }
   .section-login-register article {
     width: 80%;
+    height: fit-content;
     background-color: rgba(255, 255, 255, 0.9);
   }
   .section-login-register article h1, .section-login-register article .second-headline {
     text-align: center;
     margin: 10px 0 10px 0;
+  }
+
+  .register {
+    max-height: fit-content;
+  }
+  .register article {
+    height: fit-content;
+  }
+  .register aside {
+    height: 100%;
+  }
+  .register aside img {
+    height: 100%;
   }
 }
 /*--------------------------------------------------------------
@@ -1529,7 +1675,7 @@ h1 {
 --------------------------------------------------------------*/
 .section-blog {
   position: relative;
-  padding: 0px 10% 80px;
+  padding: 0px 10%;
 }
 
 /*--------------------------------------------------------------
@@ -1557,7 +1703,7 @@ h1 {
 # Sections home events
 --------------------------------------------------------------*/
 .section-homeEvent {
-  margin: 60px 10%;
+  margin: 0px 10%;
   position: relative;
 }
 
@@ -1613,13 +1759,17 @@ h1 {
 }
 .section-single article h1 {
   text-align: center;
-  padding: 0 0 30px 0;
+  padding: 30px 0 50px 0;
   margin: 0;
+}
+.section-single article h2 {
+  margin-bottom: 25px;
 }
 .section-single article p {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   color: #262626;
+  margin-bottom: 10px;
 }
 .section-single article .image-mise-en-avant img {
   width: 100%;
@@ -1630,10 +1780,17 @@ h1 {
   text-decoration: none;
   color: #ff8024;
 }
+.section-single .second-headline {
+  margin-bottom: 30px;
+}
+.section-single .place-venue {
+  margin-top: 30px;
+}
 .section-single .single_event_listing {
   display: flex;
   justify-content: space-between;
   padding: 0 10%;
+  margin-bottom: 50px;
 }
 .section-single .single_event_listing .image-logo {
   display: flex;
@@ -1647,6 +1804,8 @@ h1 {
   background-color: #ff8024;
   width: 100%;
   padding: 20px 0;
+  margin-bottom: 50px;
+  margin-top: 50px;
 }
 .section-single .description h2 {
   color: white;
@@ -1663,6 +1822,7 @@ h1 {
 .single_event_listing-Place {
   display: flex;
   padding: 0 10%;
+  margin-bottom: 50px;
 }
 .single_event_listing-Place .Information {
   padding-right: 25%;
@@ -1681,6 +1841,16 @@ h1 {
   .post-navigation .nav-next {
     text-align: initial;
   }
+
+  .single_event_listing-Place {
+    flex-direction: column;
+  }
+
+  .single_event_listing {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 0 10%;
+  }
 }
 /*--------------------------------------------------------------
 # Sections advanced search
@@ -1689,13 +1859,22 @@ h1 {
   margin: 0 10%;
 }
 
-.search-form {
-  width: 60%;
+.search-content {
+  min-height: 500px;
+}
+
+.search-form .sections-container {
+  display: flex;
+  justify-content: space-between;
 }
 .search-form .input {
   font-size: 20px;
   width: 200px;
   margin-top: 20px;
+}
+
+.search_when_container, .search_where_container {
+  width: 42.5%;
 }
 
 .search {
@@ -1723,7 +1902,15 @@ h1 {
   margin-bottom: 0px;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 640px) {
+  .sections-container {
+    flex-direction: column;
+  }
+
+  .search_when_container, .search_where_container {
+    width: 100%;
+  }
+
   .wpem-event-details {
     text-align: left;
   }
@@ -1811,7 +1998,7 @@ h1 {
 }
 
 /*--------------------------------------------------------------
-# Sections create event
+# Section mention legal
 --------------------------------------------------------------*/
 .section-lm {
   width: 80%;
@@ -1830,6 +2017,18 @@ h1 {
 }
 .section-lm h3 {
   color: #fdbcbc;
+/*--------------------------------------------------------------
+# Sections ads
+--------------------------------------------------------------*/
+.section-ads {
+  border-top: solid 5px #ffef9a;
+  border-bottom: solid 5px #ffef9a;
+  margin: 120px 0px;
+}
+.section-ads section {
+  max-width: 1200px;
+  margin: 0px auto;
+  padding: 60px 0px;
 }
 
 /*# sourceMappingURL=style.css.map */

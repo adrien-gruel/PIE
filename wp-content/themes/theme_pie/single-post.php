@@ -15,6 +15,11 @@
             ?>
         </article>
     </div>
+    <section>
+        <?php the_ad_group(90); ?>
+    </section>
 </section>
+
+
 
 <?php get_footer() ?>

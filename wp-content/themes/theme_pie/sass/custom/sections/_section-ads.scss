@@ -1,0 +1,12 @@
+.section-ads {
+    border-top: solid 5px $lightOrange;
+    border-bottom: solid 5px $lightOrange;
+    margin: 120px 0px;
+
+    section {
+        max-width: 1200px;
+        margin: 0px auto;
+        padding: 60px 0px;
+        @extend %flexWrapJaroundAcenter;
+    }
+}

@@ -4,11 +4,49 @@
 	$titleContact = get_field('titre_partie_contact');
 ?>
 
-<h1 class="principal-title"><?php the_title() ?></h1>
+
+<main id="primary" class="site-main">
+	<h1 class="principal-title"><?php the_title() ?></h1>
+	<h2 class="second-title-homepage">Find your next event !</h2>
+	
+	<form method="GET" action="homepage" class="form-adSearch-home">
+		<div>
+			<h3>From ?</h3>
+			<input class="input" placeholder="From" type="date" id="search_start_date_home" name="search_start_date_home" />
+		</div>
+		<div>
+			<h3>To ?</h3>
+			<input class="input" placeholder="To" type="date" id="search_end_date_home" name="search_end_date_home" />
+		</div>
+		<div>
+			<h3>Where ?</h3>
+			<input class="input" placeholder="Country" type="text" id="search_country_home" name="search_country_home" />
+		</div>
+		 <div>
+			 <h3>A Name ?</h3>
+		 	<input class="input" placeholder="Name of the event" type="text" id="search_title_home" name="search_title_home" />
+		</div>
+
+		<input type="submit" value="Search" class="cta-home-search" id="home-search-button"/>
+	</form>
+
+	<section class="home-search-content">
+		<div class="loader-container">
+					<div class="Loader">
+						<div class="LoaderBalls">
+							<div class="LoaderBalls__item"></div>
+							<div class="LoaderBalls__item"></div>
+							<div class="LoaderBalls__item"></div>
+						</div>
+					</div>
+				</div>
+		<div class="wpem-main wpem-event-listings event_listings wpem-row wpem-event-listing-box-view" id="json_resp">
+		</div>
+	</section>
 
 <section class="section-homeEvent">
 	<img class="wave wave-top-left" src="<?= get_template_directory_uri(); ?>/assets/waves-design/wave.png" alt="design wave">
-	<?php echo apply_shortcodes('[events per_page="3" orderby="event_start_date" cancelled="false" layout_type="box" show_more="false"]'); ?>
+
 	<img class="wave wave-top-right" src="<?= get_template_directory_uri(); ?>/assets/waves-design/wave-3.png" alt="design wave">
 </section> <!-- Section of three recents events -->
 
@@ -27,8 +65,7 @@
 			$the_query = new WP_Query( $args ); 
 	?>
 	<?php if ( $the_query->have_posts() ) : ?>
-	    <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>	
-		
+	    <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>			
             <article class="card-article">
 				<div class="card-article-img">
 					<?php the_post_thumbnail() ?>
@@ -55,6 +92,14 @@
     
     </section>
 </section><!-- Section of the most recent articles -->
+
+<section class="section-ads">
+	
+	<section>
+		<?php the_ad_group(84); ?>
+	</section>
+
+</section><!-- Ads Section -->
 
 <section class="section-featureCards">
 	
@@ -98,4 +143,70 @@
 
 </section><!-- Contact Section -->
 
+<section class="section-ads">
+	
+	<section>
+		<?php the_ad_group(85); ?>
+	</section>
+
+</section><!-- Ads Section -->
+
+<script>
+    jQuery(document).ready(function(jQuery) {
+		let formData = {
+			'search_start_date_home': jQuery('input[name=search_start_date_home]').val(),
+            'search_end_date_home': jQuery('input[name=search_end_date_home]').val(),
+            'search_country_home': jQuery('input[name=search_country_home]').val(),
+            'search_title_home': jQuery('input[name=search_title_home]').val(),
+			'search_featured': true
+        }
+
+        jQuery.ajax({
+                method: 'POST',
+                url: adminAjax,
+                data: {
+                    action: 'search_ajax_home',
+                    data: formData
+                },
+                beforeSend:function(){
+                    jQuery('#json_resp').empty()
+                    jQuery(".loader-container").fadeIn()
+                },
+                success: function(response){
+                    jQuery.when(jQuery(".loader-container").fadeOut()).then(function(){
+                        jQuery('#json_resp').empty().append(response)
+                    })
+                    console.log(response)
+                }
+            })
+        jQuery('#home-search-button').click(function(event) {
+            event.preventDefault()
+            let formData = {
+                'search_start_date_home': jQuery('input[name=search_start_date_home]').val(),
+                'search_end_date_home': jQuery('input[name=search_end_date_home]').val(),
+                'search_country_home': jQuery('input[name=search_country_home]').val(),
+                'search_title_home': jQuery('input[name=search_title_home]').val()
+            }
+            jQuery.ajax({
+                method: 'POST',
+                url: adminAjax,
+                data: {
+                    action: 'search_ajax_home',
+                    data: formData
+                },
+                beforeSend:function(){
+                    jQuery('#json_resp').empty()
+                    jQuery(".loader-container").fadeIn()
+                },
+                success: function(response){
+                    jQuery.when(jQuery(".loader-container").fadeOut()).then(function(){
+                        jQuery('#json_resp').empty().append(response)
+                    })
+                    console.log(response)
+                }
+            })
+        })
+    })
+</script>
+</main>
 <?php get_footer();
