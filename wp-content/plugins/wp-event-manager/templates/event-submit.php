@@ -6,7 +6,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 
 global $event_manager;
 ?>
-<form action="<?php echo esc_url( $action ); ?>" method="post" id="submit-event-form" class="wpem-form-wrapper wpem-main event-manager-form" enctype="multipart/form-data">
+<form action="<?php echo esc_url( $action ); ?>" method="post" id="submit-event-form" class="wpem-form-wrapper wpem-main event-manager-form edit-form" enctype="multipart/form-data" >
 	<?php if ( apply_filters( 'submit_event_form_show_signin', true ) ) : ?>
 		<?php get_event_manager_template( 'account-signin.php' ); ?>
 	<?php endif; ?>
