@@ -1,0 +1,22 @@
+.form-advanced-search {
+    padding: 60px 10%;
+    @extend %flexWrapJbetween;
+
+    article {
+        &:nth-child(3) {
+            @extend %flexWrapJbetween;
+            margin-top: 40px;
+            width: 100%;
+            div {
+                width: calc(50% - 40px);
+            }
+        }
+        div {
+            @extend %flexJbetween;
+        }
+    }
+
+    article:nth-child(1), article:nth-child(2) {
+        width: calc(50% - 40px);
+    }
+}

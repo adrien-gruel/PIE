@@ -10,7 +10,12 @@
     font-weight: $weight700;
     color: $primary;
     text-transform: uppercase;
-    
+}
+
+%h2Title {
+    font-family: $oswald;
+    font-size: $size32;
+    color: $black;
 }
 
 h1 {
@@ -19,26 +24,28 @@ h1 {
 }
 
 .second-headline {
-    font-family: $oswald;
-    font-size: $size32;
-    color: $black;
+    @extend %h2Title;
     margin: 0 0 0 10%;
 }
 
 .principal-title {
     @extend %h1Title;
     text-align: center;
-    margin: 80px 0 0 0;
+    margin: 40px 0 0px 0;
 }
 
 .second-title-homepage {
     text-align: center;
-    font-family: $oswald;
-    font-size: $size32;
-    color: $black;
+    @extend %h2Title;
     text-transform: uppercase;
     text-decoration: underline;
-    padding-bottom: 40px;
+    padding-bottom: 30px;
+}
+
+.second-title-adSearch {
+    @extend %h2Title;
+    width: 100%;
+    padding-bottom: 20px;
 }
 
 // ----------- RESPONSIVE CARD FONTS -----------  //
