@@ -13,7 +13,7 @@
     <section class="section-createEvent">
         <div class="create-project-button-container">
             <a class="cta-create-project-button" href="./create-event">
-                Create event
+                Submit an event
             </a>
         </div>
     </section>

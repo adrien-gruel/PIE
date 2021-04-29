@@ -1996,6 +1996,28 @@ h1 {
 }
 
 /*--------------------------------------------------------------
+# Sections create event
+--------------------------------------------------------------*/
+.section-lm {
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 12%;
+}
+.section-lm p {
+  margin-left: 2%;
+}
+.section-lm a {
+  color: orange;
+}
+.section-lm h2 {
+  color: red;
+  text-decoration: underline;
+}
+.section-lm h3 {
+  color: #fdbcbc;
+}
+
+/*--------------------------------------------------------------
 # Sections ads
 --------------------------------------------------------------*/
 .section-ads {
