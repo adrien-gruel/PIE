@@ -238,29 +238,11 @@
 
 												switch ($event->post_status) {
 													case 'publish' :
-														$actions ['details'] = array (
-																'label' => __ ( 'Details', 'wp-event-manager' ),
-																'nonce' => false
-														);
 														$actions ['edit'] = array (
 																'label' => __ ( 'Edit', 'wp-event-manager' ),
 																'nonce' => false
 														);
-														if (is_event_cancelled ( $event )) {
-															$actions ['mark_not_cancelled'] = array (
-																	'label' => __ ( 'Mark not cancelled', 'wp-event-manager' ),
-																	'nonce' => true
-															);
-														} else {
-															$actions ['mark_cancelled'] = array (
-																	'label' => __ ( 'Mark cancelled', 'wp-event-manager' ),
-																	'nonce' => true
-															);
-														}
-														$actions ['duplicate'] = array (
-																'label' => __ ( 'Duplicate', 'wp-event-manager' ),
-																'nonce' => true
-														);
+														
 														break;
 													
 													case 'expired' :
@@ -330,11 +312,7 @@
 											<div class="wpem-dashboard-event-location">
 												<div class="wpem-dashboard-event-placeholder"><strong><?php _e('Location', 'wp-event-manager') ?></strong></div>
 												<?php
-												if (get_event_location ( $event ) === 'Online Event') :
-													_e( 'Online Event', 'wp-event-manager' );
-												else :
-													display_event_location ( false, $event );
-												endif;
+													echo $event->_country . " | " . $event->_city
 												?>
 											</div>
 										</div>

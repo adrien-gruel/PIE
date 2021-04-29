@@ -126,7 +126,7 @@ add_action( 'template_redirect', 'redirect_to_specific_page' );
 
 function redirect_to_specific_page() {
 
-if ( (is_page('your-events') || is_page('create-event'))&& ! is_user_logged_in() ) {
+if ( (is_page('my-pie') || is_page('create-event'))&& ! is_user_logged_in() ) {
 
 wp_redirect( './login'); 
   exit;

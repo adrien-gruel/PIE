@@ -1281,7 +1281,7 @@ h1 {
 /*--------------------------------------------------------------
 # Inputs
 --------------------------------------------------------------*/
-.section-createEvent form input, .section-createEvent form select, form .input {
+.section-createEvent form input, .section-createEvent form select, .edit-form input, form .input {
   background: transparent !important;
   box-shadow: none !important;
   border: none !important;
@@ -1290,6 +1290,7 @@ h1 {
   font-size: 16px !important;
   font-weight: 400 !important;
   border-bottom: solid #262626 2px !important;
+  border-radius: 0px !important;
 }
 
 .um input[type=submit].um-button, .um input[type=submit].um-button:focus, .um a.um-button.um-disabled:hover, .um a.um-button.um-disabled:focus, .um a.um-button.um-disabled:active {
@@ -1943,6 +1944,10 @@ h1 {
 /*--------------------------------------------------------------
 # Sections your events
 --------------------------------------------------------------*/
+.section-myEvents {
+  margin: 0 10%;
+}
+
 .container-events {
   margin: 0px 10%;
   margin-top: 100px;
@@ -2038,6 +2043,13 @@ h1 {
   max-width: 1200px;
   margin: 0px auto;
   padding: 30px 0px;
+}
+
+/*--------------------------------------------------------------
+# Sections edit event
+--------------------------------------------------------------*/
+.edit-form select {
+  height: auto !important;
 }
 
 /*# sourceMappingURL=style.css.map */
