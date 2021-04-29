@@ -5,7 +5,9 @@
 ?>
 
 
-<main id="primary" class="site-main">
+<main id="primary" class="site-main main-waves">
+	<img class="wave wave-top-left" src="<?= get_template_directory_uri(); ?>/assets/waves-design/wave.png" alt="design wave">
+	<img class="wave wave-top-right" src="<?= get_template_directory_uri(); ?>/assets/waves-design/wave-3.png" alt="design wave">
 	<h1 class="principal-title"><?php the_title() ?></h1>
 	<h2 class="second-title-homepage">Find your next event !</h2>
 	
@@ -28,9 +30,9 @@
 		</div>
 
 		<input type="submit" value="Search" class="cta-home-search" id="home-search-button"/>
-	</form>
-
-	<section class="home-search-content">
+	</form><!-- Advanced search form in homepage -->
+	
+	<section class="section-homeEvent">
 		<div class="loader-container">
 					<div class="Loader">
 						<div class="LoaderBalls">
@@ -43,12 +45,6 @@
 		<div class="wpem-main wpem-event-listings event_listings wpem-row wpem-event-listing-box-view" id="json_resp">
 		</div>
 	</section>
-
-<section class="section-homeEvent">
-	<img class="wave wave-top-left" src="<?= get_template_directory_uri(); ?>/assets/waves-design/wave.png" alt="design wave">
-
-	<img class="wave wave-top-right" src="<?= get_template_directory_uri(); ?>/assets/waves-design/wave-3.png" alt="design wave">
-</section> <!-- Section of three recents events -->
 
 <section>
     <h2 class="second-title-homepage">
@@ -94,11 +90,9 @@
 </section><!-- Section of the most recent articles -->
 
 <section class="section-ads">
-	
 	<section>
 		<?php the_ad_group(84); ?>
 	</section>
-
 </section><!-- Ads Section -->
 
 <section class="section-featureCards">

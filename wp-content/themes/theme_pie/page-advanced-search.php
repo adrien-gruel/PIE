@@ -42,11 +42,11 @@
                     <h2>What ?</h2>
                     <div class="search_what">
                         <p>
-                            <input class="input" placeholder="From jQuery" type="number" id="search_fees_start" name="search_fees_start" />
+                            <input class="input" placeholder="From $ minimum" type="number" id="search_fees_start" name="search_fees_start" />
                         </p>
 
                         <p>
-                            <input class="input" placeholder="To jQuery" min="1" type="number" id="search_fees_end" name="search_fees_end" />
+                            <input class="input" placeholder="From $ maximum" min="1" type="number" id="search_fees_end" name="search_fees_end" />
                         </p>
                         <p>
                             <select class="input" id="search_language" name="search_language">
@@ -92,10 +92,13 @@
             </div>
         </div>
     </section>
-
-    <section>
-        <?php the_ad_group(86); ?>
+    
+    <section class="section-ads">
+        <section>
+            <?php the_ad_group(86); ?>
+        </section>
     </section>
+    
 </main><!-- #main -->
 
 <script>

@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WordPress - 5.7.x - Development - Administration package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-04-03 13:23:19+0000\n"
+"PO-Revision-Date: 2021-04-28 18:07:16+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -316,7 +316,7 @@ msgstr "<strong>Localisation d’évènements communautaires</strong> – adress
 
 #: wp-admin/erase-personal-data.php:35 wp-admin/export-personal-data.php:35
 msgid "<strong>Profile Information</strong> &mdash; user email address, username, display name, nickname, first name, last name, description/bio, and registration date."
-msgstr "<strong>Informations de profile</strong> &mdash ; adresse e-mail du compte, identifiant, nom d’affichage, surnom, prénom, nom, description/bio, et date d’inscription."
+msgstr "<strong>Informations de profile</strong> &mdash; adresse e-mail du compte, identifiant, nom d’affichage, surnom, prénom, nom, description/bio, et date d’inscription."
 
 #: wp-admin/erase-personal-data.php:34
 msgid "Personal data that is collected by WordPress and is deleted or anonymized include:"
@@ -472,7 +472,7 @@ msgstr "Impossible d’initier la confirmation pour la demande de données perso
 
 #: wp-admin/options-writing.php:210 wp-admin/options-writing.php:224
 msgid "https://wordpress.org/support/article/update-services/"
-msgstr "https://fr.wordpress.org/support/article/settings-writing-screen/#services-de-mises-%c3%a0-jour"
+msgstr "https://fr.wordpress.org/support/article/settings-writing-screen/#services-de-mises-a-jour"
 
 #. translators: %s: The server PHP version.
 #: wp-admin/includes/dashboard.php:1771
@@ -1033,7 +1033,7 @@ msgstr "Nombre maximal de fichiers autorisés."
 
 #: wp-admin/includes/class-wp-debug-data.php:566
 msgid "Max effective file size"
-msgstr "Taille de fichier effective maximale."
+msgstr "Taille de fichier effective maximale"
 
 #: wp-admin/includes/class-wp-debug-data.php:562
 msgid "Max size of an uploaded file"
@@ -1955,7 +1955,7 @@ msgstr "<a href=\"https://fr.wordpress.org/support/article/tools-export-screen/\
 
 #: wp-admin/plugin-install.php:109
 msgid "<a href=\"https://wordpress.org/support/article/plugins-add-new-screen/\">Documentation on Installing Plugins</a>"
-msgstr "<a href=\"https://wordpress.org/support/article/plugins-add-new-screen/\">Documentation sur l’installation d’extensions (en anglais)</a>"
+msgstr "<a href=\"https://fr.wordpress.org/support/article/plugins-add-new-screen/\">Documentation sur l’installation d’extensions</a>"
 
 #: wp-admin/edit.php:309
 msgid "<a href=\"https://wordpress.org/support/article/pages-screen/\">Documentation on Managing Pages</a>"
@@ -1967,7 +1967,7 @@ msgstr "<a href=\"https://fr.wordpress.org/support/article/posts-screen/\">Docum
 
 #: wp-admin/options-discussion.php:31
 msgid "<a href=\"https://wordpress.org/support/article/settings-discussion-screen/\">Documentation on Discussion Settings</a>"
-msgstr "<a href=\"https://wordpress.org/support/article/settings-discussion-screen/\">Documentation sur les réglages des commentaires (en anglais)</a>"
+msgstr "<a href=\"https://fr.wordpress.org/support/article/settings-discussion-screen/\">Documentation sur les réglages des commentaires</a>"
 
 #: wp-admin/theme-install.php:131
 msgid "<a href=\"https://wordpress.org/support/article/using-themes/#adding-new-themes\">Documentation on Adding New Themes</a>"
@@ -2082,7 +2082,7 @@ msgstr "<a href=\"https://wordpress.org/support/article/nginx/\">Documentation s
 
 #: wp-admin/options-permalink.php:212
 msgid "https://wordpress.org/support/article/using-permalinks/"
-msgstr "https://wordpress.org/support/article/using-permalinks/"
+msgstr "https://fr.wordpress.org/support/article/using-permalinks/"
 
 #: wp-admin/options-permalink.php:61
 msgid "<a href=\"https://wordpress.org/support/article/using-permalinks/\">Documentation on Using Permalinks</a>"
@@ -2098,7 +2098,7 @@ msgstr "<a href=\"https://fr.wordpress.org/support/article/dashboard-updates-scr
 
 #: wp-admin/nav-menus.php:658
 msgid "<a href=\"https://wordpress.org/support/article/appearance-menus-screen/\">Documentation on Menus</a>"
-msgstr "<a href=\"https://wordpress.org/support/article/appearance-menus-screen/\">Documentation sur les menus (en anglais)</a>"
+msgstr "<a href=\"https://fr.wordpress.org/support/article/appearance-menus-screen/\">Documentation sur les menus</a>"
 
 #: wp-admin/plugin-editor.php:143
 msgid "<a href=\"https://developer.wordpress.org/plugins/\">Documentation on Writing Plugins</a>"
@@ -2156,13 +2156,13 @@ msgstr "<a href=\"https://fr.wordpress.org/support/article/settings-general-scre
 
 #: wp-admin/includes/dashboard.php:1970
 msgid "https://wordpress.org/support/article/first-steps-with-wordpress/"
-msgstr "https://wordpress.org/support/article/first-steps-with-wordpress/"
+msgstr "https://fr.wordpress.org/support/article/first-steps-with-wordpress/"
 
 #: wp-admin/includes/file.php:324 wp-admin/theme-editor.php:323
 #: wp-admin/plugin-editor.php:296 wp-admin/options-permalink.php:366
 #: wp-admin/options-permalink.php:391 wp-admin/options-permalink.php:424
 msgid "https://wordpress.org/support/article/changing-file-permissions/"
-msgstr "https://wordpress.org/support/article/changing-file-permissions/"
+msgstr "https://fr.wordpress.org/support/article/changing-file-permissions/"
 
 #. translators: %s: Documentation URL.
 #: wp-admin/includes/file.php:323 wp-admin/theme-editor.php:322
@@ -2242,7 +2242,7 @@ msgstr "<a href=\"https://fr.wordpress.org/support/article/network-admin-sites-s
 
 #: wp-admin/includes/meta-boxes.php:807
 msgid "https://wordpress.org/support/article/introduction-to-blogging/#managing-comments"
-msgstr "https://fr.wordpress.org/support/article/introduction-to-blogging/#grer-les-commentaires"
+msgstr "https://fr.wordpress.org/support/article/introduction-to-blogging/#gerer-les-commentaires"
 
 #: wp-admin/includes/meta-boxes.php:783
 msgid "https://wordpress.org/support/article/custom-fields/"
@@ -2374,7 +2374,7 @@ msgstr "<a href=\"https://fr.wordpress.org/support/article/settings-reading-scre
 
 #: wp-admin/options-reading.php:34 wp-admin/options-reading.php:171
 msgid "https://wordpress.org/support/article/wordpress-feeds/"
-msgstr "https://wordpress.org/support/article/wordpress-feeds/"
+msgstr "https://fr.wordpress.org/support/article/wordpress-feeds/"
 
 #. translators: %s: Site title.
 #: wp-admin/ms-delete-site.php:92
@@ -3472,15 +3472,15 @@ msgstr "SUHOSIN est-il installé ?"
 #: wp-admin/includes/class-wp-debug-data.php:744
 #: wp-admin/includes/class-wp-debug-data.php:749
 msgid "cURL version"
-msgstr "version de cURL"
+msgstr "Version de cURL"
 
 #: wp-admin/includes/class-wp-debug-data.php:735
 msgid "PHP post max size"
-msgstr "PHP post max size"
+msgstr "Taille maximale d’envoi de PHP"
 
 #: wp-admin/includes/class-wp-debug-data.php:731
 msgid "Upload max filesize"
-msgstr "Upload max filesize"
+msgstr "Taille maximale de téléversement de fichier"
 
 #: wp-admin/includes/class-wp-debug-data.php:727
 msgid "Max input time"
@@ -7292,7 +7292,7 @@ msgstr "Y-m-d H:i:s"
 
 #: wp-admin/nav-menus.php:630
 msgid "To add a custom link, <strong>expand the Custom Links section, enter a URL and link text, and click Add to Menu</strong>"
-msgstr "Pour ajouter un lien personnalisé <strong>ouvrez la section « Liens personnalisés », saisissez une adresse web et un texte pour le lien, et cliquez sur « Ajouter au menu »</strong>"
+msgstr "Pour ajouter un lien personnalisé <strong>ouvrez la section « Liens personnalisés », saisissez une URL et un texte pour le lien, et cliquez sur « Ajouter au menu »</strong>"
 
 #. translators: Do not translate USERNAME, URL_DELETE, SITENAME, SITEURL: those
 #. are placeholders.
@@ -8987,7 +8987,7 @@ msgstr "En changeant de thème, il y a souvent des variations sur le nombre et l
 
 #: wp-admin/edit-tags.php:288
 msgid "<strong>Parent</strong> &mdash; Categories, unlike tags, can have a hierarchy. You might have a Jazz category, and under that have child categories for Bebop and Big Band. Totally optional. To create a subcategory, just choose another category from the Parent dropdown."
-msgstr "<strong>Parent</strong> &mdash; Les catégories, contrairement aux étiquettes, peuvent avoir une hiérarchie. Vous pouvez avoir une catégorie nommée « Jazz », et à l’intérieur, plusieurs catégories comme « Bebop » et « Big Band ». Le fait d’avoir une hiérarchie est totalement facultatif. Pour créer une sous-catégorie, choisissez juste une autre catégorie depuis la liste déroulante « Parente » ."
+msgstr "<strong>Parent</strong> &mdash; Les catégories, contrairement aux étiquettes, peuvent avoir une hiérarchie. Vous pouvez avoir une catégorie nommée « Jazz », et à l’intérieur, plusieurs catégories comme « Bebop » et « Big Band ». Le fait d’avoir une hiérarchie est totalement facultatif. Pour créer une sous-catégorie, choisissez juste une autre catégorie depuis la liste déroulante « Parente »."
 
 #: wp-admin/edit-form-advanced.php:374
 msgid "Several boxes on this screen contain settings for how your content will be published, including:"
@@ -10039,7 +10039,7 @@ msgstr "Cet écran vous donne accès à tous vos articles. Vous pouvez personnal
 #. translators: %s: URL to Add Plugins screen.
 #: wp-admin/import.php:228
 msgid "If the importer you need is not listed, <a href=\"%s\">search the plugin directory</a> to see if an importer is available."
-msgstr "Si l’outil d’importation dont vous avec besoin n’est pas présent, <a href=\"%s\">recherchez le dans le dépôt d’extensions</a> pour voir s’il s’y trouve."
+msgstr "Si l’outil d’importation dont vous avez besoin n’est pas listé, <a href=\"%s\">faites une recherche dans le répertoire officiel des extensions</a> pour voir s’il y en a un qui répond à votre besoin."
 
 #: wp-admin/edit-comments.php:181
 msgid "Moderating Comments"

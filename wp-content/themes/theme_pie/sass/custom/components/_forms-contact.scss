@@ -3,6 +3,10 @@
     width: 80%;
 }
 
+.wpcf7 .ajax-loader {
+    display: none;
+}
+
 .form-contact form p {
     @extend %flexWrapJbetween;
     span {

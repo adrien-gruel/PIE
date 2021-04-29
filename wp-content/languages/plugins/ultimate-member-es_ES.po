@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - Ultimate Member – User Profile, User Registration, Login &amp; Membership Plugin - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-04-14 12:37:41+0000\n"
+"PO-Revision-Date: 2021-04-15 09:16:29+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -10,6 +10,106 @@ msgstr ""
 "X-Generator: GlotPress/3.0.0-alpha.2\n"
 "Language: es\n"
 "Project-Id-Version: Plugins - Ultimate Member – User Profile, User Registration, Login &amp; Membership Plugin - Stable (latest release)\n"
+
+#: includes/core/class-profile.php:105
+msgid "Owner and specific roles"
+msgstr "El propietario y perfiles específicos"
+
+#: includes/core/class-profile.php:104
+msgid "Only specific roles"
+msgstr "Solo perfiles específicos"
+
+#: includes/core/class-permalinks.php:192
+msgid "This activation link is expired."
+msgstr "Este enlace de activación está caducado."
+
+#: includes/admin/core/packages/2.1.17-alpha/functions.php:138
+msgid "Database has been updated successfully"
+msgstr "La base de datos ha sido actualizada correctamente"
+
+#: includes/admin/core/packages/2.1.17-alpha/functions.php:136
+msgid "Profile tabs have been updated successfully"
+msgstr "Las pestañas del perfil han sido actualizadas correctamente"
+
+#: includes/admin/core/packages/2.1.17-alpha/functions.php:46
+msgid "Not found"
+msgstr "No encontrado"
+
+#: includes/admin/core/packages/2.1.17-alpha/functions.php:45
+msgid "Search Item"
+msgstr "Buscar un elemento"
+
+#: includes/admin/core/packages/2.1.17-alpha/functions.php:44
+msgid "View Items"
+msgstr "Ver los elementos"
+
+#: includes/admin/core/packages/2.1.17-alpha/functions.php:43
+msgid "View Item"
+msgstr "Ver el elemento"
+
+#: includes/admin/core/packages/2.1.17-alpha/functions.php:42
+msgid "Update Item"
+msgstr "Actualizar el elemento"
+
+#: includes/admin/core/packages/2.1.17-alpha/functions.php:41
+msgid "Edit Item"
+msgstr "Editar el elemento"
+
+#: includes/admin/core/packages/2.1.17-alpha/functions.php:40
+msgid "New Item"
+msgstr "Nuevo elemento"
+
+#: includes/admin/core/packages/2.1.17-alpha/functions.php:38
+msgid "Add New Item"
+msgstr "Añadir un nuevo elemento"
+
+#: includes/admin/core/packages/2.1.17-alpha/functions.php:37
+msgid "All Items"
+msgstr "Todos los elementos"
+
+#: includes/admin/core/packages/2.1.17-alpha/functions.php:36
+msgid "Parent Item:"
+msgstr "Elemento principal:"
+
+#: includes/admin/core/packages/2.1.17-alpha/functions.php:35
+msgid "Item Attributes"
+msgstr "Atributos del elemento"
+
+#: includes/admin/core/packages/2.1.17-alpha/functions.php:34
+msgid "Item Archives"
+msgstr "Archivos del elemento"
+
+#: includes/admin/core/packages/2.1.17-alpha/functions.php:32
+#: includes/admin/core/packages/2.1.17-alpha/functions.php:33
+#: includes/admin/core/packages/2.1.17-alpha/functions.php:50
+msgid "Profile Tabs"
+msgstr "Pestañas del perfil"
+
+#: includes/admin/core/packages/2.1.17-alpha/functions.php:31
+msgctxt "Post Type Singular Name"
+msgid "Profile tab"
+msgstr "Pestaña del perfil"
+
+#: includes/admin/core/packages/2.1.17-alpha/functions.php:30
+msgctxt "Post Type General Name"
+msgid "Profile Tabs"
+msgstr "Pestañas del perfil"
+
+#: includes/admin/core/packages/2.1.17-alpha/init.php:6
+msgid "Upgrade profile tabs..."
+msgstr "Actualizar las pestañas del perfil..."
+
+#: includes/admin/core/class-admin-metabox.php:2283
+msgid "Only visible to profile owner and users who can edit other member accounts"
+msgstr "Solo visible para el propietario del perfil y para los usuarios que pueden editar otras cuentas de miembros"
+
+#: includes/admin/core/class-admin-settings.php:655
+msgid "How long does an activation link live? Leave empty for endless links."
+msgstr "¿Cuánto dura un enlace de activación? Déjalo vacío para enlaces sin finalización."
+
+#: includes/admin/core/class-admin-settings.php:654
+msgid "Activation link lifetime"
+msgstr "Duración del enlace de activación"
 
 #: includes/admin/templates/role/profile.php:50
 msgid "Hides the profile page for robots. The default value depends on the General > Users setting."
@@ -340,8 +440,8 @@ msgstr "La tabla «usermeta» se ha actualizado correctamente"
 msgid "Metadata from %s to %s users were upgraded successfully..."
 msgstr "Los datos meta de usuario del %s al %s han sido actualizados correctamente..."
 
-#: includes/admin/core/class-admin-settings.php:195
 #: includes/admin/core/packages/2.1.3-beta3/functions.php:24
+#: includes/admin/core/class-admin-settings.php:195
 msgid "Wrong data"
 msgstr "Datos incorrectos"
 
@@ -483,8 +583,8 @@ msgstr "Los datos meta de usuario se han actualizado correctamente"
 msgid "Upgrade Member Directories..."
 msgstr "Actualizar el directorio de miembros..."
 
-#: includes/admin/core/packages/2.1.3-beta3/init.php:10
 #: includes/admin/core/packages/2.1.0-beta1/init.php:7
+#: includes/admin/core/packages/2.1.3-beta3/init.php:10
 msgid "Upgrade user metadata..."
 msgstr "Actualizar los datos meta de usuario..."
 
@@ -636,9 +736,9 @@ msgstr "Solo visible para el propietario del perfil y perfiles específicos"
 msgid "Placeholder"
 msgstr "Marcador de posición"
 
+#: includes/admin/core/class-admin-metabox.php:2262
 #: includes/admin/core/class-admin-forms.php:1541
 #: includes/admin/core/class-admin-forms.php:1563
-#: includes/admin/core/class-admin-metabox.php:2262
 #: includes/admin/assets/js/um-admin-forms.js:204
 msgid "Label"
 msgstr "Etiqueta"
@@ -647,9 +747,9 @@ msgstr "Etiqueta"
 msgid "Help Text"
 msgstr "Texto de ayuda"
 
+#: includes/admin/core/class-admin-builder.php:901
 #: includes/admin/core/class-admin-metabox.php:2195
 #: includes/admin/core/class-admin-metabox.php:2201
-#: includes/admin/core/class-admin-builder.php:901
 msgid "Meta Key"
 msgstr "Clave meta"
 
@@ -1072,8 +1172,8 @@ msgstr "Desactivar la subida de foto al perfil"
 msgid "Security Issue"
 msgstr "Problema de seguridad"
 
-#: includes/core/class-password.php:713 includes/core/class-mail.php:619
-#: includes/core/class-profile.php:503
+#: includes/core/class-password.php:713 includes/core/class-profile.php:503
+#: includes/core/class-mail.php:619
 msgid "Your set password"
 msgstr "Tu contraseña configurada"
 
@@ -1549,15 +1649,15 @@ msgstr "Por favor, ten en cuenta que si creas un formulario de perfil específic
 msgid "Change this If you want to override role redirection settings after login only."
 msgstr "Cambia esto si quieres anular los ajustes de redirección de perfiles solo después de iniciar sesión."
 
-#: includes/admin/templates/form/profile_customize.php:51
 #: includes/admin/templates/form/register_customize.php:47
 #: includes/admin/templates/form/login_customize.php:32
+#: includes/admin/templates/form/profile_customize.php:51
 msgid "The maximum width of shortcode in pixels e.g. 600px"
 msgstr "El ancho máximo del shortcode en píxeles, por ejemplo, 600px"
 
-#: includes/admin/templates/form/profile_customize.php:21
 #: includes/admin/templates/form/register_customize.php:19
 #: includes/admin/templates/form/login_customize.php:12
+#: includes/admin/templates/form/profile_customize.php:21
 msgid "Apply custom settings to this form"
 msgstr "Aplicar ajustes personalizados a este formulario"
 
@@ -1843,23 +1943,23 @@ msgstr "Aviso por correo electrónico"
 msgid "Member"
 msgstr "Miembro"
 
-#: includes/admin/core/list-tables/emails-list-table.php:75
 #: includes/admin/core/list-tables/roles-list-table.php:181
+#: includes/admin/core/list-tables/emails-list-table.php:75
 msgid "not found."
 msgstr "no encontrado."
 
-#: includes/admin/core/list-tables/emails-list-table.php:71
 #: includes/admin/core/list-tables/roles-list-table.php:177
+#: includes/admin/core/list-tables/emails-list-table.php:71
 msgid "items"
 msgstr "elementos"
 
-#: includes/admin/core/list-tables/emails-list-table.php:70
 #: includes/admin/core/list-tables/roles-list-table.php:176
+#: includes/admin/core/list-tables/emails-list-table.php:70
 msgid "item"
 msgstr "elemento"
 
-#: includes/admin/core/class-admin-forms.php:895
 #: includes/admin/core/class-admin-upgrade.php:255
+#: includes/admin/core/class-admin-forms.php:895
 msgid "Run"
 msgstr "Ejecutar"
 
@@ -1867,8 +1967,8 @@ msgstr "Ejecutar"
 msgid "Upgrade Log"
 msgstr "Registro de actualización"
 
-#: includes/admin/core/class-admin-settings.php:516
 #: includes/admin/core/class-admin-upgrade.php:251
+#: includes/admin/core/class-admin-settings.php:516
 msgid "If the update was successful, you will see a corresponding message. Otherwise, contact technical support if the update failed."
 msgstr "Si la actualización ha sido correcta, verás el mensaje correspondiente. De lo contrario, si la actualización ha fallado, contacta con el soporte técnico."
 
@@ -2637,17 +2737,17 @@ msgstr "Borrar"
 msgid "Select media"
 msgstr "Selecciona medio"
 
-#: includes/admin/core/class-admin-forms.php:532
 #: includes/admin/core/class-admin-metabox.php:1462
 #: includes/admin/core/class-admin-metabox.php:1490
+#: includes/admin/core/class-admin-forms.php:532
 #: includes/admin/assets/js/um-admin-modal.js:415
 #: includes/admin/assets/js/um-admin-modal.js:419
 msgid "No Icon"
 msgstr "Sin icono"
 
-#: includes/admin/core/class-admin-forms.php:526
 #: includes/admin/core/class-admin-metabox.php:1460
 #: includes/admin/core/class-admin-metabox.php:1488
+#: includes/admin/core/class-admin-forms.php:526
 msgid "Choose Icon"
 msgstr "Elegir un icono"
 
@@ -2978,27 +3078,27 @@ msgstr "El texto que se usa para el botón de actualizar el perfil"
 msgid "Profile Primary Button Text"
 msgstr "Texto del botón principal del perfil"
 
-#: includes/admin/templates/form/profile_customize.php:72
 #: includes/admin/templates/form/register_customize.php:60
 #: includes/admin/templates/form/login_customize.php:45
+#: includes/admin/templates/form/profile_customize.php:72
 #: includes/admin/core/class-admin-settings.php:946
 #: includes/admin/core/class-admin-settings.php:1159
 #: includes/admin/core/class-admin-settings.php:1249
 msgid "Turn off"
 msgstr "Desactivar"
 
-#: includes/admin/templates/form/profile_customize.php:71
 #: includes/admin/templates/form/register_customize.php:59
 #: includes/admin/templates/form/login_customize.php:44
+#: includes/admin/templates/form/profile_customize.php:71
 #: includes/admin/core/class-admin-settings.php:945
 #: includes/admin/core/class-admin-settings.php:1158
 #: includes/admin/core/class-admin-settings.php:1248
 msgid "Show with label"
 msgstr "Mostrar con etiqueta"
 
-#: includes/admin/templates/form/profile_customize.php:70
 #: includes/admin/templates/form/register_customize.php:58
 #: includes/admin/templates/form/login_customize.php:43
+#: includes/admin/templates/form/profile_customize.php:70
 #: includes/admin/core/class-admin-settings.php:944
 #: includes/admin/core/class-admin-settings.php:1157
 #: includes/admin/core/class-admin-settings.php:1247
@@ -3279,8 +3379,8 @@ msgstr "por ejemplo: el nombre de la web"
 msgid "Mail appears from"
 msgstr "El correo aparece como enviado por"
 
-#: includes/admin/core/class-admin-settings.php:877
 #: includes/admin/core/list-tables/emails-list-table.php:309
+#: includes/admin/core/class-admin-settings.php:877
 msgid "Email"
 msgstr "Correo electrónico"
 
@@ -3755,14 +3855,14 @@ msgstr "Añadir nuevo formulario"
 
 #: includes/admin/templates/role/role-edit.php:156
 #: includes/admin/core/list-tables/roles-list-table.php:485
-#: includes/admin/core/packages/2.1.17-alpha/functions.php:39
 #: includes/admin/core/packages/2.0-beta1/user_roles.php:14
+#: includes/admin/core/packages/2.1.17-alpha/functions.php:39
 #: includes/core/class-common.php:60 includes/core/class-common.php:90
 msgid "Add New"
 msgstr "Añadir nuevo"
 
-#: includes/core/class-common.php:59 includes/um-short-functions.php:690
-#: includes/um-short-functions.php:704
+#: includes/um-short-functions.php:690 includes/um-short-functions.php:704
+#: includes/core/class-common.php:59
 #: includes/admin/assets/js/um-admin-blocks-shortcode.js:6
 msgid "Form"
 msgstr "Formulario"
@@ -3775,8 +3875,8 @@ msgstr "Plantilla por defecto"
 msgid "This content has been restricted to logged in users only. Please <a href=\"{login_referrer}\">login</a> to view this content."
 msgstr "Este contenido ha sido restringido solo para usuarios conectados. Por favor, <a href=\"{login_referrer}\">inicia sesión</a> para ver este contenido."
 
-#: includes/um-deprecated-functions.php:671 includes/um-short-functions.php:864
-#: includes/um-short-functions.php:902
+#: includes/um-short-functions.php:864 includes/um-short-functions.php:902
+#: includes/um-deprecated-functions.php:671
 msgid "(empty)"
 msgstr "(vacío)"
 
@@ -6157,21 +6257,21 @@ msgid "Your account"
 msgstr "Tu cuenta"
 
 #: includes/class-config.php:135 includes/class-config.php:797
-#: includes/core/class-member-directory.php:2189
 #: includes/core/um-actions-profile.php:1396
 #: includes/core/um-actions-user.php:19
+#: includes/core/class-member-directory.php:2189
 msgid "Logout"
 msgstr "Salir"
 
-#: includes/core/class-member-directory.php:2184
 #: includes/core/um-actions-profile.php:1395
+#: includes/core/class-member-directory.php:2184
 msgid "My Account"
 msgstr "Mi cuenta"
 
-#: includes/core/class-member-directory.php:2134
-#: includes/core/class-member-directory.php:2178
 #: includes/core/um-actions-profile.php:1363
 #: includes/core/um-actions-profile.php:1394
+#: includes/core/class-member-directory.php:2134
+#: includes/core/class-member-directory.php:2178
 msgid "Edit Profile"
 msgstr "Editar el perfil"
 
@@ -6187,8 +6287,8 @@ msgstr "Cuéntanos un poco sobre ti..."
 msgid "Remove photo"
 msgstr "Borrar la foto"
 
-#: includes/core/class-fields.php:2680 includes/core/class-fields.php:2704
 #: includes/core/um-actions-profile.php:1045
+#: includes/core/class-fields.php:2680 includes/core/class-fields.php:2704
 msgid "Change photo"
 msgstr "Cambiar la foto"
 
@@ -6248,23 +6348,23 @@ msgstr "Por favor, indica tu nombre de usuario o correo electrónico"
 msgid "Hello, spam bot!"
 msgstr "¡Hola, bot de spam!"
 
-#: includes/core/um-filters-login.php:104 includes/core/um-actions-misc.php:186
+#: includes/core/um-actions-misc.php:186 includes/core/um-filters-login.php:104
 msgid "Your membership request has been rejected."
 msgstr "Tu solicitud de registro ha sido rechazada."
 
-#: includes/core/um-filters-login.php:101 includes/core/um-actions-misc.php:182
+#: includes/core/um-actions-misc.php:182 includes/core/um-filters-login.php:101
 msgid "Your account is awaiting e-mail verification."
 msgstr "Tu cuenta está a la espera de la verificación por correo electrónico."
 
-#: includes/core/um-filters-login.php:98 includes/core/um-actions-misc.php:178
+#: includes/core/um-actions-misc.php:178 includes/core/um-filters-login.php:98
 msgid "Your account has not been approved yet."
 msgstr "Tu cuenta aún no ha sido aprobada."
 
-#: includes/core/um-filters-login.php:95 includes/core/um-actions-misc.php:174
+#: includes/core/um-actions-misc.php:174 includes/core/um-filters-login.php:95
 msgid "Your account has been disabled."
 msgstr "Tu cuenta ha sido desactivada."
 
-#: includes/core/um-filters-login.php:43 includes/core/um-actions-misc.php:170
+#: includes/core/um-actions-misc.php:170 includes/core/um-filters-login.php:43
 msgid "Your IP address has been blocked."
 msgstr "Tu dirección IP ha sido bloqueada."
 
@@ -6272,7 +6372,7 @@ msgstr "Tu dirección IP ha sido bloqueada."
 msgid "We do not accept registrations from that domain."
 msgstr "No aceptamos registros desde ese dominio."
 
-#: includes/core/um-filters-login.php:40 includes/core/um-actions-misc.php:162
+#: includes/core/um-actions-misc.php:162 includes/core/um-filters-login.php:40
 msgid "This email address has been blocked."
 msgstr "Esta dirección de correo electrónico ha sido bloqueada."
 
@@ -6521,8 +6621,8 @@ msgstr "Debes introducir tu contraseña"
 msgid "Your username is invalid"
 msgstr "Tu nombre de usuario no es válido"
 
-#: includes/core/class-password.php:553 includes/core/um-actions-form.php:627
-#: includes/core/um-actions-account.php:83
+#: includes/core/class-password.php:553 includes/core/um-actions-account.php:83
+#: includes/core/um-actions-form.php:627
 msgid "Your password must contain at least one lowercase letter, one capital letter and one number"
 msgstr "Tu contraseña debe contener, al menos, una letra minúscula, una letra mayúscula y un número"
 
@@ -6712,27 +6812,27 @@ msgstr "Acción a realizar después de cerrar la sesión"
 msgid "Set a url to redirect this user role to after they login with their account"
 msgstr "Establecer una URL a la que redireccionar a este perfil de usuario después de que inicie sesión con su cuenta"
 
-#: includes/admin/templates/role/login.php:22
 #: includes/admin/templates/form/login_settings.php:20
+#: includes/admin/templates/role/login.php:22
 msgid "Redirect to WordPress Admin"
 msgstr "Redirigir a la administración de WordPress"
 
-#: includes/admin/templates/role/login.php:21
 #: includes/admin/templates/form/login_settings.php:19
+#: includes/admin/templates/role/login.php:21
 msgid "Refresh active page"
 msgstr "Actualizar la página activa"
 
+#: includes/admin/templates/form/login_settings.php:18
+#: includes/admin/templates/role/login.php:20
 #: includes/admin/templates/role/register.php:31
 #: includes/admin/templates/role/register.php:58
 #: includes/admin/templates/role/register.php:92
-#: includes/admin/templates/role/login.php:20
-#: includes/admin/templates/form/login_settings.php:18
 msgid "Redirect to URL"
 msgstr "Redirigir a la URL"
 
-#: includes/admin/templates/role/register.php:30
-#: includes/admin/templates/role/login.php:19
 #: includes/admin/templates/form/login_settings.php:17
+#: includes/admin/templates/role/login.php:19
+#: includes/admin/templates/role/register.php:30
 msgid "Redirect to profile"
 msgstr "Redirigir al perfil"
 
@@ -6780,13 +6880,13 @@ msgstr "¿Puede editar su perfil?"
 msgid "Set a url to redirect this user role to after they delete account"
 msgstr "Establece una URL para redirigir este perfil de usuario después de que haya borrado la cuenta"
 
-#: includes/admin/templates/role/delete.php:20
 #: includes/admin/templates/role/logout.php:20
+#: includes/admin/templates/role/delete.php:20
 msgid "Go to Custom URL"
 msgstr "Ir a una URL personalizada"
 
-#: includes/admin/templates/role/delete.php:19
 #: includes/admin/templates/role/logout.php:19
+#: includes/admin/templates/role/delete.php:19
 msgid "Go to Homepage"
 msgstr "Ir a la página de inicio"
 
@@ -6856,9 +6956,9 @@ msgstr "Añadir un nuevo grupo de campos"
 msgid "Add a New Field"
 msgstr "Añadir un nuevo campo"
 
-#: includes/admin/templates/modal/forms/dynamic_new_field.php:15
 #: includes/admin/templates/modal/forms/dynamic_new_divider.php:15
 #: includes/admin/templates/modal/forms/dynamic_new_group.php:15
+#: includes/admin/templates/modal/forms/dynamic_new_field.php:15
 msgid "Add"
 msgstr "Añadir"
 
@@ -6879,19 +6979,19 @@ msgid "Edit Row Settings"
 msgstr "Editar los ajustes de fila"
 
 #: includes/class-config.php:254 includes/admin/templates/role/publish.php:24
-#: includes/admin/templates/modal/forms/dynamic_new_field.php:18
 #: includes/admin/templates/modal/forms/dynamic_edit_row.php:18
-#: includes/admin/templates/modal/forms/dynamic_edit_field.php:18
-#: includes/admin/templates/modal/forms/fonticons.php:14
 #: includes/admin/templates/modal/forms/dynamic_new_divider.php:18
+#: includes/admin/templates/modal/forms/dynamic_edit_field.php:18
 #: includes/admin/templates/modal/forms/dynamic_new_group.php:18
-#: includes/core/class-fields.php:2705 includes/core/class-fields.php:2804
+#: includes/admin/templates/modal/forms/fonticons.php:14
+#: includes/admin/templates/modal/forms/dynamic_new_field.php:18
 #: includes/core/um-actions-profile.php:814
 #: includes/core/um-actions-profile.php:826
 #: includes/core/um-actions-profile.php:1014
 #: includes/core/um-actions-profile.php:1047
 #: includes/core/um-actions-profile.php:1390
 #: includes/core/um-actions-profile.php:1397
+#: includes/core/class-fields.php:2705 includes/core/class-fields.php:2804
 msgid "Cancel"
 msgstr "Cancelar"
 
@@ -6904,18 +7004,18 @@ msgstr "Actualizar"
 msgid "Edit Field"
 msgstr "Editar el campo"
 
-#: includes/admin/templates/form/profile_customize.php:80
-#: includes/admin/templates/form/profile_customize.php:99
 #: includes/admin/templates/form/register_customize.php:68
 #: includes/admin/templates/form/register_customize.php:87
 #: includes/admin/templates/form/login_customize.php:53
 #: includes/admin/templates/form/login_customize.php:72
+#: includes/admin/templates/form/profile_customize.php:80
+#: includes/admin/templates/form/profile_customize.php:99
 msgid "Customize the button text"
 msgstr "Personalizar el texto del botón"
 
-#: includes/admin/templates/form/profile_customize.php:67
 #: includes/admin/templates/form/register_customize.php:55
 #: includes/admin/templates/form/login_customize.php:40
+#: includes/admin/templates/form/profile_customize.php:67
 msgid "Whether to show field icons and where to show them relative to the field"
 msgstr "Si se muestran los iconos de campo y dónde mostrarlos en relación con el campo"
 
@@ -6929,9 +7029,9 @@ msgstr "El shortcode es centrado por defecto, a menos que especifiques aquí otr
 msgid "Assign role to form"
 msgstr "Asignar un perfil al formulario"
 
-#: includes/admin/templates/form/profile_customize.php:22
 #: includes/admin/templates/form/register_customize.php:20
 #: includes/admin/templates/form/login_customize.php:13
+#: includes/admin/templates/form/profile_customize.php:22
 msgid "Switch to yes if you want to customize this form settings, styling &amp; appearance"
 msgstr "Cámbialo a sí, si quieres personalizar los ajustes de este formulario, su estilo y apariencia"
 
@@ -6998,13 +7098,13 @@ msgstr "Formulario de registro"
 msgid "<strong>Note:</strong> Form type cannot be changed for the default forms."
 msgstr "<strong>Nota:</strong> El tipo de formulario no se puede cambiar en los formularios por defecto."
 
+#: includes/admin/templates/form/login_settings.php:26
+#: includes/admin/templates/role/login.php:28
+#: includes/admin/templates/role/logout.php:26
+#: includes/admin/templates/role/delete.php:26
 #: includes/admin/templates/role/register.php:38
 #: includes/admin/templates/role/register.php:72
 #: includes/admin/templates/role/register.php:106
-#: includes/admin/templates/role/delete.php:26
-#: includes/admin/templates/role/logout.php:26
-#: includes/admin/templates/role/login.php:28
-#: includes/admin/templates/form/login_settings.php:26
 msgid "Set Custom Redirect URL"
 msgstr "Establece una URL personalizada de redirección"
 
@@ -7020,33 +7120,33 @@ msgstr "¿Mostrar «Mantenerme conectado»?"
 msgid "Show Forgot Password Link?"
 msgstr "¿Mostrar el enlace «¿Has olvidado tu contraseña?»?"
 
-#: includes/admin/templates/form/profile_customize.php:98
 #: includes/admin/templates/form/register_customize.php:86
 #: includes/admin/templates/form/login_customize.php:71
+#: includes/admin/templates/form/profile_customize.php:98
 msgid "Secondary Button Text"
 msgstr "Texto del botón secundario"
 
-#: includes/admin/templates/form/profile_customize.php:87
 #: includes/admin/templates/form/register_customize.php:75
 #: includes/admin/templates/form/login_customize.php:60
+#: includes/admin/templates/form/profile_customize.php:87
 msgid "Show Secondary Button"
 msgstr "Mostrar el botón secundario"
 
-#: includes/admin/templates/form/profile_customize.php:79
 #: includes/admin/templates/form/register_customize.php:67
 #: includes/admin/templates/form/login_customize.php:52
+#: includes/admin/templates/form/profile_customize.php:79
 msgid "Primary Button Text"
 msgstr "Texto del botón principal"
 
-#: includes/admin/templates/form/profile_customize.php:66
 #: includes/admin/templates/form/register_customize.php:54
 #: includes/admin/templates/form/login_customize.php:39
+#: includes/admin/templates/form/profile_customize.php:66
 msgid "Field Icons"
 msgstr "Iconos de campo"
 
-#: includes/admin/templates/form/profile_customize.php:50
 #: includes/admin/templates/form/register_customize.php:46
 #: includes/admin/templates/form/login_customize.php:31
+#: includes/admin/templates/form/profile_customize.php:50
 msgid "Max. Width (px)"
 msgstr "Ancho máx. (px)"
 
@@ -7208,9 +7308,9 @@ msgstr "Mostrar solo los miembros que han subido una foto de perfil"
 msgid "User Roles to Display"
 msgstr "Perfiles de usuario a mostrar"
 
-#: includes/admin/templates/form/profile_customize.php:42
 #: includes/admin/templates/form/register_customize.php:38
 #: includes/admin/templates/form/login_customize.php:23
+#: includes/admin/templates/form/profile_customize.php:42
 #: includes/admin/templates/directory/appearance.php:12
 msgid "Template"
 msgstr "Plantilla"
@@ -7302,8 +7402,8 @@ msgstr "Nº de miembros"
 msgid "Role Title"
 msgstr "Titulo del rol"
 
-#: includes/admin/core/class-admin-settings.php:1449
 #: includes/admin/class-admin.php:318
+#: includes/admin/core/class-admin-settings.php:1449
 msgid "Settings"
 msgstr "Ajustes"
 
@@ -7465,8 +7565,13 @@ msgstr "Tarjeta del perfil"
 msgid "General Options"
 msgstr "Opciones generales"
 
-#: includes/admin/templates/role/profile.php:53
 #: includes/admin/templates/form/register_gdpr.php:26
+#: includes/admin/templates/form/register_customize.php:23
+#: includes/admin/templates/form/register_customize.php:79
+#: includes/admin/templates/form/login_customize.php:16
+#: includes/admin/templates/form/login_customize.php:64
+#: includes/admin/templates/form/login_customize.php:83
+#: includes/admin/templates/form/login_customize.php:94
 #: includes/admin/templates/form/profile_customize.php:25
 #: includes/admin/templates/form/profile_customize.php:91
 #: includes/admin/templates/form/profile_customize.php:110
@@ -7475,26 +7580,26 @@ msgstr "Opciones generales"
 #: includes/admin/templates/form/profile_customize.php:177
 #: includes/admin/templates/form/profile_customize.php:188
 #: includes/admin/templates/form/profile_customize.php:199
-#: includes/admin/templates/form/register_customize.php:23
-#: includes/admin/templates/form/register_customize.php:79
-#: includes/admin/templates/form/login_customize.php:16
-#: includes/admin/templates/form/login_customize.php:64
-#: includes/admin/templates/form/login_customize.php:83
-#: includes/admin/templates/form/login_customize.php:94
+#: includes/admin/templates/role/profile.php:53
+#: includes/admin/core/list-tables/roles-list-table.php:371
+#: includes/admin/core/list-tables/roles-list-table.php:379
 #: includes/admin/core/class-admin-columns.php:186
 #: includes/admin/core/class-admin-columns.php:219
 #: includes/admin/core/class-admin-settings.php:647
 #: includes/admin/core/class-admin-settings.php:756
-#: includes/admin/core/list-tables/roles-list-table.php:371
-#: includes/admin/core/list-tables/roles-list-table.php:379
 #: includes/core/um-actions-account.php:293
 #: includes/core/class-builtin.php:1144 includes/core/class-builtin.php:1163
 #: includes/core/class-builtin.php:1179 includes/core/class-builtin.php:1182
 msgid "No"
 msgstr "No"
 
-#: includes/admin/templates/role/profile.php:54
 #: includes/admin/templates/form/register_gdpr.php:27
+#: includes/admin/templates/form/register_customize.php:24
+#: includes/admin/templates/form/register_customize.php:80
+#: includes/admin/templates/form/login_customize.php:17
+#: includes/admin/templates/form/login_customize.php:65
+#: includes/admin/templates/form/login_customize.php:84
+#: includes/admin/templates/form/login_customize.php:95
 #: includes/admin/templates/form/profile_customize.php:26
 #: includes/admin/templates/form/profile_customize.php:92
 #: includes/admin/templates/form/profile_customize.php:111
@@ -7503,20 +7608,15 @@ msgstr "No"
 #: includes/admin/templates/form/profile_customize.php:178
 #: includes/admin/templates/form/profile_customize.php:189
 #: includes/admin/templates/form/profile_customize.php:200
-#: includes/admin/templates/form/register_customize.php:24
-#: includes/admin/templates/form/register_customize.php:80
-#: includes/admin/templates/form/login_customize.php:17
-#: includes/admin/templates/form/login_customize.php:65
-#: includes/admin/templates/form/login_customize.php:84
-#: includes/admin/templates/form/login_customize.php:95
-#: includes/admin/core/class-admin-columns.php:186
-#: includes/admin/core/class-admin-columns.php:219
-#: includes/admin/core/class-admin-settings.php:648
-#: includes/admin/core/class-admin-settings.php:757
+#: includes/admin/templates/role/profile.php:54
 #: includes/admin/core/list-tables/roles-list-table.php:371
 #: includes/admin/core/list-tables/roles-list-table.php:379
 #: includes/admin/core/packages/2.1.3-beta3/functions.php:75
 #: includes/admin/core/packages/2.1.3-beta3/functions.php:76
+#: includes/admin/core/class-admin-columns.php:186
+#: includes/admin/core/class-admin-columns.php:219
+#: includes/admin/core/class-admin-settings.php:648
+#: includes/admin/core/class-admin-settings.php:757
 #: includes/core/class-user.php:215 includes/core/class-user.php:216
 #: includes/core/um-actions-account.php:288
 #: includes/core/class-builtin.php:1145 includes/core/class-builtin.php:1164
@@ -7577,9 +7677,9 @@ msgstr "Resumen de usuarios"
 msgid "Member Directories"
 msgstr "Directorios de miembros"
 
-#: includes/admin/core/class-admin-menu.php:161
 #: includes/admin/core/list-tables/roles-list-table.php:483
 #: includes/admin/core/packages/2.0-beta1/user_roles.php:12
+#: includes/admin/core/class-admin-menu.php:161
 msgid "User Roles"
 msgstr "Perfiles de usuario"
 
@@ -7628,27 +7728,27 @@ msgstr "Tipo"
 msgid "ID"
 msgstr "ID"
 
-#: includes/admin/core/class-admin-columns.php:102
 #: includes/admin/core/class-admin-builder.php:553
+#: includes/admin/core/class-admin-columns.php:102
 msgid "Duplicate"
 msgstr "Duplicar"
 
+#: includes/admin/core/class-admin-builder.php:473
 #: includes/admin/core/class-admin-dragdrop.php:168
 #: includes/admin/core/class-admin-dragdrop.php:183
 #: includes/admin/core/class-admin-dragdrop.php:208
-#: includes/admin/core/class-admin-builder.php:473
 msgid "Delete Row"
 msgstr "Borrar la fila"
 
-#: includes/admin/core/class-admin-dragdrop.php:166
 #: includes/admin/core/class-admin-builder.php:400
 #: includes/admin/core/class-admin-builder.php:470
+#: includes/admin/core/class-admin-dragdrop.php:166
 msgid "Edit Row"
 msgstr "Editar la fila"
 
-#: includes/admin/core/class-admin-dragdrop.php:165
 #: includes/admin/core/class-admin-builder.php:399
 #: includes/admin/core/class-admin-builder.php:469
+#: includes/admin/core/class-admin-dragdrop.php:165
 msgid "Add Row"
 msgstr "Añadir una fila"
 
@@ -7711,16 +7811,17 @@ msgid "Manage conditional fields support"
 msgstr "Gestionar la compatibilidad de campos condicionales"
 
 #: includes/admin/core/class-admin-builder.php:1190
+#: includes/core/um-actions-profile.php:579
 #: includes/core/class-password.php:535 includes/core/class-form.php:176
-#: includes/core/class-form.php:425 includes/core/um-actions-profile.php:579
+#: includes/core/class-form.php:425
 msgid "This is not possible for security reasons."
 msgstr "Esto no es posible por razones de seguridad."
 
-#: includes/admin/core/class-admin-dragdrop.php:33
-#: includes/admin/core/class-admin-menu.php:106
 #: includes/admin/core/class-admin-builder.php:292
 #: includes/admin/core/class-admin-builder.php:612
 #: includes/admin/core/class-admin-builder.php:771
+#: includes/admin/core/class-admin-dragdrop.php:33
+#: includes/admin/core/class-admin-menu.php:106
 #: includes/core/class-fields.php:4623
 msgid "Please login as administrator"
 msgstr "Por favor, inicia sesión como administrador"
@@ -7744,8 +7845,8 @@ msgstr "Guardar los cambios"
 msgid "Status"
 msgstr "Estado"
 
-#: includes/admin/core/class-admin-settings.php:1305
 #: includes/admin/core/class-admin-menu.php:206
+#: includes/admin/core/class-admin-settings.php:1305
 msgid "Extensions"
 msgstr "Extensiones"
 
@@ -7758,10 +7859,10 @@ msgstr "Usuario"
 msgid "Style"
 msgstr "Estilo"
 
-#: includes/admin/core/class-admin-enqueue.php:499
 #: includes/admin/core/list-tables/roles-list-table.php:342
 #: includes/admin/core/list-tables/roles-list-table.php:410
 #: includes/admin/core/class-admin-builder.php:560
+#: includes/admin/core/class-admin-enqueue.php:499
 msgid "Delete"
 msgstr "Borrar"
 
@@ -7821,10 +7922,10 @@ msgstr "Subir"
 msgid "Background Color"
 msgstr "Color de fondo"
 
-#: includes/admin/templates/role/profile.php:52
 #: includes/admin/templates/form/register_customize.php:6
 #: includes/admin/templates/form/register_customize.php:32
 #: includes/admin/templates/form/login_settings.php:16
+#: includes/admin/templates/role/profile.php:52
 #: includes/admin/core/class-admin-columns.php:134
 #: includes/admin/core/class-admin-columns.php:153
 #: includes/admin/core/class-admin-settings.php:615
