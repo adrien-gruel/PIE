@@ -1233,6 +1233,10 @@ h1 {
   width: 80%;
 }
 
+.wpcf7 .ajax-loader {
+  display: none;
+}
+
 .form-contact form p span {
   margin-bottom: 20px;
   width: calc(50% - 30px);
@@ -1296,6 +1300,7 @@ h1 {
 # Card Article
 --------------------------------------------------------------*/
 .card-article {
+  background-color: white;
   width: calc((100% - 20%) / 3);
   position: relative;
   margin-top: 3%;
@@ -1442,18 +1447,21 @@ h1 {
 /*--------------------------------------------------------------
 # Waves
 --------------------------------------------------------------*/
+.main-waves {
+  position: relative;
+  overflow: hidden;
+}
+
 .wave {
   position: absolute;
   overflow: hidden;
 }
 .wave-top-left {
-  top: -15%;
-  left: -13%;
+  left: -10%;
   z-index: -5;
 }
 .wave-top-right {
-  top: -8%;
-  right: -12.5%;
+  right: -10.5%;
   z-index: -5;
 }
 .wave-bottom-left {
@@ -2023,14 +2031,15 @@ h1 {
 # Sections ads
 --------------------------------------------------------------*/
 .section-ads {
+  background: #ffef9a;
   border-top: solid 5px #ffef9a;
   border-bottom: solid 5px #ffef9a;
-  margin: 120px 0px;
+  margin: 60px 0px 0px;
 }
 .section-ads section {
   max-width: 1200px;
   margin: 0px auto;
-  padding: 60px 0px;
+  padding: 30px 0px;
 }
 
 /*# sourceMappingURL=style.css.map */
