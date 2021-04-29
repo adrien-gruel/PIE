@@ -46,7 +46,7 @@
 		));
 		$your_events_query = new WP_Query( $args ); ?>
 
-<div class="wpem-main wpem-event-listings event_listings wpem-row wpem-event-listing-box-view">
+	<div class="wpem-main wpem-event-listings event_listings wpem-row wpem-event-listing-box-view">
             <?php if ( $your_events_query->have_posts() ) : ?>
             <?php while ( $your_events_query->have_posts() ) : $your_events_query->the_post(); ?>
             
