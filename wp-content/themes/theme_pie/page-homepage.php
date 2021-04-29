@@ -9,29 +9,34 @@
 
 <section>
 	<h2>Find an event</h2>
-	<form method="GET" action="homepage" class="search-home-form">
-		<input class="input" placeholder="From" type="date" id="search_start_date_home" name="search_start_date_home" />
-		<input class="input" placeholder="To" type="date" id="search_end_date_home" name="search_end_date_home" />
-		<input class="input" placeholder="Country" type="text" id="search_country_home" name="search_country_home" />
-		<select class="input" id="search_language_home" name="search_language_home">
-            <option value="select">Select language</option>
-            <option value="english">English</option>
-            <option value="spanish">Spanish</option>
-            <option value="french">French</option>
-            <option value="portuguese">Portuguese</option>
-            <option value="german">German</option>
-            <option value="russian">Russian</option>
-            <option value="chinese">Chinese</option>
-            <option value="arabic">Arabic</option>
-            <option value="other">Other</option>
-		 </select>
-		 <input class="input" placeholder="Title of the event" type="text" id="search_title_home" name="search_title_home" />
-		 <input type="submit" value="Search" class="cta-home-search" id="home-search-button"/>									
+<main id="primary" class="site-main">
+	<h1 class="principal-title"><?php the_title() ?></h1>
+	<h2 class="second-title-homepage">Find your next event !</h2>
+	
+	<form method="GET" action="homepage" class="form-adSearch-home">
+		<div>
+			<h3>From ?</h3>
+			<input class="input" placeholder="From" type="date" id="search_start_date_home" name="search_start_date_home" />
+		</div>
+		<div>
+			<h3>To ?</h3>
+			<input class="input" placeholder="To" type="date" id="search_end_date_home" name="search_end_date_home" />
+		</div>
+		<div>
+			<h3>Where ?</h3>
+			<input class="input" placeholder="Country" type="text" id="search_country_home" name="search_country_home" />
+		</div>
+		 <div>
+			 <h3>A Name ?</h3>
+		 	<input class="input" placeholder="Name of the event" type="text" id="search_title_home" name="search_title_home" />
+		</div>
+		<input type="submit" value="Search" class="cta-home-search" />
+		<!-- <a href="advanced-search" title="advanced-search">Advanced Search</a>								 -->
 	</form>
+
 
 	<div class="wpem-main wpem-event-listings event_listings wpem-row wpem-event-listing-box-view" id="json_resp">
 	</div>
-</section>
 
 <section class="section-homeEvent">
 	<img class="wave wave-top-left" src="<?= get_template_directory_uri(); ?>/assets/waves-design/wave.png" alt="design wave">
@@ -199,4 +204,5 @@
         })
     })
 </script>
+</main>
 <?php get_footer();

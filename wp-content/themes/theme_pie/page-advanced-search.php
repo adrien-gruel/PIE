@@ -1,18 +1,5 @@
 <?php
-/**
- * The template for displaying all pages
- *
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages
- * and that other 'pages' on your WordPress site may use a
- * different template.
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
- *
- * @package Theme_PIE
- */
-
-get_header();
+  get_header();
 ?>
 
 <main id="primary" class="site-main">
@@ -102,21 +89,11 @@ get_header();
                 </div>
             </div>
             <div class="wpem-main wpem-event-listings event_listings wpem-row wpem-event-listing-box-view" id="json_resp">
-            
             </div>
         </div>
 
     </section>
-
-    <section class="section-ads">
-        <section>
-            <?php the_ad_group(83); ?>
-        </section>
-    </section><!-- Ads Section -->
-    
 </main><!-- #main -->
-
-
 
 <script>
     jQuery(document).ready(function(jQuery) {
@@ -183,5 +160,4 @@ get_header();
     })
 </script>
 
-<?php
-get_footer();
+<?php get_footer();
