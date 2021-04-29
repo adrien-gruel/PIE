@@ -139,10 +139,9 @@ add_action( 'wp_ajax_nopriv_search_ajax_home', 'search_ajax_home');
 function search_ajax_home(){
     $data = $_POST['data'];
     $custom_start_date= !empty($data['search_start_date_home']) ? array('key' => '_event_start_date', 'value' => $data['search_start_date_home'], 'compare' => '>=', 'type' => 'DATE') : array();
-	$custom_end_date= !empty($data['search_end_date_home']) ? array('key' => '_event_end_date', 'value' => $data['search_start_date_home'], 'compare' => '<=', 'type' => 'DATE') : array();
+	$custom_end_date= !empty($data['search_end_date_home']) ? array('key' => '_event_end_date', 'value' => $data['search_end_date_home'], 'compare' => '<=', 'type' => 'DATE') : array();
 	$custom_country= !empty($data['search_country_home']) ? array('key' => '_country', 'value' => $data['search_country_home']) : array();
 	$custom_title= !empty($data['search_title_home']) ? array('key' => '_event_title', 'value' => $data['search_title_home'], 'compare' => 'LIKE') : array();
-    $custom_language= $data['search_language_home'] != "select" ? array('key' => '_language', 'value' => $data['search_language_home'], 'compare' => 'LIKE') : array();
     $custom_featured = $data['search_featured'] ? array('key' => '_featured', 'value' => 1) : array();
 	$args = array( 
 		'post_type' => 'event_listing', 
@@ -153,7 +152,6 @@ function search_ajax_home(){
 			$custom_end_date,
 			$custom_country,
 			$custom_title,
-			$custom_language,
             $custom_featured
 		));
 		$your_events_query = new WP_Query( $args ); 
