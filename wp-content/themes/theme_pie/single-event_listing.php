@@ -58,6 +58,9 @@
                      ?></p>
                 </div>
             </div>
+            <section>
+                <?php the_ad_group(89); ?>
+            </section>
             <h2 class="second-headline">EVENT DETAILS</h2>
             <div class="single_event_listing"> 
                 <div class="Information"> 
@@ -79,6 +82,11 @@
         </article>
 
     </div>
+    <section>
+        <?php the_ad_group(88); ?>
+    </section>
 </section>
+
+
 
 <?php get_footer();

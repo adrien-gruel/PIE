@@ -91,7 +91,10 @@
             <div class="wpem-main wpem-event-listings event_listings wpem-row wpem-event-listing-box-view" id="json_resp">
             </div>
         </div>
+    </section>
 
+    <section>
+        <?php the_ad_group(86); ?>
     </section>
 </main><!-- #main -->
 
