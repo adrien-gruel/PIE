@@ -25,8 +25,14 @@
 
 .cta-advanced-search{
     @extend %cta;
+    margin: 50px auto !important;
 }
 
 .cta-create-project-button{
-    @extend %cta 
+    @extend %cta;
+}
+
+.cta-home-search {
+    @extend %cta;
+    width: 100px !important;
 }
