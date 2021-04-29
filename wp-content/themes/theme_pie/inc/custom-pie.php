@@ -19,15 +19,17 @@ add_action( 'wp_ajax_search_ajax', 'search_ajax' );
 add_action( 'wp_ajax_nopriv_search_ajax', 'search_ajax');
 
 function search_ajax(){
-    $data = $_GET['data'];
-    $custom_city = !empty($data[2]['value']) ? array('key' => '_city', 'value' => $data[2]['value']) : array();
-    $custom_country= !empty($data[1]['value']) ? array('key' => '_country', 'value' => $data[1]['value']) : array();
-    $custom_start_date= !empty($data[3]['value']) ? array('key' => '_event_start_date', 'value' => $data[3]['value'], 'compare' => '>=', 'type' => 'DATE') : array();
-    $custom_end_date= !empty($data[4]['value']) ? array('key' => '_event_end_date', 'value' => $data[4]['value'], 'compare' => '<=', 'type' => 'DATE') : array();
-    $custom_fees_start= !empty($data[5]['value']) ? array('key' => '_fees', 'value' => $data[5]['value'], 'type' => 'numeric', 'compare' => '>=') : array();
-    $custom_fees_end= !empty($data[6]['value']) ? array('key' => '_fees', 'value' => $data[6]['value'], 'type' => 'numeric', 'compare' => '<=') : array();
-    $custom_language= $data[7]['value'] != "select" ? array('key' => '_language', 'value' => $data[7]['value'], 'compare' => 'LIKE') : array();
-    $custom_type= $data[8]['value'] != "select" ? array('taxonomy' => 'event_listing_type', 'field' => 'term_id', 'terms' => $data[8]['value']) : array('taxonomy' => 'event_listing_type', 'operator' => 'EXISTS');
+    $data = $_POST['data'];
+    $custom_city = !empty($data['city']) ? array('key' => '_city', 'value' => $data['city']) : array();
+    $custom_country= !empty($data['country']) ? array('key' => '_country', 'value' => $data['country']) : array();
+    $custom_start_date= !empty($data['search_start_date']) ? array('key' => '_event_start_date', 'value' => $data['search_start_date'], 'compare' => '>=', 'type' => 'DATE') : array();
+    $custom_end_date= !empty($data['search_end_date']) ? array('key' => '_event_end_date', 'value' => $data['search_end_date'], 'compare' => '<=', 'type' => 'DATE') : array();
+    $custom_fees_start= !empty(intval($data['search_fees_start'])) ? array('key' => '_fees', 'value' => intval($data['search_fees_start']), 'type' => 'numeric', 'compare' => '>=') : array();
+    $custom_fees_end= !empty(intval($data['search_fees_end'])) ? array('key' => '_fees', 'value' => intval($data['search_fees_end']), 'type' => 'numeric', 'compare' => '<=') : array();
+    $custom_language= $data['search_language'] != "select" ? array('key' => '_language', 'value' => $data['search_language'], 'compare' => 'LIKE') : array();
+    $custom_type= $data['search_event_types'] != "select" ? array('taxonomy' => 'event_listing_type', 'field' => 'term_id', 'terms' => $data['search_event_types']) : array('taxonomy' => 'event_listing_type', 'operator' => 'EXISTS');
+
+
     $args = array( 
         'post_type' => 'event_listing', 
         'post_status' => 'publish',
