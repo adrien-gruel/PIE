@@ -67,6 +67,13 @@
                         <p>
                             <input class="input" placeholder="Name" type="text" id="search_title" name="search_title" />
                         </p>
+                        <p>
+                            <select class="input" id="search_fees" name="search_fees">
+                                <option value="select">Select type</option>
+                                <option value="free">Free</option>
+                                <option value="paying">Paying</option>                                
+                            </select>
+                        </p>
                     </div>
                 </section>
                 <p class="submit-search">
@@ -106,7 +113,8 @@
             'search_end_date': jQuery('input[name=search_end_date]').val(),
             'search_language': jQuery('select[name=search_language]').val(),
             'search_event_types': jQuery('select[name=search_event_types]').val(),
-            'search_title': jQuery('input[name=search_title]').val()
+            'search_title': jQuery('input[name=search_title]').val(),
+            'search_fees' :jQuery('select[name=search_fees]').val()
         }
 
         jQuery.ajax({
@@ -136,8 +144,8 @@
                 'search_end_date': jQuery('input[name=search_end_date]').val(),
                 'search_language': jQuery('select[name=search_language]').val(),
                 'search_event_types': jQuery('select[name=search_event_types]').val(),
-                'search_title': jQuery('input[name=search_title]').val()
-
+                'search_title': jQuery('input[name=search_title]').val(),
+                'search_fees' :jQuery('select[name=search_fees]').val()
             }
             jQuery.ajax({
                 method: 'POST',

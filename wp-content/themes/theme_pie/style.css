@@ -1169,7 +1169,7 @@ textarea {
 }
 
 .cta-home-search {
-  width: 100px !important;
+  margin-top: 40px !important;
 }
 
 /*--------------------------------------------------------------
@@ -1602,6 +1602,24 @@ h1 {
   width: 140px;
 }
 
+@media screen and (max-width: 640px) {
+  .form-adSearch-home {
+    flex-direction: column;
+    width: auto;
+    margin: 0 10%;
+    margin-bottom: 50px;
+  }
+  .form-adSearch-home div:nth-child(2) {
+    border-right: none;
+    border-left: none;
+  }
+  .form-adSearch-home div:nth-child(3) {
+    border-right: none;
+  }
+  .form-adSearch-home select, .form-adSearch-home input {
+    width: 200px;
+  }
+}
 /* Sections */
 /*--------------------------------------------------------------
 # Sections login & register form

@@ -26,7 +26,15 @@ function search_ajax(){
     $custom_end_date= !empty($data['search_end_date']) ? array('key' => '_event_end_date', 'value' => $data['search_end_date'], 'compare' => '<=', 'type' => 'DATE') : array();
     $custom_language= $data['search_language'] != "select" ? array('key' => '_language', 'value' => $data['search_language'], 'compare' => 'LIKE') : array();
     $custom_type= $data['search_event_types'] != "select" ? array('taxonomy' => 'event_listing_type', 'field' => 'term_id', 'terms' => $data['search_event_types']) : array('taxonomy' => 'event_listing_type', 'operator' => 'EXISTS');
-    $custom_title= !empty($data['search_title']) ? array('key' => '_event_title', 'value' => $data['search_title'], 'compare' => 'LIKE') : array();
+    $custom_title= !empty($data['search_title']) ? array('key' => '_event_title', 'value' => $data['search_title'], 'compare' => 'LIKE') : array();    
+    if($data['search_fees'] === "select"){
+        $custom_fees= array();
+    } else if($data['search_fees'] === "free"){
+        $custom_fees= array('key' => '_fees', 'value' => 0, 'compare' => '=', 'type' => 'NUMERIC');
+    } else if($data['search_fees'] === "paying"){
+        $custom_fees= array('key' => '_fees', 'value' => 0, 'compare' => '>', 'type' => 'NUMERIC');
+    }
+
 
 
     $args = array( 
@@ -38,7 +46,8 @@ function search_ajax(){
             $custom_start_date,
             $custom_end_date,
             $custom_language,
-            $custom_title
+            $custom_title,
+            $custom_fees
         ),
         'tax_query' => array(
             $custom_type
@@ -124,7 +133,7 @@ add_action( 'template_redirect', 'redirect_to_specific_page' );
 
 function redirect_to_specific_page() {
 
-    if ( (is_page('my-pie') || is_page('create-event') || is_page('user') && ! is_user_logged_in() )) {
+    if ( (is_page('my-pie') || is_page('create-event') || is_page('user')) && ! is_user_logged_in() ) {
         wp_redirect( './login');
         exit;
     }
