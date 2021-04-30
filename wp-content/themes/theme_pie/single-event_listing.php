@@ -42,10 +42,6 @@
                             ?>
                         </p>
                         <p><strong>Event webpage:</strong>  <a href="<?php echo $post->_event_webpage?>"><?php echo $post->_event_webpage?></a></p>
-                        <p><strong>Contact Us:</strong> <?php display_organizer_email()?></p>
-                    </div>
-                    <div class="image-logo">
-                        <?php display_organizer_logo() ?>
                     </div>
                 </article>
             </section><!-- Informations of an event -->  
