@@ -130,7 +130,12 @@ function redirect_to_specific_page() {
     }
 
     if ( (is_page('login') || is_page('register')) &&  is_user_logged_in() ) {
-        wp_redirect( './user'); 
+        wp_redirect( './account'); 
+        exit;
+    }
+
+    if ( (is_page('user')) &&  is_user_logged_in() ) {
+        wp_redirect( './account'); 
         exit;
     }
 }
