@@ -14,11 +14,11 @@
 	<form method="GET" action="homepage" class="form-adSearch-home">
 		<div>
 			<h3>When ?</h3>
-			<input class="input" placeholder="From" type="date" id="search_start_date_home" name="search_start_date_home" />
+			<input class="input" placeholder="From" type="month" id="search_start_date_home" name="search_start_date_home" />
 		</div>
 		<div>
 			<h3>Where ?</h3>
-			<input class="input" placeholder="Country" type="text" id="search_country_home" name="search_country_home" />
+			<input class="input" placeholder="Country / Region" type="text" id="search_country_home" name="search_country_home" />
 		</div>
 		<div>
 			<h3>What ?</h3>
@@ -31,8 +31,8 @@
                 </select>
 		</div>
 		 <div>
-			 <h3>A Name ?</h3>
-		 	<input class="input" placeholder="Name of the event" type="text" id="search_title_home" name="search_title_home" />
+			 <h3>An event ?</h3>
+		 	<input class="input" placeholder="Event name" type="text" id="search_title_home" name="search_title_home" />
 		</div>
 
 		<input type="submit" value="Search" class="cta-home-search" id="home-search-button"/>
