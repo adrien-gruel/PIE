@@ -27,9 +27,17 @@
                         <p><strong>End</strong>: <?php echo date("d/m/y", $eventDateEnd) . " | " . get_event_end_time()?></p>
                         <p><strong>Languages:</strong>
                             <?php 
+                                $length = count($post->_language);
+                                $i = 0;
                                 foreach($post->_language as $language){
-                                    if($language)
+                                    if($language && $i < $length-1){
                                         echo ucfirst($language)." | ";
+                                    } else {
+                                        echo ucfirst($language);
+                                    }
+                                    $i++;
+
+                                        
                                 } 
                             ?>
                         </p>
