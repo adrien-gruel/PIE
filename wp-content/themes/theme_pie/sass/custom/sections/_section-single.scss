@@ -7,27 +7,18 @@
         background-color: $primary;
         height: 30vh;
     }
-        article{
+        .event-single{
             margin: -15vh auto 0 ;
             width: 80vw;
             background-color: white;
             border: black solid 1px;
             border-radius: 20px;
-            padding: 60px 30px;
             h1{
                 text-align: center;
-                padding: 30px 0 50px 0;
+                padding: 50px 0 0px 0;
                 margin: 0;
             }
-            h2{
-                margin-bottom: 25px;
-            }
-            p{
-                font-family: $roboto;
-                font-size: $size16;
-                color: $black;
-                margin-bottom: 10px;
-            }
+
             .image-mise-en-avant{
                 img{
                     width: 100%;
@@ -40,60 +31,126 @@
                 color: $primary;
             }
         }
+
+    // .single_event_listing{
+    //     display: flex;
+    //     justify-content: space-between;
+    //     padding: 0 10%;
+    //     margin-bottom: 50px;
+    // }
+}
+
+.content-article {
+    padding: 0px 30px;
+    .image-mise-en-avant {
+        margin-top: 40px;
+    }
+}
+
+.section-data-single {
+    padding: 20px 100px 20px;
     
-    .second-headline{
-        margin-bottom: 30px;
+    h2 {
+        font-size: $size32;
+        font-family: $oswald;
+        padding-bottom: 20px;
     }
 
-    .place-venue{
-        margin-top: 30px;
+    p {
+        font-size: $size16;
+        font-family: $roboto;
+        margin-bottom: 10px;
     }
 
-
-    .single_event_listing{
-        display: flex;
-        justify-content: space-between;
-        padding: 0 10%;
-        
-        margin-bottom: 50px;
-        .image-logo{
-            display: flex;
-            img{
-                width: 200px;
-                align-self: center;
-                justify-content: center;
-            }
-        }
+    &-informations, &-eventDetails {
+        padding-top: 80px;
     }
-    .description{
-        background-color: $primary;
-        width: 100%;
-        padding: 20px 0;
-        margin-bottom: 50px;
-        margin-top: 50px;
-        h2{
-            color: $white;
-        }
-        p{
-            padding: 5px 10%;
+
+    &-eventDetails {
+        padding-bottom: 80px;
+    }
+
+    &-description {
+        padding: 40px 100px;
+        margin: 40px 0px;
+        background: $primary;
+        h2, p {
             color: $white;
         }
     }
-}
-.event-single{
-    padding: 0 !important;
-}
-.single_event_listing-Place{
-    display: flex; 
-    padding: 0 10% ;
-    margin-bottom: 50px;
-    .Information{
-        padding-right: 25%;
+
+    article {
+        @extend %flexWrapJbetween;
+        align-items: center;
+        .image-logo {
+            width: 300px;
+        }
+    }
+
+    .article-placeVenue {
+        @extend %flexWrap;
+        justify-content: initial;
+        div:nth-child(2) {
+            margin-left: 120px;
+        }
     }
 }
 
 
 // ----------- RESPONSIVE feature cards -----------  //
+
+@media screen and(max-width: 1100px)
+{
+    .section-data-single {
+        padding: 20px 80px 20px;
+    }
+}
+
+@media screen and (max-width: 1024px)
+{
+    .section-data-single {
+
+        &-placeVenue {
+            h2 {
+                text-align: center;
+            }
+        }
+
+        &-eventDetails {
+            padding-top: 60px;
+            padding-bottom: 100px;
+        }
+
+        article {
+            text-align: center;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .image-logo {
+                margin-top: 40px;
+            }
+        }
+
+        .article-placeVenue {
+            flex-direction: column;
+            text-align: center;
+            div:nth-child(2) {
+                margin-left: 0px;
+            }
+        }
+    }
+    
+}
+
+@media screen and (max-width: 600px){
+    .section-single .event-single {
+        width: 90%;
+    }
+    .section-data-single {
+        padding: 20px 20px 20px;
+    }
+}
+
 
 @media screen and (max-width: 1024px) {
 
