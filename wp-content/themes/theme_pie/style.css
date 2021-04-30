@@ -931,7 +931,7 @@ textarea {
 /* Font Size */
 /* Font Weight */
 /* Variables */
-.section-featureCards, .section-blog, .section-login-register, .custom-footer nav ul {
+.section-data-single .article-placeVenue, .section-featureCards, .section-blog, .section-login-register, .custom-footer nav ul {
   display: flex;
   flex-wrap: wrap;
 }
@@ -958,7 +958,7 @@ textarea {
   align-items: center;
 }
 
-.search .search_what, .form-advanced-search article:nth-child(3), .form-advanced-search, .card-article-header div, .form-contact form p {
+.search .search_what, .section-data-single article, .form-advanced-search article:nth-child(3), .form-advanced-search, .card-article-header div, .form-contact form p {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -1774,85 +1774,114 @@ h1 {
   background-color: #ff8024;
   height: 30vh;
 }
-.section-single article {
+.section-single .event-single {
   margin: -15vh auto 0;
   width: 80vw;
   background-color: white;
   border: black solid 1px;
   border-radius: 20px;
-  padding: 60px 30px;
 }
-.section-single article h1 {
+.section-single .event-single h1 {
   text-align: center;
-  padding: 30px 0 50px 0;
+  padding: 50px 0 0px 0;
   margin: 0;
 }
-.section-single article h2 {
-  margin-bottom: 25px;
-}
-.section-single article p {
-  font-family: "Roboto", sans-serif;
-  font-size: 16px;
-  color: #262626;
-  margin-bottom: 10px;
-}
-.section-single article .image-mise-en-avant img {
+.section-single .event-single .image-mise-en-avant img {
   width: 100%;
   height: 500px;
   object-fit: contain;
 }
-.section-single article a {
+.section-single .event-single a {
   text-decoration: none;
   color: #ff8024;
 }
-.section-single .second-headline {
-  margin-bottom: 30px;
+
+.content-article {
+  padding: 0px 30px;
 }
-.section-single .place-venue {
-  margin-top: 30px;
+.content-article .image-mise-en-avant {
+  margin-top: 40px;
 }
-.section-single .single_event_listing {
-  display: flex;
-  justify-content: space-between;
-  padding: 0 10%;
-  margin-bottom: 50px;
+
+.section-data-single {
+  padding: 20px 100px 20px;
 }
-.section-single .single_event_listing .image-logo {
-  display: flex;
+.section-data-single h2 {
+  font-size: 32px;
+  font-family: "Oswald", sans-serif;
+  padding-bottom: 20px;
 }
-.section-single .single_event_listing .image-logo img {
-  width: 200px;
-  align-self: center;
-  justify-content: center;
+.section-data-single p {
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 10px;
 }
-.section-single .description {
-  background-color: #ff8024;
-  width: 100%;
-  padding: 20px 0;
-  margin-bottom: 50px;
-  margin-top: 50px;
+.section-data-single-informations, .section-data-single-eventDetails {
+  padding-top: 80px;
 }
-.section-single .description h2 {
+.section-data-single-eventDetails {
+  padding-bottom: 80px;
+}
+.section-data-single-description {
+  padding: 40px 100px;
+  margin: 40px 0px;
+  background: #ff8024;
+}
+.section-data-single-description h2, .section-data-single-description p {
   color: white;
 }
-.section-single .description p {
-  padding: 5px 10%;
-  color: white;
+.section-data-single article {
+  align-items: center;
+}
+.section-data-single article .image-logo {
+  width: 300px;
+}
+.section-data-single .article-placeVenue {
+  justify-content: initial;
+}
+.section-data-single .article-placeVenue div:nth-child(2) {
+  margin-left: 120px;
 }
 
-.event-single {
-  padding: 0 !important;
+@media screen and (max-width: 1100px) {
+  .section-data-single {
+    padding: 20px 80px 20px;
+  }
 }
+@media screen and (max-width: 1024px) {
+  .section-data-single-placeVenue h2 {
+    text-align: center;
+  }
+  .section-data-single-eventDetails {
+    padding-top: 60px;
+    padding-bottom: 100px;
+  }
+  .section-data-single article {
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .section-data-single article .image-logo {
+    margin-top: 40px;
+  }
+  .section-data-single .article-placeVenue {
+    flex-direction: column;
+    text-align: center;
+  }
+  .section-data-single .article-placeVenue div:nth-child(2) {
+    margin-left: 0px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .section-single .event-single {
+    width: 90%;
+  }
 
-.single_event_listing-Place {
-  display: flex;
-  padding: 0 10%;
-  margin-bottom: 50px;
+  .section-data-single {
+    padding: 20px 20px 20px;
+  }
 }
-.single_event_listing-Place .Information {
-  padding-right: 25%;
-}
-
 @media screen and (max-width: 1024px) {
   .section-single article .image-mise-en-avant img {
     height: initial;
