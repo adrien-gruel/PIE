@@ -27,3 +27,29 @@
         width: 140px;
     }
 }
+
+// ----------- RESPONSIVE form home-----------  //
+
+@media screen and (max-width: 640px) 
+{
+    .form-adSearch-home {
+        flex-direction: column;
+        width: auto;
+        margin:0 10%;
+        margin-bottom: 50px;
+
+        div{
+            &:nth-child(2) {
+                border-right: none;
+                border-left: none;
+            }
+            &:nth-child(3) {
+                border-right: none;
+             }
+        }
+
+        select, input{
+            width: 200px;
+        }
+    }
+}
