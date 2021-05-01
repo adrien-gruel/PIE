@@ -41,7 +41,7 @@
                                 } 
                             ?>
                         </p>
-                        <p><strong>Event webpage:</strong>  <a href="<?php echo $post->_event_webpage?>"><?php echo $post->_event_webpage?></a></p>
+                        <p><strong>Event webpage:</strong>  <a href="<?php echo $post->_event_webpage?>"><?php the_title() ?></a></p>
                     </div>
                 </article>
             </section><!-- Informations of an event -->  
