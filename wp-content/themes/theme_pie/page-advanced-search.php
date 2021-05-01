@@ -30,10 +30,10 @@
                         <h2>When ?</h2>
                         <div class="search_when">
                             <p>
-                                <input class="input" placeholder="From" type="month" id="search_start_date" name="search_start_date" />
+                                <input class="input" placeholder="From" type="date" id="search_start_date" name="search_start_date" />
                             </p>
                             <p>
-                                <input class="input" placeholder="To" type="month" id="search_end_date" name="search_end_date" />
+                                <input class="input" placeholder="To" type="date" id="search_end_date" name="search_end_date" />
                             </p>
                         </div>
                     </section>
@@ -69,11 +69,7 @@
                         </p>
                         <p>
                             <select class="input" id="search_fees" name="search_fees">
-<<<<<<< HEAD
                                 <option value="select">Fee</option>
-=======
-                                <option value="select">Select fees</option>
->>>>>>> b16b1ba7ba4a0f4345efb62e4d69ff65cbfd269c
                                 <option value="free">Free</option>
                                 <option value="paying">Paying</option>                                
                             </select>

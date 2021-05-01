@@ -14,7 +14,7 @@
 	<form method="GET" action="homepage" class="form-adSearch-home">
 		<div>
 			<h3>When ?</h3>
-			<input class="input" placeholder="From" type="month" id="search_start_date_home" name="search_start_date_home" />
+			<input class="input" placeholder="From" type="date" id="search_start_date_home" name="search_start_date_home" />
 		</div>
 		<div>
 			<h3>Where ?</h3>
