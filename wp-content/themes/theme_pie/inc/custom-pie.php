@@ -147,6 +147,10 @@ function redirect_to_specific_page() {
         wp_redirect( './account'); 
         exit;
     }
+    
+    if(is_page('members') && !current_user_can('administrator')) {
+        wp_redirect('./login');
+    }
 }
 
 add_action( 'wp_ajax_search_ajax_home', 'search_ajax_home' );

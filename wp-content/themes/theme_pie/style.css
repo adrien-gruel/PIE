@@ -2053,6 +2053,12 @@ h1 {
   width: 80%;
   margin: auto;
 }
+.section-createEvent form input[type=submit] {
+  background: #ff8024 !important;
+  color: white !important;
+  padding: 8px 12px !important;
+  border-bottom: none !important;
+}
 .section-createEvent h2 {
   font-family: "Oswald", sans-serif;
 }
@@ -2082,6 +2088,10 @@ h1 {
 }
 .section-lm h3 {
   color: #fdbcbc;
+}
+
+.section-profil {
+  margin: 80px auto;
 }
 
 /*--------------------------------------------------------------

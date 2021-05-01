@@ -69,7 +69,7 @@
                         </p>
                         <p>
                             <select class="input" id="search_fees" name="search_fees">
-                                <option value="select">Select type</option>
+                                <option value="select">Fee</option>
                                 <option value="free">Free</option>
                                 <option value="paying">Paying</option>                                
                             </select>

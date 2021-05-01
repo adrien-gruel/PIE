@@ -5,6 +5,12 @@
         input, select {
             @extend %customInput;
         }
+        input[type=submit] {
+            background: $primary !important;
+            color: $white !important;
+            padding: 8px 12px !important;
+            border-bottom: none !important;
+        }
     }
 
     h2 {
